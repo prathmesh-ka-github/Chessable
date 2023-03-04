@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.cdnfonts.com/css/sansation');
+*{
+    color: #fff;
+
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -9,10 +16,30 @@ body {
     z-index: -1;
     bottom: 0;
 }   
-
-.logo_plybtn{
+.logo{
+    display: flex;
+    align-items: flex-end;
+}
+.logo-txt{
+    font-family: 'Sansation', sans-serif;
+    font-size: 80px;
+    font-weight: 700;
+}
+.logo-plybtn{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 150px;
+}
+.ply-btn{
+    all:unset;
+    margin-top: 40px;
+    background-color: #7FA650;
+    color: #fff;
+    font-size: 36;
+    font-weight: 700;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    padding: 20 70;
+    border-radius: 20px;
 }
