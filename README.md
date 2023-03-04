@@ -1,1 +1,2 @@
-# Chessable - Web based 2-player Chess game!
+# Chessable
+A Web based Chess game!
