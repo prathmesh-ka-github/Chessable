@@ -35,6 +35,9 @@ body {
     border-radius: 20px;
     transition: background-color 300ms;
     cursor: pointer;
+    -webkit-box-shadow: 10px 10px 31px -7px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 31px -7px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 31px -7px rgba(0,0,0,0.75);
 }
 .ply-btn:hover {
     background-color: #64863a;
