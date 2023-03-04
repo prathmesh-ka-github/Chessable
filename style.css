@@ -1,4 +1,18 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: #272422;
+}
+.bg-img{
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+    bottom: 0;
+}   
+
+.logo_plybtn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
 }
