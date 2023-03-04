@@ -20,9 +20,11 @@ body {
     align-items: center;
     margin-top: 250px;
 }
-.ply-btn{
-    all:unset;
+.logo-plybtn a{
     margin-top: 40px;
+}
+.ply-btn{
+    all: unset;
     background-color: #7FA650;
     color: #fff;
     font-size: 36;
