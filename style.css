@@ -29,7 +29,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 150px;
+    margin-top: 200px;
 }
 .ply-btn{
     all:unset;
@@ -42,4 +42,11 @@ body {
     text-align: center;
     padding: 20 70;
     border-radius: 20px;
+    transition: all 300ms;
+}
+.ply-btn:hover {
+    background-color: #64863a;
+}
+.ply-btn:active {
+    background-color: #5a7935;
 }
