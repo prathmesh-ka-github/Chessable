@@ -15,16 +15,8 @@ body {
     position: fixed;
     z-index: -1;
     bottom: 0;
-}   
-.logo{
-    display: flex;
-    align-items: flex-end;
 }
-.logo-txt{
-    font-family: 'Sansation', sans-serif;
-    font-size: 80px;
-    font-weight: 700;
-}
+
 .logo-plybtn{
     display: flex;
     flex-direction: column;
