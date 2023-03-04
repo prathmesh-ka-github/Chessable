@@ -1,6 +1,4 @@
-CHESSABLE
-
-Web-based multiplayer Chess game
+# CHESSABLE a Web-based multiplayer Chess game
 
 
 It is a hassle to carry a chess board and all the pieces wherever you travel, that is, the physical board game is not portable. Traditional chess is played between 2 players so there is no room for more players to play together on the same board. The majority of people are not aware of any alternative version of chess. Even though chess has simple rules and piece movements, many people tend to use the excuse of “Chess is hard to learn”.
