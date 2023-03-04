@@ -1,0 +1,34 @@
+.choose-main {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 50px;
+    font-weight: 100;
+}
+.two-player{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.four-player{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.choose-txt{
+    padding: 10px;
+}
+@media only screen and (max-width: 600px) {
+    .choose-main{
+        flex-direction: column;
+        font-size: 30px;
+
+    }
+  }
