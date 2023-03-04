@@ -8,20 +8,19 @@
     font-size: 50px;
     font-weight: 100;
 }
-.two-player{
+.sub-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    transition: transform 300ms;
+    
 }
-.four-player{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.sub-container:hover {
+    transform: scale(1.05);
 }
+
 .choose-txt{
     padding: 10px;
 }
