@@ -62,9 +62,9 @@
 @media only screen and (orientation:portrait) and (max-width:600px){
     .clk-div{
         display: flex;
-        flex-direction: column;
     }
     .clk-btn{
+        margin-left: 15px;
         margin-top: 20px;
     }
 
