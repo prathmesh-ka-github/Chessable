@@ -7,6 +7,7 @@
     justify-content: space-evenly;
     font-size: 50px;
     font-weight: 100;
+    padding-top: 80px;
 }
 .sub-container{
     display: flex;
@@ -28,6 +29,5 @@
     .choose-main{
         flex-direction: column;
         font-size: 30px;
-
     }
   }
