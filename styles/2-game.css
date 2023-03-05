@@ -45,13 +45,15 @@
 .board{
     margin-left: 200px;
 }
-ul {
+.board div{
     list-style: none;
     display: flex;
     margin: 0;
 }
 li {
-    width: 100px;
-    height: 100px;
-    border: 1px solid #ffffff;
+    width: 115px;
+    height: 115px;
+    display: grid;
+    place-items: center;
+    font-size: 0;
 }
