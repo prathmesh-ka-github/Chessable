@@ -49,6 +49,7 @@ a {
     all: unset;
 }
 .logo-sm img{
+    position: fixed;
     width: 200px;
     padding: 20px;
     cursor: pointer;
