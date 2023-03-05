@@ -7,33 +7,56 @@
     justify-content: center;
     padding-top: 90px;
 }
-.two-p-txt{
+.four-p-txt{
     margin-top: 10px;
     font-size: 35px;
     text-align: center;
 }
+
+.red-blue-names{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+.yellow-green-names{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
 .name{
     all:unset;
-    margin-top: 25px;
-    padding: 2 30 2 20;
+    margin-top: 2px;
+    color:#fff;
+    font-weight:500;
     width: 300px;
     height: 40px;
-    border-radius: 7px;
-    font-size: 20;
+    border-radius: 8px;
+    margin-right: 10px;
+    padding: 2 30 2 20;
 }
-#b-player{
-    background-color: #454241;
+#red-player{
+    background-color:#B54040;
 }
-#b-player::placeholder{
+#red-player::placeholder{
     color:#fff
 }
-#w-player{
-    margin-top: 10px;
-    background-color: #f8f8f8;
-    color:#000
+#blue-player{
+    background-color:#4070B5;
 }
-#w-player::placeholder{
-    color:#000
+#blue-player::placeholder{
+    color:#fff;
+}
+#yellow-player{
+    background-color:#CE9D2C;
+}
+#yellow-player::placeholder{
+    color:#fff;
+}
+#green-player{
+    background-color:#4A8D54;
+}
+#green-player::placeholder{
+    color:#fff;
 }
 .clk-div{
     display: flex;
@@ -58,14 +81,4 @@
 }
 .clk-btn:hover{
     background-color: #5f5a58;
-}
-@media only screen and (orientation:portrait) and (max-width:600px){
-    .clk-div{
-        display: flex;
-        flex-direction: column;
-    }
-    .clk-btn{
-        margin-top: 20px;
-    }
-
 }
