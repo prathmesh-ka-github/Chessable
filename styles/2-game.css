@@ -1,5 +1,6 @@
+
 .test {
-    background-color:;
+    background-color:cadetblue;
     background-color: rgb(100, 75, 43);
 }
 .main-space{
@@ -9,7 +10,6 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding-top: 40px;
 }
@@ -20,18 +20,19 @@
     height: 70%;
 }
 .profile img{
-    width: 40px;
+    width: 60px;
 }
 .player-name{
     margin: 0 10px;
+    font-size: 34px;
 }
 .row {
     display: flex;
     flex-direction: row;
 }
 .player-time {
-    width: 137px;
-    height: 51px;
+    width: 160px;
+    height: 60px;
     background-color: #ffffff;
     color: black;
     font-size: 32px;
@@ -39,7 +40,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 15px;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 #black-time {
     background-color: #1D1C1A;
@@ -70,4 +71,32 @@ li {
 .allimg{
     width: 115px;
     height: 115px;
+}
+@media only screen and (orientation:portrait) and (max-width:600px){
+    li {
+        width: 50px;
+        height: 50px;
+    }
+    .allimg{
+        width: 50px;
+        height: 50px;
+    }
+    .main-space{
+        flex-direction: column-reverse;
+    }
+    .board {
+        margin-left: 0;
+    }
+    .player-name{
+        font-size: 24px;
+
+    }
+    .profile img{
+        width: 40px;
+    }
+    .stats {
+        flex-direction: row;
+        margin-top: 100px;
+        height: auto;
+    }
 }
