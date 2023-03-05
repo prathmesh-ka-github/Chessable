@@ -58,3 +58,13 @@
 .clk-btn:hover{
     background-color: #5f5a58;
 }
+@media only screen and (orientation:portrait) and (max-width:600px){
+    .clk-div{
+        display: flex;
+        flex-direction: column;
+    }
+    .clk-btn{
+        margin-top: 20px;
+    }
+
+}
