@@ -1,6 +1,6 @@
 .container{
     width: 100%;
-    height: 70%;
+    height: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -62,10 +62,10 @@
 @media only screen and (orientation:portrait) and (max-width:600px){
     .clk-div{
         display: flex;
+        flex-direction: column;
     }
     .clk-btn{
-        margin-left: 15px;
-        margin-top: 20px;
+        margin-top:15px;
     }
 
 }
