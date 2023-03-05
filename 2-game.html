@@ -19,6 +19,7 @@
     
     <div class="main-space">
         <div class="stats">
+            <h2 id="tog">White's Turn</h2>
             <div class="black-side">
                 <div class="row">
                     <div class="profile">
@@ -27,7 +28,8 @@
                     <div class="player-name" id="black-player-name">Black</div>
                 </div>
                 <div id="black-time" class="player-time">
-                    10:00
+                    <div id="bmin">10</div>:
+                    <div id="bsec">00</div>
                 </div>
             </div>
             <div class="white-side">
@@ -38,12 +40,14 @@
                     <div class="player-name" id="white-player-name">White</div>
                 </div>
                 <div id="white-time" class="player-time">
-                    10:00
+                    <div id="bmin">10</div>:
+                    <div id="bsec">00</div>
                 </div>
             </div>
+            
         </div>
-        <div class="board">
-            <div>
+        <div class="board" id="board">
+            <div id="row8">
                 <li class="box" id="b801">Brook</li>
                 <li class="box" id="b802">Bknight</li>
                 <li class="box" id="b803">Bbishop</li>
@@ -53,17 +57,17 @@
                 <li class="box" id="b807">Bknight</li>
                 <li class="box" id="b808">Brook</li>
             </div>
-            <div>
-                <li class="box" id="b701"></li>
-                <li class="box" id="b702"></li>
-                <li class="box" id="b703"></li>
-                <li class="box" id="b704"></li>
-                <li class="box" id="b705"></li>
-                <li class="box" id="b706"></li>
-                <li class="box" id="b707"></li>
-                <li class="box" id="b708"></li>
+            <div id="row7">
+                <li class="box" id="b701">Bpawn</li>
+                <li class="box" id="b702">Bpawn</li>
+                <li class="box" id="b703">Bpawn</li>
+                <li class="box" id="b704">Bpawn</li>
+                <li class="box" id="b705">Bpawn</li>
+                <li class="box" id="b706">Bpawn</li>
+                <li class="box" id="b707">Bpawn</li>
+                <li class="box" id="b708">Bpawn</li>
             </div>
-            <div>
+            <div id="row6">
                 <li class="box" id="b601"></li>
                 <li class="box" id="b602"></li>
                 <li class="box" id="b603"></li>
@@ -73,7 +77,7 @@
                 <li class="box" id="b607"></li>
                 <li class="box" id="b608"></li>
             </div>
-            <div>
+            <div id="row5">
                 <li class="box" id="b501"></li>
                 <li class="box" id="b502"></li>
                 <li class="box" id="b503"></li>
@@ -83,7 +87,7 @@
                 <li class="box" id="b507"></li>
                 <li class="box" id="b508"></li>
             </div>
-            <div>
+            <div id="row4">
                 <li class="box" id="b401"></li>
                 <li class="box" id="b402"></li>
                 <li class="box" id="b403"></li>
@@ -93,7 +97,7 @@
                 <li class="box" id="b407"></li>
                 <li class="box" id="b408"></li>
             </div>
-            <div>
+            <div id="row3">
                 <li class="box" id="b301"></li>
                 <li class="box" id="b302"></li>
                 <li class="box" id="b303"></li>
@@ -103,25 +107,25 @@
                 <li class="box" id="b307"></li>
                 <li class="box" id="b308"></li>
             </div>
-            <div>
-                <li class="box" id="b201"></li>
-                <li class="box" id="b202"></li>
-                <li class="box" id="b203"></li>
-                <li class="box" id="b204"></li>
-                <li class="box" id="b205"></li>
-                <li class="box" id="b206"></li>
-                <li class="box" id="b207"></li>
-                <li class="box" id="b208"></li>
+            <div id="row2">
+                <li class="box" id="b201">Wpawn</li>
+                <li class="box" id="b202">Wpawn</li>
+                <li class="box" id="b203">Wpawn</li>
+                <li class="box" id="b204">Wpawn</li>
+                <li class="box" id="b205">Wpawn</li>
+                <li class="box" id="b206">Wpawn</li>
+                <li class="box" id="b207">Wpawn</li>
+                <li class="box" id="b208">Wpawn</li>
             </div>
-            <div>
-                <li class="box" id="b101"></li>
-                <li class="box" id="b102"></li>
-                <li class="box" id="b103"></li>
-                <li class="box" id="b104"></li>
-                <li class="box" id="b105"></li>
-                <li class="box" id="b106"></li>
-                <li class="box" id="b107"></li>
-                <li class="box" id="b108"></li>
+            <div id="row1">
+                <li class="box" id="b101">Wrook</li>
+                <li class="box" id="b102">Wknight</li>
+                <li class="box" id="b103">Wbishop</li>
+                <li class="box" id="b104">Wqueen</li>
+                <li class="box" id="b105">Wking</li>
+                <li class="box" id="b106">Wbishop</li>
+                <li class="box" id="b107">Wknight</li>
+                <li class="box" id="b108">Wrook</li>
             </div>
 
         </div>

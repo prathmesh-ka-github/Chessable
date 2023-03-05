@@ -1,3 +1,7 @@
+.test {
+    background-color:;
+    background-color: rgb(100, 75, 43);
+}
 .main-space{
     display: flex;
     width: 100%;
@@ -41,7 +45,9 @@
     background-color: #1D1C1A;
     color: #ffffff;
 }
-
+#tog {
+    font-size: 0;
+}
 .board{
     margin-left: 200px;
 }
@@ -50,10 +56,18 @@
     display: flex;
     margin: 0;
 }
+.box {
+    cursor: pointer;
+}
 li {
     width: 115px;
     height: 115px;
     display: grid;
     place-items: center;
     font-size: 0;
+    border: 0.1px solid white;
+}
+.allimg{
+    width: 115px;
+    height: 115px;
 }
