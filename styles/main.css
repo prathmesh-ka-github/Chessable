@@ -1,6 +1,13 @@
+.landing-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+}
 @media only screen and (max-width: 600px) {
     img {
-        width: 95%;
+        width: 90%;
     }
     .ply-btn{
         font-size: 25px;

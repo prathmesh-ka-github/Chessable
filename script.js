@@ -1,13 +1,3 @@
-function sleep(ms) {
-    return new Promise(
-      resolve => setTimeout(resolve, ms)
-    );
-  }
-  
-
-
-
-
 console.log("Hi Mom!")
 function coloring() {
     const color = document.querySelectorAll('.box')
@@ -108,8 +98,7 @@ document.querySelectorAll('.box').forEach(item => {
 
         if (item.style.backgroundColor == 'green' && item.innerText.length == 0) {
             tog = tog + 1
-            sleep(2000);
-            setTimeout(flip, 700);
+            setTimeout(flip, 800);
         }
 
         else if (item.style.backgroundColor == 'green' && item.innerText.length !== 0) {
@@ -124,14 +113,11 @@ document.querySelectorAll('.box').forEach(item => {
                     coloring()
                     insertImage()
                     tog = tog + 1
-                    setTimeout(flip, 700);
+                    setTimeout(flip, 800);
                 }
 
             })
         }
-
-
-
         getId = item.id
         arr = Array.from(getId)
         arr.shift()
@@ -140,12 +126,8 @@ document.querySelectorAll('.box').forEach(item => {
         aup = eval(arr.join(''))
         a = aside + aup
 
-
-
         // Function to display the available paths for all pieces
-
         function whosTurn(toggle) {
-
             // PAWN
 
             if (item.innerText == `${toggle}pawn`) {
@@ -524,21 +506,21 @@ document.querySelectorAll('.box').forEach(item => {
 
 
 // Moving the element
-document.querySelectorAll('.box').forEach(hathiTest => {
+document.querySelectorAll('.box').forEach(select => {
 
-    hathiTest.addEventListener('click', function () {
+    select.addEventListener('click', function () {
 
-        if (hathiTest.style.backgroundColor == 'cadetblue') {
+        if (select.style.backgroundColor == 'cadetblue') {
 
-            cadetblueId = hathiTest.id
-            cadetblueText = hathiTest.innerText
+            cadetblueId = select.id
+            cadetblueText = select.innerText
 
-            document.querySelectorAll('.box').forEach(hathiTest2 => {
+            document.querySelectorAll('.box').forEach(replace => {
 
-                hathiTest2.addEventListener('click', function () {
-                    if (hathiTest2.style.backgroundColor == 'green' && hathiTest2.innerText.length == 0) {
+                replace.addEventListener('click', function () {
+                    if (replace.style.backgroundColor == 'green' && replace.innerText.length == 0) {
                         document.getElementById(cadetblueId).innerText = ''
-                        hathiTest2.innerText = cadetblueText
+                        replace.innerText = cadetblueText
                         coloring()
                         insertImage()
 

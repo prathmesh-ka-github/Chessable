@@ -66,7 +66,7 @@ li {
     display: grid;
     place-items: center;
     font-size: 0;
-    border: 0.1px solid white;
+    border: 0.1px solid #C3CDDC;
 }
 .allimg{
     width: 115px;
@@ -88,7 +88,10 @@ li {
         margin-left: 0;
     }
     .player-name{
-        font-size: 24px;
+        font-size: 20px;
+    }
+    #black-player-name {
+        margin-right: 40px;
 
     }
     .profile img{
@@ -98,5 +101,10 @@ li {
         flex-direction: row;
         margin-top: 100px;
         height: auto;
+    }
+    .player-time{
+        width: 120px;
+        height: 50px;
+        font-size: 24px;
     }
 }
