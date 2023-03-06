@@ -18,7 +18,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 250px;
 }
 .logo-plybtn a{
     margin-top: 40px;
