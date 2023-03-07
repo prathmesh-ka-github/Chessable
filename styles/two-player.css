@@ -1,6 +1,6 @@
 .container{
     width: 100%;
-    height: 80%;
+    height: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -73,7 +73,6 @@
     width:150px;
     height:50px;
     border-radius: 15px;
-    margin-left: 15px;
     transition: background-color 300ms;
     cursor: pointer;
     -webkit-box-shadow: 10px 10px 31px -7px rgba(0,0,0,0.75);
@@ -91,6 +90,9 @@
     margin-top: 30px;
     display: flex;
     flex-direction: row;
+}
+.clk-ply-div a{
+    margin-left: 15;
 }
 .sub-container{
     display: flex;

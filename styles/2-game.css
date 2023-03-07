@@ -61,8 +61,8 @@
     cursor: pointer;
 }
 li {
-    width: 115px;
-    height: 115px;
+    width: 6vw;
+    height: 6vw;
     display: grid;
     place-items: center;
     font-size: 0;
@@ -70,8 +70,7 @@ li {
     transition: background-color 400ms;
 }
 .allimg{
-    width: 115px;
-    height: 115px;
+    width: 100%;
 }
 @media only screen and (orientation:portrait) and (max-width:600px){
     li {
@@ -84,6 +83,7 @@ li {
     }
     .main-space{
         flex-direction: column-reverse;
+        padding-top: 60px;
     }
     .board {
         margin-left: 0;
