@@ -7,7 +7,7 @@ function startclockblack() {
     if (bsec == 0 && bmin== 0) {
         document.getElementById("bsec").innerHTML = bsec;
         document.getElementById("bmin").innerHTML = bmin;
-        
+        window.alert("White wins by timeout!!!")
     } else {    
         bsec --;
         if (bsec<60) {
@@ -31,7 +31,7 @@ function startclockwhite() {
     if (wsec == 0 && wmin== 0) {
         document.getElementById("wsec").innerHTML = wsec;
         document.getElementById("wmin").innerHTML = wmin;
-        
+        window.alert("Black wins by timeout!!!")
     } else {    
         wsec --;
         if (wsec<60) {
