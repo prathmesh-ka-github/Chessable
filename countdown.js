@@ -1,5 +1,4 @@
 //      BLACK COUNTER
-
 var bmin = playtime-1;
 var bsec = 60;
 var blackinterval = 0;
@@ -23,8 +22,6 @@ function startclockblack() {
         }
     }
 }
-
-
 //      WHITE COUNTER
 var wmin = playtime-1;
 var wsec = 60;

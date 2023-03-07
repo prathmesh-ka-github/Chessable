@@ -577,6 +577,3 @@ function flip() {
     }
 }
 flip()
-
-
-
