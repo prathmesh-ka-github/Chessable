@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles/four-player.css">
 </head>
 <body>
+    <img class="bg-img" src="./Assets/chessable-bg-light.png" alt="background-img">
     <a href="index.html">
         <div class="logo-sm">
             <img src="Assets/Chessable-logo-dark.png" alt="Chessable logo">
@@ -25,10 +26,17 @@
             <input id="yellow-player" type="text" class="name" placeholder="Enter player name">
             <input id="green-player" type="text" class="name" placeholder="Enter player name">
         </div>
-        <div class="clk-div">
-            <button id="b_5min" class="clk-btn">5 mins</button>
-            <button id="b_10min" class="clk-btn">10 mins</button>
-            <button id="b_15min" class="clk-btn">15 mins</button>
+        <div class="sub-container">
+            <div class="clk-div">
+                <button onclick="fivemin()" id="b_5min" class="clk-btn">5 mins</button>
+                <button onclick="tenmin()" id="b_10min" class="clk-btn">10 mins</button>
+            </div>
+            <div class="clk-ply-div">
+                <button onclick="fifteenmin()" id="b_15min" class="clk-btn">15 mins</button>
+                <a href="four-choose.html">
+                    <button class="ply-btn-sm">Play!</button>
+                </a>
+            </div>
         </div>
     </div>
 </body>
