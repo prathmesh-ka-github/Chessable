@@ -168,6 +168,8 @@ document.querySelectorAll('.box').forEach(item => {
 
             }
 
+
+
             // KING
 
             if (item.innerText == `${toggle}king`) {
@@ -211,7 +213,41 @@ document.querySelectorAll('.box').forEach(item => {
 
             }
 
-
+            // CASTLING
+            var f1 = document.getElementById('b106')
+            var g1 = document.getElementById('b107')
+            var h1 = document.getElementById('b108')
+            if (item.innerText == "Wking"){
+                if ( f1.innerText == '' && g1.innerText == ''){
+                    if (h1.innerText == 'Wrook') {
+                        g1.style.backgroundColor = 'yellow'
+                    }
+                }
+            }
+            // select.addEventListener('click', function () {
+            //     if (select.style.backgroundColor == 'cadetblue') {
+        
+            //         cadetblueId = select.id
+            //         cadetblueText = select.innerText
+        
+            //         document.querySelectorAll('.box').forEach(replace => {
+        
+            //             replace.addEventListener('click', function () {
+            //                 if (replace.style.backgroundColor == 'green' && replace.innerText.length == 0) {
+            //                     document.getElementById(cadetblueId).innerText = ''
+            //                     replace.innerText = cadetblueText
+            //                     coloring()
+            //                     insertImage()
+        
+            //                 }
+        
+            //             })
+            //         })
+        
+            //     }
+        
+        
+            // })
             // ROOK
 
             if (item.innerText == `${toggle}rook`) {
@@ -475,17 +511,12 @@ document.querySelectorAll('.box').forEach(item => {
 
 
         // winning()
-
         numOfKings = 0
-
-
         document.querySelectorAll('.box').forEach(win => {
             if (win.innerText == 'Wking' || win.innerText == 'Bking') {
                 numOfKings += 1
             }
-
         })
-
         if (numOfKings == 1) {
             setTimeout(() => {
                 // console.log(`${toggle}`) 
@@ -499,19 +530,16 @@ document.querySelectorAll('.box').forEach(item => {
                 }
             }, 500)
         }
-
-
-
     })
-
 })
-
+var f1 = document.getElementById('b106')
+var g1 = document.getElementById('b107')
+var h1 = document.getElementById('b108')
 
 // Moving the element
 document.querySelectorAll('.box').forEach(select => {
 
     select.addEventListener('click', function () {
-
         if (select.style.backgroundColor == 'cadetblue') {
 
             cadetblueId = select.id
@@ -530,8 +558,22 @@ document.querySelectorAll('.box').forEach(select => {
 
                 })
             })
+            document.querySelectorAll('.box').forEach(castle => {
+                if (castle.style.backgroundColor == 'yellow') {
+                    castle.addEventListener('click', function () {
+                        select.innerText = ''
+                        castle.innerText = 'Wking'
+                        h1.innerText = ''
+                        f1.innerText = 'Wrook'
+                        coloring()
+                        insertImage()
+                        
+                    })
+                }
+            })
 
         }
+
 
     })
 
