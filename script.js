@@ -547,7 +547,7 @@ document.querySelectorAll('.box').forEach(ee => {
     })
 })
 
-//board auto flip
+// Board auto flip
 function flip() {
     if (tog % 2 !== 0 && tog!==1) {
         console.log("Flipped to white")
