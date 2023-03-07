@@ -61,12 +61,12 @@
     cursor: pointer;
 }
 li {
-    width: 6vw;
-    height: 6vw;
+    width: 11vh;
+    height: 11vh;
     display: grid;
     place-items: center;
     font-size: 0;
-    border: 0.1px solid #8F9EB8;
+    border: 0.1px solid #fff;
     transition: background-color 400ms;
 }
 .allimg{
