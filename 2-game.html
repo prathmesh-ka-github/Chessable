@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="icon" href="./Assets/favicon.png">
@@ -9,6 +10,7 @@
 
     <link rel="stylesheet" href="styles/2-game.css">
 </head>
+
 <body>
     <img class="bg-img" src="./Assets/chessable-bg-light.png" alt="background-img">
 
@@ -18,10 +20,10 @@
             <img src="Assets/Chessable-logo-dark.png" alt="Chessable logo">
         </div>
     </a>
-    
+
     <div class="main-space">
         <div class="stats">
-            
+
             <div class="black-side">
                 <div class="row">
                     <div class="profile">
@@ -47,7 +49,7 @@
                 </div>
                 <h2 id="tog">White's Turn</h2>
             </div>
-        <!-- BOARD -->
+            <!-- BOARD -->
         </div>
         <div class="board" id="board">
             <div id="row8">
@@ -133,18 +135,24 @@
 
         </div>
     </div>
+    <div id="counter">
+    </div>
     <script src="script.js"></script>
     <script>
         var playtime = localStorage.getItem("timevalue");
         var blackName = localStorage.getItem("blackname");
         var whiteName = localStorage.getItem("whitename");
+
         console.log(playtime)
         console.log(blackName)
         console.log(whiteName)
+
         document.getElementById("black-player-name").innerHTML = blackName;
         document.getElementById("white-player-name").innerHTML = whiteName;
         document.getElementById("bmin").innerHTML = playtime;
         document.getElementById("wmin").innerHTML = playtime;
     </script>
+    <script src="countdown.js"></script>
 </body>
+
 </html>

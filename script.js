@@ -99,21 +99,23 @@ document.querySelectorAll('.box').forEach(item => {
         if (item.style.backgroundColor == 'green' && item.innerText.length == 0) {
             tog = tog + 1
             setTimeout(flip, 800);
+            console.log("black's turn")
         }
-
+        
         else if (item.style.backgroundColor == 'green' && item.innerText.length !== 0) {
-
+            
             document.querySelectorAll('.box').forEach(i => {
                 if (i.style.backgroundColor == 'cadetblue') {
                     cadetblueId = i.id
                     cadetblueText = i.innerText
-
+                    
                     document.getElementById(cadetblueId).innerText = ''
                     item.innerText = cadetblueText
                     coloring()
                     insertImage()
                     tog = tog + 1
                     setTimeout(flip, 800);
+                    console.log("white's turn")
                 }
 
             })
@@ -495,7 +497,7 @@ document.querySelectorAll('.box').forEach(item => {
                     alert('Black Wins !!')
                     location.reload()
                 }
-            }, 100)
+            }, 500)
         }
 
 
@@ -565,7 +567,16 @@ function flip() {
             image.style.transform='rotate(180deg)'
         })
     }
+    if (tog % 2 !== 0) {
+        clearInterval(blackinterval)
+        whiteinterval = setInterval(startclockwhite,1000);
+    }
+    if (tog % 2 == 0) {
+        clearInterval(whiteinterval)
+        blackinterval = setInterval(startclockblack,1000);
+    }
 }
 flip()
+
 
 
