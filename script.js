@@ -12,10 +12,10 @@ function coloring() {
         a = aside + aup
 
         if (a % 2 == 0) {
-            color.style.backgroundColor = '#C3CDDC'
+            color.style.backgroundColor = '#8F9EB8'
         }
         if (a % 2 !== 0) {
-            color.style.backgroundColor = '#8F9EB8 '
+            color.style.backgroundColor = '#C3CDDC'
         }
     })
 }
@@ -66,10 +66,10 @@ function reddish() {
                     a = aside + aup
             
                     if (a % 2 == 0 && cadetblueColor == greenColor) {
-                        i2.style.backgroundColor = '#C3CDDC'
+                        i2.style.backgroundColor = '#8F9EB8'
                     }
                     if (a % 2 !== 0 && cadetblueColor == greenColor) {
-                        i2.style.backgroundColor = '#8F9EB8'
+                        i2.style.backgroundColor = '#C3CDDC'
                     }
 
                     // if (cadetblueColor == greenColor) {
@@ -82,12 +82,9 @@ function reddish() {
 }
 
 function checkpawn(){
-
     document.querySelectorAll('.box').forEach(checkpawn =>{
         id=checkpawn.id
-        lst = Array.from(id)
-        lst.shift
-        idnum = eval(lst.join(''))
+        idnum = parseInt(id.substr(1,4))
         if (checkpawn.innerText == 'Wpawn' && 800<idnum && idnum<809) {
             checkpawn.innerText = "Wqueen"
         }
@@ -136,6 +133,8 @@ document.querySelectorAll('.box').forEach(item => {
                     insertImage()
                     tog = tog + 1
                     setTimeout(flip, 800);
+                    checkpawn()
+                    insertImage()
                 }
 
             })
@@ -547,11 +546,11 @@ document.querySelectorAll('.box').forEach(item => {
             setTimeout(() => {
                 // console.log(`${toggle}`) 
                 if (tog % 2 == 0) {
-                    alert('White Wins !!')
+                    alert('White Wins by king capture!!')
                     location.reload()
                 }
                 else if (tog % 2 !== 0) {
-                    alert('Black Wins !!')
+                    alert('Black Wins king capture!!')
                     location.reload()
                 }
             }, 500)
@@ -589,9 +588,9 @@ document.querySelectorAll('.box').forEach(select => {
                     if (replace.style.backgroundColor == 'green' && replace.innerText.length == 0) {
                         document.getElementById(cadetblueId).innerText = ''
                         replace.innerText = cadetblueText
+                        checkpawn()
                         coloring()
                         insertImage()
-
                     }
                 })
             })
