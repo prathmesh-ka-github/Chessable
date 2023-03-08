@@ -81,14 +81,32 @@ function reddish() {
     })
 }
 
+function checkpawn(){
 
+    document.querySelectorAll('.box').forEach(checkpawn =>{
+        id=checkpawn.id
+        lst = Array.from(id)
+        lst.shift
+        idnum = eval(lst.join(''))
+        if (checkpawn.innerText == 'Wpawn' && 800<idnum && idnum<809) {
+            checkpawn.innerText = "Wqueen"
+        }
+        if (checkpawn.innerText == 'Bpawn' && 100<idnum && idnum<109) {
+            checkpawn.innerText = "Bqueen"
+        }
+    })
+}
 
-
-
-
-
-
-
+// if (800<a && a<809) {
+//     console.log('promoted')
+//     item.innerText = `${toggle}queen`
+//     insertImage()
+// }
+// if (100<a && a<109) {
+//     console.log('promoted')
+//     item.innerText = `${toggle}queen`
+//     insertImage()
+// }
 
 tog = 1
 document.querySelectorAll('.box').forEach(item => {
@@ -99,7 +117,10 @@ document.querySelectorAll('.box').forEach(item => {
         if (item.style.backgroundColor == 'green' && item.innerText.length == 0) {
             tog = tog + 1
             setTimeout(flip, 800);
-            console.log("black's turn")
+        }
+        if (item.style.backgroundColor == 'yellow' && item.innerText.length == 0) {
+            tog = tog + 1
+            setTimeout(flip, 800);
         }
         
         else if (item.style.backgroundColor == 'green' && item.innerText.length !== 0) {
@@ -115,7 +136,6 @@ document.querySelectorAll('.box').forEach(item => {
                     insertImage()
                     tog = tog + 1
                     setTimeout(flip, 800);
-                    console.log("white's turn")
                 }
 
             })
@@ -123,6 +143,7 @@ document.querySelectorAll('.box').forEach(item => {
         getId = item.id
         arr = Array.from(getId)
         arr.shift()
+        current = eval(arr.join(''))
         aside = eval(arr.pop())
         arr.push('0')
         aup = eval(arr.join(''))
@@ -133,14 +154,28 @@ document.querySelectorAll('.box').forEach(item => {
             // PAWN
 
             if (item.innerText == `${toggle}pawn`) {
-                item.style.backgroundColor = 'cadetblue'
-
+                // WORKING BUT IN NEXT MOVE
+                // if (800<a && a<809) {
+                //     console.log('promoted')
+                //     item.innerText = `${toggle}queen`
+                //     insertImage()
+                // }
+                // if (100<a && a<109) {
+                //     console.log('promoted')
+                //     item.innerText = `${toggle}queen`
+                //     insertImage()
+                // }
                 if (tog % 2 !== 0 && aup < 800) {
-
+                    // For white side
+                    if (200<a && a<209) {
+                        //for pawn can move two squares on first move
+                        if (document.getElementById(`b${a + 200}`).innerText.length == 0) {
+                            document.getElementById(`b${a + 200}`).style.backgroundColor = 'green'
+                        }
+                    }
                     if (document.getElementById(`b${a + 100}`).innerText.length == 0) {
                         document.getElementById(`b${a + 100}`).style.backgroundColor = 'green'
                     }
-
                     if (aside < 8 && document.getElementById(`b${a + 100 + 1}`).innerText.length !== 0) {
                         document.getElementById(`b${a + 100 + 1}`).style.backgroundColor = 'green'
                     }
@@ -149,10 +184,17 @@ document.querySelectorAll('.box').forEach(item => {
                         document.getElementById(`b${a + 100 - 1}`).style.backgroundColor = 'green'
 
                     }
+
                 }
 
                 if (tog % 2 == 0 && aup > 100) {
-
+                    // For black side
+                    if (700<a && a<709) {
+                        //for pawn can move two squares on first move
+                        if (document.getElementById(`b${a - 200}`).innerText.length == 0) {
+                            document.getElementById(`b${a - 200}`).style.backgroundColor = 'green'
+                        }
+                    }
                     if (document.getElementById(`b${a - 100}`).innerText.length == 0) {
                         document.getElementById(`b${a - 100}`).style.backgroundColor = 'green'
                     }
@@ -164,8 +206,7 @@ document.querySelectorAll('.box').forEach(item => {
 
                     }
                 }
-
-
+                item.style.backgroundColor = 'cadetblue'
             }
 
 
@@ -214,40 +255,25 @@ document.querySelectorAll('.box').forEach(item => {
             }
 
             // CASTLING
-            var f1 = document.getElementById('b106')
-            var g1 = document.getElementById('b107')
-            var h1 = document.getElementById('b108')
-            if (item.innerText == "Wking"){
-                if ( f1.innerText == '' && g1.innerText == ''){
-                    if (h1.innerText == 'Wrook') {
-                        g1.style.backgroundColor = 'yellow'
+            if (item.innerText == `${toggle}king`){
+                item.style.backgroundColor = 'cadetblue'
+
+                // SHORT CASTLE
+                if(item.id == 'b105' || item.id == 'b805'){
+                    if (document.getElementById(`b${current+1}`).innerText == '' && document.getElementById(`b${current+2}`).innerText == '') {
+                        if (document.getElementById(`b${current+3}`).innerText == `${toggle}rook`) {
+                            document.getElementById(`b${current+2}`).style.backgroundColor = 'yellow';
+                        }
+                    }
+                }
+                // LONG CASTLE
+                if ( document.getElementById(`b${current-1}`).innerText == '' && document.getElementById(`b${current-2}`).innerText == '' && document.getElementById(`b${current-3}`).innerText == ''){
+                    if (document.getElementById(`b${current-4}`).innerText == `${toggle}rook`) {
+                        document.getElementById(`b${current-2}`).style.backgroundColor = 'yellow';
                     }
                 }
             }
-            // select.addEventListener('click', function () {
-            //     if (select.style.backgroundColor == 'cadetblue') {
-        
-            //         cadetblueId = select.id
-            //         cadetblueText = select.innerText
-        
-            //         document.querySelectorAll('.box').forEach(replace => {
-        
-            //             replace.addEventListener('click', function () {
-            //                 if (replace.style.backgroundColor == 'green' && replace.innerText.length == 0) {
-            //                     document.getElementById(cadetblueId).innerText = ''
-            //                     replace.innerText = cadetblueText
-            //                     coloring()
-            //                     insertImage()
-        
-            //                 }
-        
-            //             })
-            //         })
-        
-            //     }
-        
-        
-            // })
+
             // ROOK
 
             if (item.innerText == `${toggle}rook`) {
@@ -535,19 +561,31 @@ document.querySelectorAll('.box').forEach(item => {
 var f1 = document.getElementById('b106')
 var g1 = document.getElementById('b107')
 var h1 = document.getElementById('b108')
+var d1 = document.getElementById('b104')
+var c1 = document.getElementById('b103')
+var b1 = document.getElementById('b102')
+var a1 = document.getElementById('b101')
+
+var f8 = document.getElementById('b806')
+var g8 = document.getElementById('b807')
+var h8 = document.getElementById('b808')
+var d8 = document.getElementById('b804')
+var c8 = document.getElementById('b803')
+var b8 = document.getElementById('b802')
+var a8 = document.getElementById('b801')
 
 // Moving the element
 document.querySelectorAll('.box').forEach(select => {
 
     select.addEventListener('click', function () {
         if (select.style.backgroundColor == 'cadetblue') {
-
+            console.log('piece selected')
             cadetblueId = select.id
             cadetblueText = select.innerText
-
             document.querySelectorAll('.box').forEach(replace => {
-
+                
                 replace.addEventListener('click', function () {
+                    // console.log('replace tile clicked')
                     if (replace.style.backgroundColor == 'green' && replace.innerText.length == 0) {
                         document.getElementById(cadetblueId).innerText = ''
                         replace.innerText = cadetblueText
@@ -555,30 +593,12 @@ document.querySelectorAll('.box').forEach(select => {
                         insertImage()
 
                     }
-
                 })
             })
-            document.querySelectorAll('.box').forEach(castle => {
-                if (castle.style.backgroundColor == 'yellow') {
-                    castle.addEventListener('click', function () {
-                        select.innerText = ''
-                        castle.innerText = 'Wking'
-                        h1.innerText = ''
-                        f1.innerText = 'Wrook'
-                        coloring()
-                        insertImage()
-                        
-                    })
-                }
-            })
-
         }
 
-
     })
-
 })
-
 
 // Prvents from selecting multiple elements
 z = 0
@@ -594,7 +614,6 @@ document.querySelectorAll('.box').forEach(ee => {
 // Board auto flip
 function flip() {
     if (tog % 2 !== 0 && tog!==1) {
-        console.log("Flipped to white")
         board = document.getElementById('board')         
         board.style.transform = 'rotate(0deg)'
         document.querySelectorAll('.box').forEach(image => {
@@ -602,7 +621,6 @@ function flip() {
         })
     }
     if (tog % 2 == 0) {
-        console.log("Flipped to Black")
         board = document.getElementById('board') 
         board.style.transform = 'rotate(180deg)'
         document.querySelectorAll('.box').forEach(image => {
