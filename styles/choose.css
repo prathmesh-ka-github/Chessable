@@ -18,6 +18,9 @@
     transition: transform 300ms;
     
 }
+.four-player-container {
+    display: block;
+}
 .sub-container:hover {
     transform: scale(1.05);
 }
@@ -25,9 +28,18 @@
 .choose-txt{
     padding: 10px;
 }
+.four-player-info{
+    display: none;
+}
 @media only screen and (max-width: 600px) {
     .choose-main{
         flex-direction: column;
         font-size: 30px;
+    }
+    .four-player-container {
+        display: none;
+    }
+    .four-player-info{
+        display: flex;
     }
   }
