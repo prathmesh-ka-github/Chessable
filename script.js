@@ -532,11 +532,11 @@ document.querySelectorAll('.box').forEach(item => {
             setTimeout(() => {
                 // console.log(`${toggle}`) 
                 if (tog % 2 == 0) {
-                    alert('White Wins by king capture!!')
+                    alert(whiteName + ' Wins by king capture!!')
                     location.reload()
                 }
                 else if (tog % 2 !== 0) {
-                    alert('Black Wins by king capture!!')
+                    alert(blackName + ' Wins by king capture!!')
                     location.reload()
                 }
             }, 500)
