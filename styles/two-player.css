@@ -99,6 +99,9 @@
     flex-direction: row;
 }
 @media only screen and (orientation:portrait) and (max-width:600px){
+    .container{
+        padding-top: 130px;
+    }
     .clk-div{
         display: flex;
         flex-direction: column;

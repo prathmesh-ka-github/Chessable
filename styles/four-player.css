@@ -61,7 +61,7 @@
 .clk-div{
     display: flex;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .clk-btn{
@@ -110,7 +110,7 @@
     background-color: #5a7935;
 }
 .clk-ply-div{
-    margin-top: 30px;
+    margin-top: 20px;
     display: flex;
     flex-direction: row;
 }
@@ -122,9 +122,13 @@
     flex-direction: row;
 }
 @media only screen and (orientation:portrait) and (max-width:600px){
+    .container{
+        padding-top: 130px;
+    }
     .clk-div{
         display: flex;
         flex-direction: column;
+        margin-top: 10px;
     }
     .clk-btn{
         margin-top:15px;
@@ -132,6 +136,7 @@
     .clk-ply-div{
         display: flex;
         flex-direction: column ;
+        margin-top: 10px;
     }
     .ply-btn-sm{
         margin-top: 15px;
@@ -139,6 +144,7 @@
     .sub-container{
         display: flex;
         flex-direction: row;
+        
     }
     #b_5min{
         margin-top: 15px;
@@ -149,6 +155,7 @@
     .red-blue-names{
         display: flex;
         flex-direction: column;
+        margin-top: 20px;
     }
     .yellow-green-names{
         display: flex;
