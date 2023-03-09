@@ -577,8 +577,8 @@ document.querySelectorAll('.box').forEach(select => {
                         document.getElementById(cadetblueId).innerText = ''
                         replace.innerText = cadetblueText
                         checkpawn()
-                        coloring()
                         insertImage()
+                        coloring()
                     }
                 })
             })
