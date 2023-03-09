@@ -148,7 +148,6 @@ document.querySelectorAll('.box').forEach(item => {
         getId = item.id
         arr = Array.from(getId)
         arr.shift()
-        console.log(arr)
         current = eval(arr.join(''))
 
         // ASIDE Calculation all done and working as expected
@@ -171,6 +170,15 @@ document.querySelectorAll('.box').forEach(item => {
         arr = Array.from(getId)
         arr.shift()
         arr.pop()
+        console.log("array is " +arr)
+        if (arr.length==2 && arr[1] !== 0) {
+            arr.pop()
+            arr.push(0)
+        }
+        if (arr.length==3 && arr[2] !== 0) {
+            arr.pop()
+            arr.push(0)
+        }
         if(arr.length == 4){
             arr.pop()
             arr.pop()
@@ -185,8 +193,9 @@ document.querySelectorAll('.box').forEach(item => {
 
         a = current
         console.log(a)
+        console.log("aup is " +aup)
+        console.log("aside is " +aside)
         // console.log('aup = ' + aup)
-        console.log('aside = ' + aside)
 
         // Function to display the available paths for all piece
         function whosTurn(toggle) {
