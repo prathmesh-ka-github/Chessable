@@ -1,14 +1,15 @@
 .main-container{
     display: flex;
     width: 100%;
+    height: 100%;
     justify-content: center;
     align-items: center;
 }
 li {
     list-style: none;
     border: 1px solid #C3CDDC;
-    width: 70px;
-    height: 70px;
+    width: 3.6vw;
+    height: 3.6vw;
     font-size: 0px;
 }
 li img{
