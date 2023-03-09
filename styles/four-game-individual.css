@@ -6,12 +6,16 @@
 }
 li {
     list-style: none;
-    border: 1px solid white;
+    border: 1px solid #C3CDDC;
     width: 70px;
     height: 70px;
+    font-size: 0px;
+}
+li img{
+    width: 100%;
 }
 .dead-box{
-    border: 1px solid blue;
+    border: 1px solid transparent;
 }
 .board div{
     display: flex;

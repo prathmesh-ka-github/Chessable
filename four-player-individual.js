@@ -30,12 +30,30 @@ function coloring() {
 coloring()
 
 
+function insertImage() {
+    document.querySelectorAll('.box').forEach(image => {
+        if (image.innerText.length !== 0) {
+            if (image.innerText == 'Rpawn' || image.innerText == 'Bpawn' || image.innerText == 'Ypawn'|| image.innerText == 'Gpawn') {
+                image.innerHTML = `${image.innerText} <img class='allimg allpawn' src="four-player-pieces/${image.innerText}.png" alt="">`
+                image.style.cursor = 'pointer'
+
+            }
+            else {
+
+                image.innerHTML = `${image.innerText} <img class='allimg' src="four-player-pieces/${image.innerText}.png" alt="">`
+                image.style.cursor = 'pointer'
+            }
+        }
+    })
+}
+insertImage()
+
 document.querySelectorAll('.box').forEach(item=> {
     item.addEventListener('click',function(){
         getId = item.id
         arr = Array.from(getId)
         arr.shift()
-        
+
         current = arr.join('')
         current = parseInt(arr.join(''))
 
