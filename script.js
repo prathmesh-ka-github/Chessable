@@ -1,4 +1,3 @@
-console.log("Hi Mom!")
 function coloring() {
     const color = document.querySelectorAll('.box')
 
@@ -153,17 +152,6 @@ document.querySelectorAll('.box').forEach(item => {
             // PAWN
 
             if (item.innerText == `${toggle}pawn`) {
-                // WORKING BUT IN NEXT MOVE
-                // if (800<a && a<809) {
-                //     console.log('promoted')
-                //     item.innerText = `${toggle}queen`
-                //     insertImage()
-                // }
-                // if (100<a && a<109) {
-                //     console.log('promoted')
-                //     item.innerText = `${toggle}queen`
-                //     insertImage()
-                // }
                 if (tog % 2 !== 0 && aup < 800) {
                     // For white side
                     if (200<a && a<209) {
@@ -487,8 +475,6 @@ document.querySelectorAll('.box').forEach(item => {
             // KNIGHT
 
             if (item.innerText == `${toggle}knight`) {
-
-
                 if (aside < 7 && aup < 800) {
                     document.getElementById(`b${a + 100 + 2}`).style.backgroundColor = 'green'
                 }
@@ -550,7 +536,7 @@ document.querySelectorAll('.box').forEach(item => {
                     location.reload()
                 }
                 else if (tog % 2 !== 0) {
-                    alert('Black Wins king capture!!')
+                    alert('Black Wins by king capture!!')
                     location.reload()
                 }
             }, 500)
@@ -578,13 +564,11 @@ document.querySelectorAll('.box').forEach(select => {
 
     select.addEventListener('click', function () {
         if (select.style.backgroundColor == 'cadetblue') {
-            console.log('piece selected')
             cadetblueId = select.id
             cadetblueText = select.innerText
             document.querySelectorAll('.box').forEach(replace => {
                 
                 replace.addEventListener('click', function () {
-                    // console.log('replace tile clicked')
                     if (replace.style.backgroundColor == 'green' && replace.innerText.length == 0) {
                         document.getElementById(cadetblueId).innerText = ''
                         replace.innerText = cadetblueText
@@ -595,9 +579,75 @@ document.querySelectorAll('.box').forEach(select => {
                 })
             })
         }
-
     })
 })
+
+// CASTLING MOVEMENT
+var whiteking = document.getElementById('b105')
+var blackking = document.getElementById('b805')
+whiteking.addEventListener('click', function(){
+        //SHORT CASTLE WHITE
+        if (whiteking.innerText == 'Wking' && f1.innerText == '' && g1.innerText=='' && whiteking.style.backgroundColor == 'cadetblue' ) {
+            g1.addEventListener('click', function() {
+                if( g1.innerText == '' && whiteking.innerText == 'Wking'){
+                    console.log('yellow tile selected')
+                    g1.innerText = 'Wking'
+                    whiteking.innerText = ' '
+                    h1.innerText = ''
+                    f1.innerText = 'Wrook'
+                    coloring()
+                    insertImage()
+                }
+            })
+        }
+        //LONG CASTLE WHITE
+        if (whiteking.innerText == 'Wking' && c1.innerText == '' && d1.innerText == '' && b1.innerText=='' && whiteking.style.backgroundColor == 'cadetblue' ) {
+            c1.addEventListener('click', function() {
+                if( c1.innerText == '' && whiteking.innerText == 'Wking'){
+                    console.log('yellow tile selected')
+                    c1.innerText = 'Wking'
+                    whiteking.innerText = ' '
+                    a1.innerText = ''
+                    d1.innerText = 'Wrook'
+                    coloring()
+                    insertImage()
+                }
+            })
+        }
+    })
+    blackking.addEventListener('click', function(){
+        //SHORT CASTLE BLACK
+        if (blackking.innerText == 'Bking' && f8.innerText == '' && g8.innerText=='' && blackking.style.backgroundColor == 'cadetblue' ) {
+            g8.addEventListener('click', function() {
+                if( g8.innerText == '' && blackking.innerText == 'Bking'){
+                    console.log('yellow tile selected')
+                    g8.innerText = 'Bking'
+                    blackking.innerText = ' '
+                    h8.innerText = ''
+                    f8.innerText = 'Brook'
+                    coloring()
+                    insertImage()
+                }
+            })
+        }
+        //LONG CASTLE BLACK
+        if (blackking.innerText == 'Bking' && c8.innerText == '' && d8.innerText == '' && b8.innerText=='' && blackking.style.backgroundColor == 'cadetblue' ) {
+            c8.addEventListener('click', function() {
+                if( c8.innerText == '' && blackking.innerText == 'Bking'){
+                    console.log('yellow tile selected')
+                    c8.innerText = 'Bking'
+                    blackking.innerText = ' '
+                    a8.innerText = ''
+                    d8.innerText = 'Brook'
+                    coloring()
+                    insertImage()
+                }
+            })
+        }
+    })
+
+
+
 
 // Prvents from selecting multiple elements
 z = 0

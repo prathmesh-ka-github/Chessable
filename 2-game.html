@@ -137,17 +137,17 @@
     </div>
     <div id="counter">
     </div>
-    <script src="script.js"></script>
     <script>
         var playtime = localStorage.getItem("timevalue");
         var blackName = localStorage.getItem("blackname");
         var whiteName = localStorage.getItem("whitename");
-
+        
         document.getElementById("black-player-name").innerHTML = blackName;
         document.getElementById("white-player-name").innerHTML = whiteName;
         document.getElementById("bmin").innerHTML = playtime;
         document.getElementById("wmin").innerHTML = playtime;
     </script>
+    <script src="script.js"></script>
     <script src="countdown.js"></script>
 </body>
 
