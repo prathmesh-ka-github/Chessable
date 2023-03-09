@@ -143,9 +143,13 @@ document.querySelectorAll('.box').forEach(item => {
         arr.shift()
         current = eval(arr.join(''))
         aside = eval(arr.pop())
+        console.log('aside = ' + aside)
         arr.push('0')
         aup = eval(arr.join(''))
+        console.log('aup = ' + aup)
         a = aside + aup
+        console.log('a = ' + a)
+
 
         // Function to display the available paths for all pieces
         function whosTurn(toggle) {
