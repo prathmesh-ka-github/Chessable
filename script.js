@@ -264,11 +264,11 @@ document.querySelectorAll('.box').forEach(item => {
                             document.getElementById(`b${current+2}`).style.backgroundColor = 'yellow';
                         }
                     }
-                }
-                // LONG CASTLE
-                if ( document.getElementById(`b${current-1}`).innerText == '' && document.getElementById(`b${current-2}`).innerText == '' && document.getElementById(`b${current-3}`).innerText == ''){
-                    if (document.getElementById(`b${current-4}`).innerText == `${toggle}rook`) {
-                        document.getElementById(`b${current-2}`).style.backgroundColor = 'yellow';
+                    // LONG CASTLE
+                    if ( document.getElementById(`b${current-1}`).innerText == '' && document.getElementById(`b${current-2}`).innerText == '' && document.getElementById(`b${current-3}`).innerText == ''){
+                        if (document.getElementById(`b${current-4}`).innerText == `${toggle}rook`) {
+                            document.getElementById(`b${current-2}`).style.backgroundColor = 'yellow';
+                        }
                     }
                 }
             }
