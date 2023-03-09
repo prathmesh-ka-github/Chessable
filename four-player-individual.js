@@ -63,11 +63,17 @@ function reddish() {
 
                     cadetblueColor = ((Array.from(cadetblueText)).shift()).toString()
                     greenColor = ((Array.from(greenText)).shift()).toString()
-
+                    
                     getId = i2.id
                     arr = Array.from(getId)
                     arr.shift()
-                    aside = eval(arr.pop())
+                    if (arr.length == 4) {
+                        aside = parseInt(arr.slice(2).join(''))
+                    }
+                    else
+                    {
+                        aside = eval(arr.pop())
+                    }            
                     aup = eval(arr.shift())
                     a = aside + aup
             
@@ -78,9 +84,9 @@ function reddish() {
                         i2.style.backgroundColor = '#C3CDDC'
                     }
 
-                    // if (cadetblueColor == greenColor) {
-                    //     i2.style.backgroundColor = 'rgb(253, 60, 60)'
-                    // }
+                    if (cadetblueColor == greenColor) {
+                        i2.style.backgroundColor = 'rgb(253, 60, 60)'
+                    }
                 }
             })
         }
@@ -93,33 +99,24 @@ function reddish() {
 tog = 1
 document.querySelectorAll('.box').forEach(item => {
     item.addEventListener('click', function(){
-        
+        // console.log("tog - "+ tog)
+
+                // To delete the opposite element
         if (item.style.backgroundColor == 'green' && item.innerText.length == 0) {
-            if (tog == 1) {
-                console.log(tog)
-                tog ++
+            if (tog<4) {
+                tog++
             }
-            if (tog == 2) {
-                tog = tog + 1
-            }
-            if (tog == 3) {
-                tog = tog +1
-            }
-            if (tog == 4) {
+            else
+            {
                 tog = 1
             }
         }
         if (item.style.backgroundColor == 'yellow' && item.innerText.length == 0) {
-            if (tog == 1) {
-                tog = tog +1
+            if (tog<4) {
+                tog++
             }
-            if (tog == 2) {
-                tog = tog +1
-            }
-            if (tog == 3) {
-                tog = tog +1
-            }
-            if (tog == 4) {
+            else
+            {
                 tog = 1
             }
         }
@@ -133,20 +130,14 @@ document.querySelectorAll('.box').forEach(item => {
                     
                     document.getElementById(cadetblueId).innerText = ''
                     item.innerText = cadetblueText
-                    coloring()
-                    if (tog == 1) {
-                        tog = tog +1
+                    if (tog<4) {
+                        tog++
                     }
-                    if (tog == 2) {
-                        tog = tog +1
-                    }
-                    if (tog == 3) {
-                        tog = tog +1
-                    }
-                    if (tog == 4) {
+                    else
+                    {
                         tog = 1
                     }
-                    checkpawn()
+                    coloring()
                     insertImage()
                 }
 
@@ -154,27 +145,55 @@ document.querySelectorAll('.box').forEach(item => {
         }
 
 
-
-
         getId = item.id
         arr = Array.from(getId)
         arr.shift()
         current = eval(arr.join(''))
-        aside = eval(arr.pop())
-            console.log('aside = ' + aside)
+        if (arr.length == 4) {
+            aside = parseInt(arr.slice(2).join(''))
+        }
+        else
+        {
+            aside = eval(arr.pop())
+        }
+
+        // AUP calculation all done and working as expected
+        arr = Array.from(getId)
+        arr.shift()
+        arr.pop()
+        if(arr.length == 4){
+            arr.pop()
+            arr.pop()
+            arr.push('0')
+        }
+        console.log(arr)
+
         arr.push('0')
         aup = eval(arr.join(''))
-            console.log('aup = ' + aup)
-        a = aside + aup
-            console.log('a = ' + a)
+
+
+
+
+        a = current
+        console.log(a)
+        console.log('aup = ' + aup)
+        console.log('aside = ' + aside)
 
         // Function to display the available paths for all piece
         function whosTurn(toggle) {
             //  PAWN
-            if (item.innerText == "Rpawn") 
+            if (item.innerText == "Rpawn" && tog == 1) 
             {
+                item.style.backgroundColor = 'cadetblue'
+
                 if (tog == 1 && aup > 100) {
                     // For red side
+                    if (a>1304 && a<1313) {
+                        if (document.getElementById(`b${a - 200}`).innerText.length == 0 && document.getElementById(`b${a - 100}`).innerText.length == 0) {
+                            document.getElementById(`b${a - 200}`).style.backgroundColor = 'green'
+                        }
+                        
+                    }
                     if (document.getElementById(`b${a - 100}`).innerText.length == 0) {
                         document.getElementById(`b${a - 100}`).style.backgroundColor = 'green'
                     }
@@ -182,16 +201,22 @@ document.querySelectorAll('.box').forEach(item => {
                         document.getElementById(`b${a - 100 + 1}`).style.backgroundColor = 'green'
                     }
 
-                    if (aside > 1 && document.getElementById(`b${a - 100 + 1}`).innerText.length !== 0) {
+                    if (aside > 1 && document.getElementById(`b${a - 100 - 1}`).innerText.length !== 0) {
                         document.getElementById(`b${a - 100 - 1}`).style.backgroundColor = 'green'
                     }
                 }
-                item.style.backgroundColor = 'cadetblue'
             }
-            if (item.innerText == "Bpawn") 
+            if (item.innerText == "Bpawn" && tog == 2) 
             {   
+                item.style.backgroundColor = 'cadetblue'
                 if (tog == 2) {
                     // For blue side
+                    if (a==403 || a==503 || a==603 || a==703||a==803||a==903||a==1003||a==1103 ) {
+                        if (document.getElementById(`b${a + 2}`).innerText.length == 0 && document.getElementById(`b${a + 1}`).innerText.length == 0) {
+                            document.getElementById(`b${a + 2}`).style.backgroundColor = 'green'
+                        }
+                        
+                    }
                     if (document.getElementById(`b${a + 1}`).innerText.length == 0) {
                         document.getElementById(`b${a + 1}`).style.backgroundColor = 'green'
                     }
@@ -203,7 +228,84 @@ document.querySelectorAll('.box').forEach(item => {
                         document.getElementById(`b${a - 100 + 1}`).style.backgroundColor = 'green'
                     }
                 }
+            }
+            if (item.innerText == "Ypawn" && tog == 3) 
+            {
                 item.style.backgroundColor = 'cadetblue'
+
+                if (tog == 3) {
+                    // For yellow side
+                    if (a>204 && a<213) {
+                        if (document.getElementById(`b${a + 200}`).innerText.length == 0 && document.getElementById(`b${a + 100}`).innerText.length == 0) {
+                            document.getElementById(`b${a + 200}`).style.backgroundColor = 'green'
+                        }
+                        
+                    }
+                    if (document.getElementById(`b${a + 100}`).innerText.length == 0) {
+                        document.getElementById(`b${a + 100}`).style.backgroundColor = 'green'
+                    }
+                    if (aside < 8 && document.getElementById(`b${a + 100 + 1}`).innerText.length !== 0) {
+                        document.getElementById(`b${a + 100 + 1}`).style.backgroundColor = 'green'
+                    }
+
+                    if (aside > 1 && document.getElementById(`b${a + 100 - 1}`).innerText.length !== 0) {
+                        document.getElementById(`b${a + 100 - 1}`).style.backgroundColor = 'green'
+                    }
+                }
+            }
+            if (item.innerText == "Gpawn" && tog == 4) 
+            {   
+                item.style.backgroundColor = 'cadetblue'
+                if (tog == 4) {
+                    // For green side
+                    if (a==414 || a==514 || a==614 || a==714||a==814||a==914||a==1014||a==1114 ) {
+                        if (document.getElementById(`b${a - 2}`).innerText.length == 0 && document.getElementById(`b${a - 1}`).innerText.length == 0) {
+                            document.getElementById(`b${a - 2}`).style.backgroundColor = 'green'
+                        }
+                        
+                    }
+                    if (document.getElementById(`b${a - 1}`).innerText.length == 0) {
+                        document.getElementById(`b${a - 1}`).style.backgroundColor = 'green'
+                    }
+                    if (aside < 8 && document.getElementById(`b${a - 100 - 1}`).innerText.length !== 0) {
+                        document.getElementById(`b${a - 100 - 1}`).style.backgroundColor = 'green'
+                    }
+                    
+                    if (aside > 1 && document.getElementById(`b${a + 100 - 1}`).innerText.length !== 0) {
+                        console.log('this runned')
+                        document.getElementById(`b${a + 100 - 1}`).style.backgroundColor = 'green'
+                    }
+                }
+            }
+
+            if (item.innerText == `${toggle}knight`) {
+                if (a) {
+                    document.getElementById(`b${a + 100 + 2}`).style.backgroundColor = 'green'
+                }
+                if (aside < 7 && aup > 200) {
+                    document.getElementById(`b${a - 100 + 2}`).style.backgroundColor = 'green'
+                }
+                if (aside < 8 && aup < 700) {
+                    document.getElementById(`b${a + 200 + 1}`).style.backgroundColor = 'green'
+                }
+                if (aside > 1 && aup < 700) {
+                    document.getElementById(`b${a + 200 - 1}`).style.backgroundColor = 'green'
+                }
+                if (aside > 2 && aup < 800) {
+                    document.getElementById(`b${a - 2 + 100}`).style.backgroundColor = 'green'
+                }
+                if (aside > 2 && aup > 100) {
+                    document.getElementById(`b${a - 2 - 100}`).style.backgroundColor = 'green'
+                }
+                if (aside < 8 && aup > 200) {
+                    document.getElementById(`b${a - 200 + 1}`).style.backgroundColor = 'green'
+                }
+                if (aside > 1 && aup > 200) {
+                    document.getElementById(`b${a - 200 - 1}`).style.backgroundColor = 'green'
+                }
+
+                item.style.backgroundColor = 'cadetblue'
+
             }
         }
 
@@ -276,14 +378,24 @@ document.querySelectorAll('.box').forEach(ee => {
 
 document.querySelectorAll('.box').forEach(tile=> {
     tile.addEventListener('click',function(){
-        getId = tile.id
+        getId = tile.id     //b104
         arr = Array.from(getId)
-        arr.shift()
-
-        current = arr.join('')
-        current = parseInt(arr.join(''))
-
+        arr.shift()     //104
+        current = arr.join('')      //current = "104"
+        current = parseInt(arr.join(''))        //current = 104
         aside = eval(arr.pop())
+
+        arr = Array.from(getId)
+        arr.shift() 
+        // console.log("arr is " + arr)
+
+        if (arr.length == 4) {
+            aside = parseInt(arr.slice(2).join(''))
+            // console.log("aside is "+ aside)
+        }
+
+        // console.log("outside aside is " + aside)
+        // console.log(current)
         aup = eval(arr.shift())
         a = aside + aup
 
