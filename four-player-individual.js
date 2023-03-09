@@ -34,13 +34,12 @@ function insertImage() {
     document.querySelectorAll('.box').forEach(image => {
         if (image.innerText.length !== 0) {
             if (image.innerText == 'Rpawn' || image.innerText == 'Bpawn' || image.innerText == 'Ypawn'|| image.innerText == 'Gpawn') {
-                image.innerHTML = `${image.innerText} <img class='allimg allpawn' src="four-player-pieces/${image.innerText}.png" alt="">`
+                image.innerHTML = `${image.innerText}<img class='allimg allpawn' src="four-player-pieces/${image.innerText}.png">`
                 image.style.cursor = 'pointer'
 
             }
             else {
-
-                image.innerHTML = `${image.innerText} <img class='allimg' src="four-player-pieces/${image.innerText}.png" alt="">`
+                image.innerHTML = `${image.innerText}<img class='allimg' src="four-player-pieces/${image.innerText}.png">`
                 image.style.cursor = 'pointer'
             }
         }
@@ -96,10 +95,33 @@ document.querySelectorAll('.box').forEach(item => {
     item.addEventListener('click', function(){
         
         if (item.style.backgroundColor == 'green' && item.innerText.length == 0) {
-            tog = tog + 1
+            if (tog == 1) {
+                console.log(tog)
+                tog ++
+            }
+            if (tog == 2) {
+                tog = tog + 1
+            }
+            if (tog == 3) {
+                tog = tog +1
+            }
+            if (tog == 4) {
+                tog = 1
+            }
         }
         if (item.style.backgroundColor == 'yellow' && item.innerText.length == 0) {
-            tog = tog + 1
+            if (tog == 1) {
+                tog = tog +1
+            }
+            if (tog == 2) {
+                tog = tog +1
+            }
+            if (tog == 3) {
+                tog = tog +1
+            }
+            if (tog == 4) {
+                tog = 1
+            }
         }
         
         else if (item.style.backgroundColor == 'green' && item.innerText.length !== 0) {
@@ -112,9 +134,18 @@ document.querySelectorAll('.box').forEach(item => {
                     document.getElementById(cadetblueId).innerText = ''
                     item.innerText = cadetblueText
                     coloring()
-                    insertImage()
-                    tog = tog + 1
-                    setTimeout(flip, 800);
+                    if (tog == 1) {
+                        tog = tog +1
+                    }
+                    if (tog == 2) {
+                        tog = tog +1
+                    }
+                    if (tog == 3) {
+                        tog = tog +1
+                    }
+                    if (tog == 4) {
+                        tog = 1
+                    }
                     checkpawn()
                     insertImage()
                 }
@@ -130,20 +161,18 @@ document.querySelectorAll('.box').forEach(item => {
         arr.shift()
         current = eval(arr.join(''))
         aside = eval(arr.pop())
-            // console.log('aside = ' + aside)
+            console.log('aside = ' + aside)
         arr.push('0')
         aup = eval(arr.join(''))
-            // console.log('aup = ' + aup)
+            console.log('aup = ' + aup)
         a = aside + aup
             console.log('a = ' + a)
-            console.log(item.innerText)
+
         // Function to display the available paths for all piece
         function whosTurn(toggle) {
-            console.log('function whose turn active')
             //  PAWN
-            if (item.innerText == `${toggle}pawn`) 
+            if (item.innerText == "Rpawn") 
             {
-                console.log('Red pawn selected')
                 if (tog == 1 && aup > 100) {
                     // For red side
                     if (document.getElementById(`b${a - 100}`).innerText.length == 0) {
@@ -155,6 +184,23 @@ document.querySelectorAll('.box').forEach(item => {
 
                     if (aside > 1 && document.getElementById(`b${a - 100 + 1}`).innerText.length !== 0) {
                         document.getElementById(`b${a - 100 - 1}`).style.backgroundColor = 'green'
+                    }
+                }
+                item.style.backgroundColor = 'cadetblue'
+            }
+            if (item.innerText == "Bpawn") 
+            {   
+                if (tog == 2) {
+                    // For blue side
+                    if (document.getElementById(`b${a + 1}`).innerText.length == 0) {
+                        document.getElementById(`b${a + 1}`).style.backgroundColor = 'green'
+                    }
+                    if (aside < 8 && document.getElementById(`b${a + 100 + 1}`).innerText.length !== 0) {
+                        document.getElementById(`b${a + 100 + 1}`).style.backgroundColor = 'green'
+                    }
+
+                    if (aside > 1 && document.getElementById(`b${a - 100 + 1}`).innerText.length !== 0) {
+                        document.getElementById(`b${a - 100 + 1}`).style.backgroundColor = 'green'
                     }
                 }
                 item.style.backgroundColor = 'cadetblue'
@@ -192,7 +238,6 @@ document.querySelectorAll('.box').forEach(select => {
                     if (replace.style.backgroundColor == 'green' && replace.innerText.length == 0) {
                         document.getElementById(cadetblueId).innerText = ''
                         replace.innerText = cadetblueText
-                        checkpawn()
                         coloring()
                         insertImage()
                     }
