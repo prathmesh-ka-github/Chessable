@@ -8,8 +8,10 @@
 li {
     list-style: none;
     border: 1px solid #C3CDDC;
-    width: 3.6vw;
-    height: 3.6vw;
+    /* width: 3.6vw;
+    height: 3.6vw; */
+    width: 70px;
+    height: 70px;
     font-size: 0px;
 }
 li img{

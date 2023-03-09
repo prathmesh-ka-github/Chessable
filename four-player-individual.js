@@ -84,9 +84,9 @@ function reddish() {
                         i2.style.backgroundColor = '#C3CDDC'
                     }
 
-                    if (cadetblueColor == greenColor) {
-                        i2.style.backgroundColor = 'rgb(253, 60, 60)'
-                    }
+                    // if (cadetblueColor == greenColor) {
+                    //     i2.style.backgroundColor = 'rgb(253, 60, 60)'
+                    // }
                 }
             })
         }
@@ -170,7 +170,6 @@ document.querySelectorAll('.box').forEach(item => {
         arr = Array.from(getId)
         arr.shift()
         arr.pop()
-        console.log("array is " +arr)
         if (arr.length==2 && arr[1] !== 0) {
             arr.pop()
             arr.push(0)
@@ -206,7 +205,7 @@ document.querySelectorAll('.box').forEach(item => {
 
                 if (tog == 1 && aup > 100) {
                     // For red side
-                    if (a>1304 && a<1313) {
+                    if (a>1304 && aup == 1300) {
                         if (document.getElementById(`b${a - 200}`).innerText.length == 0 && document.getElementById(`b${a - 100}`).innerText.length == 0) {
                             document.getElementById(`b${a - 200}`).style.backgroundColor = 'green'
                         }
@@ -229,7 +228,7 @@ document.querySelectorAll('.box').forEach(item => {
                 item.style.backgroundColor = 'cadetblue'
                 if (tog == 2) {
                     // For blue side
-                    if (a==403 || a==503 || a==603 || a==703||a==803||a==903||a==1003||a==1103 ) {
+                    if (aside == 3 ) {
                         if (document.getElementById(`b${a + 2}`).innerText.length == 0 && document.getElementById(`b${a + 1}`).innerText.length == 0) {
                             document.getElementById(`b${a + 2}`).style.backgroundColor = 'green'
                         }
@@ -253,7 +252,7 @@ document.querySelectorAll('.box').forEach(item => {
 
                 if (tog == 3) {
                     // For yellow side
-                    if (a>204 && a<213) {
+                    if (aup == 200) {
                         if (document.getElementById(`b${a + 200}`).innerText.length == 0 && document.getElementById(`b${a + 100}`).innerText.length == 0) {
                             document.getElementById(`b${a + 200}`).style.backgroundColor = 'green'
                         }
@@ -276,7 +275,7 @@ document.querySelectorAll('.box').forEach(item => {
                 item.style.backgroundColor = 'cadetblue'
                 if (tog == 4) {
                     // For green side
-                    if (a==414 || a==514 || a==614 || a==714||a==814||a==914||a==1014||a==1114 ) {
+                    if (aside == 14) {
                         if (document.getElementById(`b${a - 2}`).innerText.length == 0 && document.getElementById(`b${a - 1}`).innerText.length == 0) {
                             document.getElementById(`b${a - 2}`).style.backgroundColor = 'green'
                         }
@@ -297,28 +296,28 @@ document.querySelectorAll('.box').forEach(item => {
             }
 
             if (item.innerText == `${toggle}knight`) {
-                if (a) {
+                if (document.getElementById(`b${a + 100 + 2}`)) {
                     document.getElementById(`b${a + 100 + 2}`).style.backgroundColor = 'green'
                 }
-                if (aside < 7 && aup > 200) {
+                if (document.getElementById(`b${a - 100 + 2}`)) {
                     document.getElementById(`b${a - 100 + 2}`).style.backgroundColor = 'green'
                 }
-                if (aside < 8 && aup < 700) {
+                if (document.getElementById(`b${a + 200 + 1}`)) {
                     document.getElementById(`b${a + 200 + 1}`).style.backgroundColor = 'green'
                 }
-                if (aside > 1 && aup < 700) {
+                if (document.getElementById(`b${a + 200 - 1}`)) {
                     document.getElementById(`b${a + 200 - 1}`).style.backgroundColor = 'green'
                 }
-                if (aside > 2 && aup < 800) {
+                if (document.getElementById(`b${a - 2 + 100}`)) {
                     document.getElementById(`b${a - 2 + 100}`).style.backgroundColor = 'green'
                 }
-                if (aside > 2 && aup > 100) {
+                if (document.getElementById(`b${a - 2 - 100}`)) {
                     document.getElementById(`b${a - 2 - 100}`).style.backgroundColor = 'green'
                 }
-                if (aside < 8 && aup > 200) {
+                if (document.getElementById(`b${a - 200 + 1}`)) {
                     document.getElementById(`b${a - 200 + 1}`).style.backgroundColor = 'green'
                 }
-                if (aside > 1 && aup > 200) {
+                if (document.getElementById(`b${a - 200 - 1}`)) {
                     document.getElementById(`b${a - 200 - 1}`).style.backgroundColor = 'green'
                 }
 
