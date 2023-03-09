@@ -148,14 +148,24 @@ document.querySelectorAll('.box').forEach(item => {
         getId = item.id
         arr = Array.from(getId)
         arr.shift()
+        console.log(arr)
         current = eval(arr.join(''))
-        if (arr.length == 4) {
+
+        // ASIDE Calculation all done and working as expected
+        if (arr.length==3 && arr[1] == 0) {
+            aside = parseInt(arr.slice(1).join(''))
+        }
+        if (arr.length==3 && arr[1] !== 0) {
+            aside = parseInt(arr.slice(1).join(''))
+        }
+        if (arr.length==4 && arr[2] == 0) {
             aside = parseInt(arr.slice(2).join(''))
         }
-        else
-        {
-            aside = eval(arr.pop())
+        if (arr.length==4 && arr[2] !== 0) {
+            aside = parseInt(arr.slice(2).join(''))
         }
+
+
 
         // AUP calculation all done and working as expected
         arr = Array.from(getId)
@@ -166,7 +176,6 @@ document.querySelectorAll('.box').forEach(item => {
             arr.pop()
             arr.push('0')
         }
-        console.log(arr)
 
         arr.push('0')
         aup = eval(arr.join(''))
@@ -176,7 +185,7 @@ document.querySelectorAll('.box').forEach(item => {
 
         a = current
         console.log(a)
-        console.log('aup = ' + aup)
+        // console.log('aup = ' + aup)
         console.log('aside = ' + aside)
 
         // Function to display the available paths for all piece
