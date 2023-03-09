@@ -1,0 +1,18 @@
+.main-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+li {
+    list-style: none;
+    border: 1px solid white;
+    width: 70px;
+    height: 70px;
+}
+.dead-box{
+    border: 1px solid blue;
+}
+.board div{
+    display: flex;
+}
