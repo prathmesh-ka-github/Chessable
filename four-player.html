@@ -39,5 +39,47 @@
             </div>
         </div>
     </div>
+    <script>
+        var redName = "Red Player"
+        var blueName = "Blue Player"
+        var yellowName = "Yellow Player"
+        var greenName = "Green Player"
+        var playtime = 10;
+
+        function setlocalstorage(){
+            localStorage.setItem("timevalue", playtime);
+            localStorage.setItem("redname", redName);
+            localStorage.setItem("bluename", blueName);
+            localStorage.setItem("yellowname", yellowName);
+            localStorage.setItem("greenname", greenName);
+        }
+        function savedefaults(){
+            if (redName == "") {
+                Name = "Red Player";
+            }
+            if (blueName == "") {
+                Name = "Blue Player";
+            }
+            if (yellowName == "") {
+                Name = "Yellow Player";
+            }
+            if (greenName == "") {
+                Name = "Green Player";
+            }
+        }
+        function fivemin() {
+            console.log('Time set to 5 mins');
+            playtime = 5;
+            redName = document.getElementById("red-player").value
+            blueName = document.getElementById("blue-player").value
+            yellowName = document.getElementById("yellow-player").value
+            greenName = document.getElementById("green-player").value
+            savedefaults();
+            setlocalstorage();
+            document.getElementById("b_5min").style.backgroundColor = "#7FA650"//b_5min btn is selected
+            document.getElementById("b_10min").style.backgroundColor = "#4F4844"
+            document.getElementById("b_15min").style.backgroundColor = "#4F4844"
+        }
+    </script>
 </body>
 </html>

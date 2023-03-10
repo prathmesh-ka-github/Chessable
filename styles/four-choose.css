@@ -8,8 +8,7 @@
     flex-direction: row-reverse;
 }
 .choose-btn{
-    all:unset;
-    background-color: #4F4844;
+    all:unset;     background-color: #4F4844;
     display: flex;
     flex-direction: column;
     align-items: center;
