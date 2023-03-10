@@ -158,20 +158,20 @@ document.querySelectorAll('.box').forEach(item => {
             if (item.innerText == `${toggle}pawn`) {
                 if (tog % 2 !== 0 && aup < 800) {
                     // For white side
-                    if (200<a && a<209) {
+                    if (aup == 200) {
                         //for pawn can move two squares on first move
-                        if (document.getElementById(`b${a + 200}`).innerText.length == 0) {
+                        if (document.getElementById(`b${a + 200}`).innerText.length == 0 && document.getElementById(`b${a + 100}`).innerText.length == 0) {
                             document.getElementById(`b${a + 200}`).style.backgroundColor = 'green'
                         }
                     }
                     if (document.getElementById(`b${a + 100}`).innerText.length == 0) {
                         document.getElementById(`b${a + 100}`).style.backgroundColor = 'green'
                     }
-                    if (aside < 8 && document.getElementById(`b${a + 100 + 1}`).innerText.length !== 0) {
+                    if (document.getElementById(`b${a + 100 + 1}`) && document.getElementById(`b${a + 100 + 1}`).innerText.length !== 0) {
                         document.getElementById(`b${a + 100 + 1}`).style.backgroundColor = 'green'
                     }
 
-                    if (aside > 1 && document.getElementById(`b${a + 100 - 1}`).innerText.length !== 0) {
+                    if (document.getElementById(`b${a + 100 - 1}`) && document.getElementById(`b${a + 100 - 1}`).innerText.length !== 0) {
                         document.getElementById(`b${a + 100 - 1}`).style.backgroundColor = 'green'
 
                     }
@@ -180,19 +180,19 @@ document.querySelectorAll('.box').forEach(item => {
 
                 if (tog % 2 == 0 && aup > 100) {
                     // For black side
-                    if (700<a && a<709) {
+                    if (aup == 700) {
                         //for pawn can move two squares on first move
-                        if (document.getElementById(`b${a - 200}`).innerText.length == 0) {
+                        if (document.getElementById(`b${a - 200}`).innerText.length == 0 && document.getElementById(`b${a - 100}`).innerText.length == 0) {
                             document.getElementById(`b${a - 200}`).style.backgroundColor = 'green'
                         }
                     }
                     if (document.getElementById(`b${a - 100}`).innerText.length == 0) {
                         document.getElementById(`b${a - 100}`).style.backgroundColor = 'green'
                     }
-                    if (aside < 8 && document.getElementById(`b${a - 100 + 1}`).innerText.length !== 0) {
+                    if (document.getElementById(`b${a - 100 + 1}`) && document.getElementById(`b${a - 100 + 1}`).innerText.length !== 0) {
                         document.getElementById(`b${a - 100 + 1}`).style.backgroundColor = 'green'
                     }
-                    if (aside > 1 && document.getElementById(`b${a - 100 - 1}`).innerText.length !== 0) {
+                    if (document.getElementById(`b${a - 100 - 1}`) && document.getElementById(`b${a - 100 - 1}`).innerText.length !== 0) {
                         document.getElementById(`b${a - 100 - 1}`).style.backgroundColor = 'green'
 
                     }
@@ -207,37 +207,29 @@ document.querySelectorAll('.box').forEach(item => {
             if (item.innerText == `${toggle}king`) {
 
 
-                if (aside < 8) {
+                if (document.getElementById(`b${a + 1}`)) {
                     document.getElementById(`b${a + 1}`).style.backgroundColor = 'green'
-
                 }
-                if (aside > 1) {
-
+                if (document.getElementById(`b${a - 1}`)) {
                     document.getElementById(`b${a - 1}`).style.backgroundColor = 'green'
                 }
-                if (aup < 800) {
-
+                if (document.getElementById(`b${a + 100}`)) {
                     document.getElementById(`b${a + 100}`).style.backgroundColor = 'green'
                 }
-                if (aup > 100) {
-
+                if (document.getElementById(`b${a - 100}`)) {
                     document.getElementById(`b${a - 100}`).style.backgroundColor = 'green'
                 }
 
-                if (aup > 100 && aside < 8) {
-
+                if (document.getElementById(`b${a - 100 + 1}`)) {
                     document.getElementById(`b${a - 100 + 1}`).style.backgroundColor = 'green'
                 }
-                if (aup > 100 && aside > 1) {
-
+                if (document.getElementById(`b${a - 100 - 1}`)) {
                     document.getElementById(`b${a - 100 - 1}`).style.backgroundColor = 'green'
                 }
-                if (aup < 800 && aside < 8) {
-
+                if (document.getElementById(`b${a + 100 + 1}`)) {
                     document.getElementById(`b${a + 100 + 1}`).style.backgroundColor = 'green'
                 }
-                if (aup < 800 && aside > 1) {
-
+                if (document.getElementById(`b${a + 100 - 1}`)) {
                     document.getElementById(`b${a + 100 - 1}`).style.backgroundColor = 'green'
                 }
 
@@ -271,10 +263,10 @@ document.querySelectorAll('.box').forEach(item => {
 
                 for (let i = 1; i < 9; i++) {
 
-                    if ((a + i * 100) < 900 && document.getElementById(`b${a + i * 100}`).innerText == 0) {
+                    if (document.getElementById(`b${a + i * 100}`) && document.getElementById(`b${a + i * 100}`).innerText == 0) {
                         document.getElementById(`b${a + i * 100}`).style.backgroundColor = 'green'
                     }
-                    else if ((a + i * 100) < 900 && document.getElementById(`b${a + i * 100}`).innerText !== 0) {
+                    else if (document.getElementById(`b${a + i * 100}`) && document.getElementById(`b${a + i * 100}`).innerText !== 0) {
                         document.getElementById(`b${a + i * 100}`).style.backgroundColor = 'green'
                         break
                     }
@@ -282,10 +274,10 @@ document.querySelectorAll('.box').forEach(item => {
 
                 for (let i = 1; i < 9; i++) {
 
-                    if ((a - i * 100) > 100 && document.getElementById(`b${a - i * 100}`).innerText == 0) {
+                    if (document.getElementById(`b${a - i * 100}`) && document.getElementById(`b${a - i * 100}`).innerText == 0) {
                         document.getElementById(`b${a - i * 100}`).style.backgroundColor = 'green'
                     }
-                    else if ((a - i * 100) > 100 && document.getElementById(`b${a - i * 100}`).innerText !== 0) {
+                    else if (document.getElementById(`b${a - i * 100}`) && document.getElementById(`b${a - i * 100}`).innerText !== 0) {
                         document.getElementById(`b${a - i * 100}`).style.backgroundColor = 'green'
                         break
                     }
@@ -293,10 +285,10 @@ document.querySelectorAll('.box').forEach(item => {
 
                 for (let i = 1; i < 9; i++) {
 
-                    if ((a + i) < (aup + 9) && document.getElementById(`b${a + i}`).innerText == 0) {
+                    if (document.getElementById(`b${a + i}`) && document.getElementById(`b${a + i}`).innerText == 0) {
                         document.getElementById(`b${a + i}`).style.backgroundColor = 'green'
                     }
-                    else if ((a + i) < (aup + 9) && document.getElementById(`b${a + i}`).innerText !== 0) {
+                    else if (document.getElementById(`b${a + i}`) && document.getElementById(`b${a + i}`).innerText !== 0) {
                         document.getElementById(`b${a + i}`).style.backgroundColor = 'green'
                         break
                     }
@@ -304,10 +296,10 @@ document.querySelectorAll('.box').forEach(item => {
 
                 for (let i = 1; i < 9; i++) {
 
-                    if ((a - i) > (aup) && document.getElementById(`b${a - i}`).innerText == 0) {
+                    if (document.getElementById(`b${a - i}`) && document.getElementById(`b${a - i}`).innerText == 0) {
                         document.getElementById(`b${a - i}`).style.backgroundColor = 'green'
                     }
-                    else if ((a - i) > (aup) && document.getElementById(`b${a - i}`).innerText !== 0) {
+                    else if (document.getElementById(`b${a - i}`) && document.getElementById(`b${a - i}`).innerText !== 0) {
                         document.getElementById(`b${a - i}`).style.backgroundColor = 'green'
                         break
                     }
@@ -324,53 +316,43 @@ document.querySelectorAll('.box').forEach(item => {
 
 
                 for (let i = 1; i < 9; i++) {
-                    if (i < (900 - aup) / 100 && i < 9 - aside && document.getElementById(`b${a + i * 100 + i}`).innerText.length == 0) {
+                    if (document.getElementById(`b${a + i * 100 + i}`) && document.getElementById(`b${a + i * 100 + i}`).innerText.length == 0) {
                         document.getElementById(`b${a + i * 100 + i}`).style.backgroundColor = 'green'
                     }
-                    else if (i < (900 - aup) / 100 && i < 9 - aside && document.getElementById(`b${a + i * 100 + i}`).innerText.length !== 0) {
+                    else if (document.getElementById(`b${a + i * 100 + i}`) && document.getElementById(`b${a + i * 100 + i}`).innerText.length !== 0) {
                         document.getElementById(`b${a + i * 100 + i}`).style.backgroundColor = 'green'
                         break
                     }
                 }
-
-
                 for (let i = 1; i < 9; i++) {
-                    if (i < aup / 100 && i < 9 - aside && document.getElementById(`b${a - i * 100 + i}`).innerText.length == 0) {
+                    if (document.getElementById(`b${a - i * 100 + i}`) && document.getElementById(`b${a - i * 100 + i}`).innerText.length == 0) {
                         document.getElementById(`b${a - i * 100 + i}`).style.backgroundColor = 'green'
                     }
-                    else if (i < aup / 100 && i < 9 - aside && document.getElementById(`b${a - i * 100 + i}`).innerText.length !== 0) {
+                    else if (document.getElementById(`b${a - i * 100 + i}`) && document.getElementById(`b${a - i * 100 + i}`).innerText.length !== 0) {
                         document.getElementById(`b${a - i * 100 + i}`).style.backgroundColor = 'green'
                         break
                     }
                 }
-
-
                 for (let i = 1; i < 9; i++) {
-                    if (i < (900 - aup) / 100 && i < aside && document.getElementById(`b${a + i * 100 - i}`).innerText.length == 0) {
+                    if (document.getElementById(`b${a + i * 100 - i}`) && document.getElementById(`b${a + i * 100 - i}`).innerText.length == 0) {
                         document.getElementById(`b${a + i * 100 - i}`).style.backgroundColor = 'green'
                     }
-                    else if (i < (900 - aup) / 100 && i < aside && document.getElementById(`b${a + i * 100 - i}`).innerText.length !== 0) {
+                    else if (document.getElementById(`b${a + i * 100 - i}`) && document.getElementById(`b${a + i * 100 - i}`).innerText.length !== 0) {
                         document.getElementById(`b${a + i * 100 - i}`).style.backgroundColor = 'green'
                         break
                     }
 
                 }
-
-
                 for (let i = 1; i < 9; i++) {
-                    if (i < aup / 100 && i < aside && document.getElementById(`b${a - i * 100 - i}`).innerText.length == 0) {
+                    if (document.getElementById(`b${a - i * 100 - i}`) && document.getElementById(`b${a - i * 100 - i}`).innerText.length == 0) {
                         document.getElementById(`b${a - i * 100 - i}`).style.backgroundColor = 'green'
                     }
-                    else if (i < aup / 100 && i < aside && document.getElementById(`b${a - i * 100 - i}`).innerText.length !== 0) {
+                    else if (document.getElementById(`b${a - i * 100 - i}`) && document.getElementById(`b${a - i * 100 - i}`).innerText.length !== 0) {
                         document.getElementById(`b${a - i * 100 - i}`).style.backgroundColor = 'green'
                         break
                     }
                 }
-
-
-
                 item.style.backgroundColor = 'cadetblue'
-
             }
 
 
@@ -378,134 +360,114 @@ document.querySelectorAll('.box').forEach(item => {
             // QUEEN
 
             if (item.innerText == `${toggle}queen`) {
-
-
                 for (let i = 1; i < 9; i++) {
 
-                    if ((a + i * 100) < 900 && document.getElementById(`b${a + i * 100}`).innerText == 0) {
+                    if (document.getElementById(`b${a + i * 100}`) && document.getElementById(`b${a + i * 100}`).innerText == 0) {
                         document.getElementById(`b${a + i * 100}`).style.backgroundColor = 'green'
                     }
-                    else if ((a + i * 100) < 900 && document.getElementById(`b${a + i * 100}`).innerText !== 0) {
+                    else if (document.getElementById(`b${a + i * 100}`) && document.getElementById(`b${a + i * 100}`).innerText !== 0) {
                         document.getElementById(`b${a + i * 100}`).style.backgroundColor = 'green'
                         break
                     }
                 }
-
                 for (let i = 1; i < 9; i++) {
 
-                    if ((a - i * 100) > 100 && document.getElementById(`b${a - i * 100}`).innerText == 0) {
+                    if (document.getElementById(`b${a - i * 100}`) && document.getElementById(`b${a - i * 100}`).innerText == 0) {
                         document.getElementById(`b${a - i * 100}`).style.backgroundColor = 'green'
                     }
-                    else if ((a - i * 100) > 100 && document.getElementById(`b${a - i * 100}`).innerText !== 0) {
+                    else if (document.getElementById(`b${a - i * 100}`) && document.getElementById(`b${a - i * 100}`).innerText !== 0) {
                         document.getElementById(`b${a - i * 100}`).style.backgroundColor = 'green'
                         break
                     }
                 }
-
                 for (let i = 1; i < 9; i++) {
 
-                    if ((a + i) < (aup + 9) && document.getElementById(`b${a + i}`).innerText == 0) {
+                    if (document.getElementById(`b${a + i}`) && document.getElementById(`b${a + i}`).innerText == 0) {
                         document.getElementById(`b${a + i}`).style.backgroundColor = 'green'
                     }
-                    else if ((a + i) < (aup + 9) && document.getElementById(`b${a + i}`).innerText !== 0) {
+                    else if (document.getElementById(`b${a + i}`) && document.getElementById(`b${a + i}`).innerText !== 0) {
                         document.getElementById(`b${a + i}`).style.backgroundColor = 'green'
                         break
                     }
                 }
-
                 for (let i = 1; i < 9; i++) {
 
-                    if ((a - i) > (aup) && document.getElementById(`b${a - i}`).innerText == 0) {
+                    if (document.getElementById(`b${a - i}`) && document.getElementById(`b${a - i}`).innerText == 0) {
                         document.getElementById(`b${a - i}`).style.backgroundColor = 'green'
                     }
-                    else if ((a - i) > (aup) && document.getElementById(`b${a - i}`).innerText !== 0) {
+                    else if (document.getElementById(`b${a - i}`) && document.getElementById(`b${a - i}`).innerText !== 0) {
                         document.getElementById(`b${a - i}`).style.backgroundColor = 'green'
                         break
                     }
                 }
-
-
-
                 for (let i = 1; i < 9; i++) {
-                    if (i < (900 - aup) / 100 && i < 9 - aside && document.getElementById(`b${a + i * 100 + i}`).innerText.length == 0) {
+                    if (document.getElementById(`b${a + i * 100 + i}`) && document.getElementById(`b${a + i * 100 + i}`).innerText.length == 0) {
                         document.getElementById(`b${a + i * 100 + i}`).style.backgroundColor = 'green'
                     }
-                    else if (i < (900 - aup) / 100 && i < 9 - aside && document.getElementById(`b${a + i * 100 + i}`).innerText.length !== 0) {
+                    else if (document.getElementById(`b${a + i * 100 + i}`) && document.getElementById(`b${a + i * 100 + i}`).innerText.length !== 0) {
                         document.getElementById(`b${a + i * 100 + i}`).style.backgroundColor = 'green'
                         break
                     }
                 }
-
-
                 for (let i = 1; i < 9; i++) {
-                    if (i < aup / 100 && i < 9 - aside && document.getElementById(`b${a - i * 100 + i}`).innerText.length == 0) {
+                    if (document.getElementById(`b${a - i * 100 + i}`) && document.getElementById(`b${a - i * 100 + i}`).innerText.length == 0) {
                         document.getElementById(`b${a - i * 100 + i}`).style.backgroundColor = 'green'
                     }
-                    else if (i < aup / 100 && i < 9 - aside && document.getElementById(`b${a - i * 100 + i}`).innerText.length !== 0) {
+                    else if (document.getElementById(`b${a - i * 100 + i}`) && document.getElementById(`b${a - i * 100 + i}`).innerText.length !== 0) {
                         document.getElementById(`b${a - i * 100 + i}`).style.backgroundColor = 'green'
                         break
                     }
                 }
-
-
                 for (let i = 1; i < 9; i++) {
-                    if (i < (900 - aup) / 100 && i < aside && document.getElementById(`b${a + i * 100 - i}`).innerText.length == 0) {
+                    if (document.getElementById(`b${a + i * 100 - i}`) && document.getElementById(`b${a + i * 100 - i}`).innerText.length == 0) {
                         document.getElementById(`b${a + i * 100 - i}`).style.backgroundColor = 'green'
                     }
-                    else if (i < (900 - aup) / 100 && i < aside && document.getElementById(`b${a + i * 100 - i}`).innerText.length !== 0) {
+                    else if (document.getElementById(`b${a + i * 100 - i}`) && document.getElementById(`b${a + i * 100 - i}`).innerText.length !== 0) {
                         document.getElementById(`b${a + i * 100 - i}`).style.backgroundColor = 'green'
                         break
                     }
 
                 }
-
-
                 for (let i = 1; i < 9; i++) {
-                    if (i < aup / 100 && i < aside && document.getElementById(`b${a - i * 100 - i}`).innerText.length == 0) {
+                    if (document.getElementById(`b${a - i * 100 - i}`) && document.getElementById(`b${a - i * 100 - i}`).innerText.length == 0) {
                         document.getElementById(`b${a - i * 100 - i}`).style.backgroundColor = 'green'
                     }
-                    else if (i < aup / 100 && i < aside && document.getElementById(`b${a - i * 100 - i}`).innerText.length !== 0) {
+                    else if (document.getElementById(`b${a - i * 100 - i}`) && document.getElementById(`b${a - i * 100 - i}`).innerText.length !== 0) {
                         document.getElementById(`b${a - i * 100 - i}`).style.backgroundColor = 'green'
                         break
                     }
                 }
-
-
-
                 item.style.backgroundColor = 'cadetblue'
-
             }
 
             // KNIGHT
 
             if (item.innerText == `${toggle}knight`) {
-                if (aside < 7 && aup < 800) {
+                if (document.getElementById(`b${a + 100 + 2}`)) {
                     document.getElementById(`b${a + 100 + 2}`).style.backgroundColor = 'green'
                 }
-                if (aside < 7 && aup > 200) {
+                if (document.getElementById(`b${a - 100 + 2}`)) {
                     document.getElementById(`b${a - 100 + 2}`).style.backgroundColor = 'green'
                 }
-                if (aside < 8 && aup < 700) {
+                if (document.getElementById(`b${a + 200 + 1}`)) {
                     document.getElementById(`b${a + 200 + 1}`).style.backgroundColor = 'green'
                 }
-                if (aside > 1 && aup < 700) {
+                if (document.getElementById(`b${a + 200 - 1}`)) {
                     document.getElementById(`b${a + 200 - 1}`).style.backgroundColor = 'green'
                 }
-                if (aside > 2 && aup < 800) {
+                if (document.getElementById(`b${a - 2 + 100}`)) {
                     document.getElementById(`b${a - 2 + 100}`).style.backgroundColor = 'green'
                 }
-                if (aside > 2 && aup > 100) {
+                if (document.getElementById(`b${a - 2 - 100}`)) {
                     document.getElementById(`b${a - 2 - 100}`).style.backgroundColor = 'green'
                 }
-                if (aside < 8 && aup > 200) {
+                if (document.getElementById(`b${a - 200 + 1}`)) {
                     document.getElementById(`b${a - 200 + 1}`).style.backgroundColor = 'green'
                 }
-                if (aside > 1 && aup > 200) {
+                if (document.getElementById(`b${a - 200 - 1}`)) {
                     document.getElementById(`b${a - 200 - 1}`).style.backgroundColor = 'green'
                 }
-
                 item.style.backgroundColor = 'cadetblue'
-
             }
         }
 
