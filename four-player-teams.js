@@ -85,7 +85,7 @@ function reddish() {
                         i2.style.backgroundColor = '#C3CDDC'
                     }
 
-
+                    // CODE FOR TEAM FOR RED AND YELLOW
 
                     if (a % 2 == 0 && cadetblueColor=='R' && greenColor=='Y') {
                         i2.style.backgroundColor = '#8F9EB8'
@@ -101,7 +101,7 @@ function reddish() {
                     }
 
 
-
+                    // CODE FOR TEAM BLUE AND GREEN
                     
                     if (a % 2 == 0 && cadetblueColor=='B' && greenColor=='G') {
                         i2.style.backgroundColor = '#8F9EB8'
@@ -628,6 +628,44 @@ document.querySelectorAll('.box').forEach(item => {
             whosTurn('G')
         }
         reddish()
+
+
+
+
+        // winning()
+        numOfKings = 0
+        document.querySelectorAll('.box').forEach(win => {
+            if (win.innerText == 'Rking' ) {
+                numOfKings += 1
+            }
+            if (win.innerText == 'Yking' ) {
+                numOfKings += 1
+            }
+            if ( win.innerText == 'Gking') {
+                numOfKings += 1
+            }
+            if ( win.innerText == 'Bking') {
+                numOfKings += 1
+            }
+        })
+        console.log(numOfKings)
+        if (numOfKings < 4) {
+            setTimeout(() => {
+                // console.log(`${toggle}`) 
+                if (tog == 1 || tog == 3) {
+                    alert('Team Blue and Green Wins by king capture!!')
+                    location.reload()
+                }
+                else if (tog == 2 || tog == 4 ) {
+                    alert('Team Red and Yellow Wins by king capture!!')
+                    location.reload()
+                }
+            }, 500)
+        }
+
+
+
+
     })
 })
 
