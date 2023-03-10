@@ -15,10 +15,10 @@
 li {
     list-style: none;
     border: 1px solid #C3CDDC;
-    /* width: 3.6vw;
-    height: 3.6vw; */
-    width: 70px;
-    height: 70px;
+    width: 3.6vw;
+    height: 3.6vw;
+    /* width: 70px;
+    height: 70px; */
     font-size: 0px;
     transition: background-color 400ms;
 
@@ -31,4 +31,47 @@ li img{
 }
 .board div{
     display: flex;
+}
+.stats {
+    padding: 20px;
+    font-size: 30px;
+}
+.red{
+    margin: 130px 0px;
+}
+.yellow{
+    margin: 130px 0px;
+}
+.green{
+    margin: 130px 0px;
+}
+.blue{
+    margin: 130px 0px;
+}
+.profile{
+    padding: 10px 0px;
+}
+.time{
+    text-align: center;
+    padding: 10px;
+    width: 120px;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+}
+#R-time{
+    background-color: #B54040;
+    color: white;
+}
+#Y-time{
+    background-color: #CA9A28;
+    color: white;
+}
+#B-time{
+    background-color: #4085B6;
+    color: white;
+}
+#G-time{
+    background-color: #538E60;
+    color: white;
 }
