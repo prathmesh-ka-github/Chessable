@@ -441,8 +441,6 @@ document.querySelectorAll('.box').forEach(item => {
             // KING
 
             if (item.innerText == `${toggle}king`) {
-
-
                 if (document.getElementById(`b${a + 1}`)) {
                     document.getElementById(`b${a + 1}`).style.backgroundColor = 'green'
                 }
@@ -474,7 +472,6 @@ document.querySelectorAll('.box').forEach(item => {
 
                     document.getElementById(`b${a + 100 - 1}`).style.backgroundColor = 'green'
                 }
-
                 item.style.backgroundColor = 'cadetblue'
             }
 
@@ -482,8 +479,6 @@ document.querySelectorAll('.box').forEach(item => {
             // QUEEN
 
             if (item.innerText == `${toggle}queen`) {
-
-
                 for (let i = 1; i < 15; i++) {
 
                     if (document.getElementById(`b${a + i * 100}`) && document.getElementById(`b${a + i * 100}`).innerText == 0) {

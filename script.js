@@ -207,15 +207,15 @@ document.querySelectorAll('.box').forEach(item => {
             if (item.innerText == `${toggle}king`) {
 
 
-                if (aside < 8) {
+                if (document.getElementById(`b${a + 1}`)) {
                     document.getElementById(`b${a + 1}`).style.backgroundColor = 'green'
 
                 }
-                if (aside > 1) {
+                if (document.getElementById(`b${a - 1}`)) {
 
                     document.getElementById(`b${a - 1}`).style.backgroundColor = 'green'
                 }
-                if (aup < 800) {
+                if (document.getElementById(`b${a + 100}`)) {
 
                     document.getElementById(`b${a + 100}`).style.backgroundColor = 'green'
                 }
