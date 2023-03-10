@@ -67,6 +67,7 @@ function reddish() {
                     getId = i2.id
                     arr = Array.from(getId)
                     arr.shift()
+                    current = parseInt(arr.join(''))
                     if (arr.length == 4) {
                         aside = parseInt(arr.slice(2).join(''))
                     }
@@ -82,6 +83,16 @@ function reddish() {
                     }
                     if (a % 2 !== 0 && cadetblueColor == greenColor) {
                         i2.style.backgroundColor = '#C3CDDC'
+                    }
+                    if (cadetblueColor == greenColor) {
+                        if ( current >1000 && current<1016 || current>1204 && current<1213 || current>1404 && current<1413) {
+                            if (a % 2 !== 0) {
+                                i2.style.backgroundColor = '#8F9EB8'
+                            }
+                            if (a % 2 == 0) {
+                                i2.style.backgroundColor = '#C3CDDC'
+                            }
+                        }
                     }
 
                     // if (cadetblueColor == greenColor) {
@@ -211,14 +222,14 @@ document.querySelectorAll('.box').forEach(item => {
                         }
                         
                     }
-                    if (document.getElementById(`b${a - 100}`).innerText.length == 0) {
+                    if (document.getElementById(`b${a - 100}`) && document.getElementById(`b${a - 100}`).innerText.length == 0) {
                         document.getElementById(`b${a - 100}`).style.backgroundColor = 'green'
                     }
-                    if (aside < 8 && document.getElementById(`b${a - 100 + 1}`).innerText.length !== 0) {
+                    if (document.getElementById(`b${a - 100 + 1}`) && document.getElementById(`b${a - 100 + 1}`).innerText.length !== 0) {
                         document.getElementById(`b${a - 100 + 1}`).style.backgroundColor = 'green'
                     }
 
-                    if (aside > 1 && document.getElementById(`b${a - 100 - 1}`).innerText.length !== 0) {
+                    if (document.getElementById(`b${a - 100 - 1}`) && document.getElementById(`b${a - 100 - 1}`).innerText.length !== 0) {
                         document.getElementById(`b${a - 100 - 1}`).style.backgroundColor = 'green'
                     }
                 }
@@ -234,14 +245,14 @@ document.querySelectorAll('.box').forEach(item => {
                         }
                         
                     }
-                    if (document.getElementById(`b${a + 1}`).innerText.length == 0) {
+                    if (document.getElementById(`b${a + 1}`) && document.getElementById(`b${a + 1}`).innerText.length == 0) {
                         document.getElementById(`b${a + 1}`).style.backgroundColor = 'green'
                     }
-                    if (aside < 8 && document.getElementById(`b${a + 100 + 1}`).innerText.length !== 0) {
+                    if (document.getElementById(`b${a + 100 + 1}`) && document.getElementById(`b${a + 100 + 1}`).innerText.length !== 0) {
                         document.getElementById(`b${a + 100 + 1}`).style.backgroundColor = 'green'
                     }
 
-                    if (aside > 1 && document.getElementById(`b${a - 100 + 1}`).innerText.length !== 0) {
+                    if (document.getElementById(`b${a - 100 + 1}`) && document.getElementById(`b${a - 100 + 1}`).innerText.length !== 0) {
                         document.getElementById(`b${a - 100 + 1}`).style.backgroundColor = 'green'
                     }
                 }
@@ -258,14 +269,14 @@ document.querySelectorAll('.box').forEach(item => {
                         }
                         
                     }
-                    if (document.getElementById(`b${a + 100}`).innerText.length == 0) {
+                    if (document.getElementById(`b${a + 100}`) && document.getElementById(`b${a + 100}`).innerText.length == 0) {
                         document.getElementById(`b${a + 100}`).style.backgroundColor = 'green'
                     }
-                    if (aside < 8 && document.getElementById(`b${a + 100 + 1}`).innerText.length !== 0) {
+                    if (document.getElementById(`b${a + 100 + 1}`)&& document.getElementById(`b${a + 100 + 1}`).innerText.length !== 0) {
                         document.getElementById(`b${a + 100 + 1}`).style.backgroundColor = 'green'
                     }
 
-                    if (aside > 1 && document.getElementById(`b${a + 100 - 1}`).innerText.length !== 0) {
+                    if (document.getElementById(`b${a + 100 - 1}`) && document.getElementById(`b${a + 100 - 1}`).innerText.length !== 0) {
                         document.getElementById(`b${a + 100 - 1}`).style.backgroundColor = 'green'
                     }
                 }
@@ -281,15 +292,14 @@ document.querySelectorAll('.box').forEach(item => {
                         }
                         
                     }
-                    if (document.getElementById(`b${a - 1}`).innerText.length == 0) {
+                    if (document.getElementById(`b${a - 1}`) && document.getElementById(`b${a - 1}`).innerText.length == 0) {
                         document.getElementById(`b${a - 1}`).style.backgroundColor = 'green'
                     }
-                    if (aside < 8 && document.getElementById(`b${a - 100 - 1}`).innerText.length !== 0) {
+                    if (document.getElementById(`b${a - 100 - 1}`) && document.getElementById(`b${a - 100 - 1}`).innerText.length !== 0) {
                         document.getElementById(`b${a - 100 - 1}`).style.backgroundColor = 'green'
                     }
                     
-                    if (aside > 1 && document.getElementById(`b${a + 100 - 1}`).innerText.length !== 0) {
-                        console.log('this runned')
+                    if (document.getElementById(`b${a + 100 - 1}`) && document.getElementById(`b${a + 100 - 1}`).innerText.length !== 0) {
                         document.getElementById(`b${a + 100 - 1}`).style.backgroundColor = 'green'
                     }
                 }
