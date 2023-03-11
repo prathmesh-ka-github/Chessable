@@ -23,18 +23,22 @@
         <div class="stats">
             <div class="red">
                 <div class="profile">
-                    <div class="name">Red player</div>                    
+                    <div class="name" id="red-player-name">Red player</div>                    
                 </div>
                 <div class="time" id="R-time">
-                    15:00
+                    <div id="rmin">15</div>:
+                    <div id="rsec">00</div>
                 </div>
             </div>
 
             <div class="yellow">
                 <div class="profile">
-                    <div class="name">Yellow player</div>
+                    <div class="name" id="yellow-player-name">Yellow player</div>
                 </div>
-                <div class="time" id="Y-time">15:00</div>
+                <div class="time" id="Y-time">
+                    <div id="ymin">15</div>:
+                    <div id="ysec">00</div>
+                </div>
             </div>
 
         </div>
@@ -310,19 +314,40 @@
         <div class="stats">
             <div class="blue">
                 <div class="profile">
-                    <div class="name">Blue player</div>
+                    <div class="name" id="blue-player-name">Blue player</div>
                 </div>
-                <div class="time" id="B-time">15:00</div>
+                <div class="time" id="B-time">
+                    <div id="bmin">15</div>:
+                    <div id="bsec">00</div>
+                </div>
             </div>
             <div class="green">
                 <div class="profile">
-                    <div class="name" >Green player</div>
+                    <div class="name" id="green-player-name">Green player</div>
                 </div>
-                <div class="time" id="G-time">15:00</div>
+                <div class="time" id="G-time">
+                    <div id="gmin">15</div>:
+                    <div id="gsec">00</div>
+                </div>
             </div>
         </div>
     </div>
+    <script>
+        var playtime = localStorage.getItem("timevalue");
+        var redName = localStorage.getItem("redname");
+        var blueName = localStorage.getItem("bluename");
+        var yellowName = localStorage.getItem("yellowname");
+        var greenName = localStorage.getItem("greenname");
+        
+        document.getElementById("red-player-name").innerHTML = redName;
+        document.getElementById("blue-player-name").innerHTML = blueName;
+        document.getElementById("yellow-player-name").innerHTML = yellowName;
+        document.getElementById("green-player-name").innerHTML = greenName;
+        document.getElementById("bmin").innerHTML = playtime;
+        document.getElementById("wmin").innerHTML = playtime;
+    </script>
     <script src="four-player-teams.js"></script>
+    <script src="test.js"></script>
     <script src="test.js"></script>
 </body>
 </html>

@@ -20,6 +20,34 @@
         Individual
     </div>
     <div class="main-container">
+        <div class="stats">
+            <div class="red">
+                <div class="profile">
+                    <div class="name" id="red-player-name">Red player</div>                    
+                </div>
+                <div class="time" id="R-time">
+                    15:00
+                </div>
+            </div>
+            <div class="blue">
+                <div class="profile">
+                    <div class="name" id="blue-player-name">Blue player</div>
+                </div>
+                <div class="time" id="B-time">15:00</div>
+            </div>
+            <div class="yellow">
+                <div class="profile">
+                    <div class="name" id="yellow-player-name">Yellow player</div>
+                </div>
+                <div class="time" id="Y-time">15:00</div>
+            </div>
+            <div class="green">
+                <div class="profile">
+                    <div class="name" id="green-player-name">Green player</div>
+                </div>
+                <div class="time" id="G-time">15:00</div>
+            </div>
+        </div>
         <div class="board">
             <div>
                 <li class="dead-box"></li>
@@ -289,11 +317,22 @@
 
             </div>
         </div>
-        <div class="stats">
-
-        </div>
     </div>
     <script src="four-player-individual.js"></script>
     <script src="test.js"></script>
+    <script>
+        var playtime = localStorage.getItem("timevalue");
+        var redName = localStorage.getItem("redname");
+        var blueName = localStorage.getItem("bluename");
+        var yellowName = localStorage.getItem("yellowname");
+        var greenName = localStorage.getItem("greenname");
+        
+        document.getElementById("red-player-name").innerHTML = redName;
+        document.getElementById("blue-player-name").innerHTML = blueName;
+        document.getElementById("yellow-player-name").innerHTML = yellowName;
+        document.getElementById("green-player-name").innerHTML = greenName;
+        document.getElementById("bmin").innerHTML = playtime;
+        document.getElementById("wmin").innerHTML = playtime;
+    </script>
 </body>
 </html>
