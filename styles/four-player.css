@@ -77,10 +77,10 @@
     -webkit-box-shadow: 4px 6px 7px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 4px 6px 7px 0px rgba(0,0,0,0.75);
     box-shadow: 4px 6px 7px 0px rgba(0,0,0,0.75);
-    transition: background-color 300ms;
+    transition: background-color 400ms;
 }
 .clk-btn:hover{
-    background-color: #7FA650;
+    background-color: #5f5a58;
 }
 #b_5min{
     margin:0;

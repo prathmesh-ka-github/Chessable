@@ -21,7 +21,7 @@ li {
     width: 70px;
     height: 70px;
     font-size: 0px;
-    transition: background-color 400ms;
+    transition: background-color 500ms;
 
 }
 li img{
