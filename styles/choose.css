@@ -41,12 +41,12 @@
     position: absolute;
     width: max-content;
     font-size: 20;
-    padding: 15px;
+    padding: 12px;
     background-color:#4F4844;
     border-radius: 30px 25px 25px 0px;
     transform: translateX(2%) translateY(-70%) scale(var(--scale));
     transform-origin: bottom left;
-    transition: transform 300ms;
+    transition: transform 200ms;
 }
 .tooltip:hover .tooltip-text {
     visibility: visible;
