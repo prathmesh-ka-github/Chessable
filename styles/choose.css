@@ -31,6 +31,28 @@
 .four-player-info{
     display: none;
 }
+.tooltip{
+    position: relative;
+    cursor: pointer;
+}
+.tooltip-text{
+    --scale: 0;
+    visibility: hidden;
+    position: absolute;
+    width: max-content;
+    font-size: 20;
+    padding: 15px;
+    background-color:#4F4844;
+    border-radius: 30px 25px 25px 0px;
+    transform: translateX(2%) translateY(-70%) scale(var(--scale));
+    transform-origin: bottom left;
+    transition: transform 300ms;
+}
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    --scale:1;
+  }
+
 @media only screen and (max-width: 600px) {
     .choose-main{
         flex-direction: column;
