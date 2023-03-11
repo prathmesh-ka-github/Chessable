@@ -80,6 +80,32 @@
             document.getElementById("b_10min").style.backgroundColor = "#4F4844"
             document.getElementById("b_15min").style.backgroundColor = "#4F4844"
         }
-    </script>
+        function tenmin() {
+            console.log('Time set to 10 mins');
+            playtime = 10;
+            redName = document.getElementById("red-player").value
+            blueName = document.getElementById("blue-player").value
+            yellowName = document.getElementById("yellow-player").value
+            greenName = document.getElementById("green-player").value
+            savedefaults();
+            setlocalstorage();
+            document.getElementById("b_5min").style.backgroundColor = "#4F4844"
+            document.getElementById("b_10min").style.backgroundColor = "#7FA650"
+            document.getElementById("b_15min").style.backgroundColor = "#4F4844"
+        }
+        function fifteenmin() {
+            console.log('Time set to 15 mins');
+            playtime = 15;
+            redName = document.getElementById("red-player").value
+            blueName = document.getElementById("blue-player").value
+            yellowName = document.getElementById("yellow-player").value
+            greenName = document.getElementById("green-player").value
+            savedefaults();
+            setlocalstorage();
+            document.getElementById("b_5min").style.backgroundColor = "#4F4844"
+            document.getElementById("b_10min").style.backgroundColor = "#4F4844"
+            document.getElementById("b_15min").style.backgroundColor = "#7FA650"
+        }
+        </script>
 </body>
 </html>
