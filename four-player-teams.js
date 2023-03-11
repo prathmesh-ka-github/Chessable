@@ -138,7 +138,24 @@ function reddish() {
         }
     })
 }
-
+function clocks() {
+    if (tog == 1) {
+        clearInterval(greeninterval)
+        redinterval = setInterval(startclockred,1000);
+    }
+    if (tog == 2) {
+        clearInterval(redinterval)
+        blueinterval = setInterval(startclockblue,1000);
+    }
+    if (tog == 3) {
+        clearInterval(blueinterval)
+        yellowinterval = setInterval(startclockyellow,1000);
+    }
+    if (tog == 4) {
+        clearInterval(yellowinterval)
+        greeninterval = setInterval(startclockgreen,1000);
+    }
+}
 
 
 
@@ -156,6 +173,7 @@ document.querySelectorAll('.box').forEach(item => {
             {
                 tog = 1
             }
+            clocks()
         }
         if (item.style.backgroundColor == 'yellow' && item.innerText.length == 0) {
             if (tog<4) {
@@ -165,6 +183,7 @@ document.querySelectorAll('.box').forEach(item => {
             {
                 tog = 1
             }
+            clocks()
         }
         
         else if (item.style.backgroundColor == 'green' && item.innerText.length !== 0) {
@@ -183,6 +202,7 @@ document.querySelectorAll('.box').forEach(item => {
                     {
                         tog = 1
                     }
+                    clocks()
                     coloring()
                     insertImage()
                 }
@@ -617,14 +637,18 @@ document.querySelectorAll('.box').forEach(item => {
         //toggling the turn
         if (tog == 1) {
             whosTurn('R')
+
         }
         if (tog == 2) {
+
             whosTurn('B')
         }
         if (tog == 3) {
+
             whosTurn('Y')
         }
         if (tog == 4) {
+
             whosTurn('G')
         }
         reddish()
