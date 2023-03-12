@@ -819,3 +819,7 @@ document.querySelectorAll('.box').forEach(ee => {
         }
     })
 })
+
+function reloadd(){
+    location.reload();
+}

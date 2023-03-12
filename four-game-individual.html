@@ -328,6 +328,19 @@
             </div>
         </div>
     </div>
+    <div class="winner-screen-container">
+        <div class="winner-screen">
+            <div class="winner-name" id="winner-name">
+                Red Player wins!
+            </div>
+            <div class="lastplayer">
+                <div id="winner-name-only">Red player</div>&nbsp;is the last player standing!!
+            </div>
+            <div class="rematch" onclick="reloadd()">
+                <button>Rematch</button>
+            </div>
+        </div>
+    </div>
     <script>
         var playtime = localStorage.getItem("timevalue");
         var redName = localStorage.getItem("redname");
