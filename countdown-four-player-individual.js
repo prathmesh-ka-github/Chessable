@@ -1,13 +1,39 @@
 //!     RED COUNTER
 var rmin = playtime - 1;
-var rsec = 60;
+var rsec = 30;
 var redinterval = 0;
 function startclockred() {
     if (rsec == 0 && rmin == 0) {
         document.getElementById("rsec").innerHTML = rsec;
         document.getElementById("rmin").innerHTML = rmin;
-        window.alert(blueName + ' and ' + greenName + " wins by timeout!!!")
-        location.reload()
+        var redking = 0
+        if (redking == 0 && redlost == 1) {
+            setTimeout(() => {
+                alert('Red eliminated by king capture!!')
+            }, 500)
+            document.querySelectorAll('.box').forEach(remove => {
+                removeId = remove.innerText
+                arr = Array.from(removeId)
+                firstletter = arr.shift()
+                if (firstletter == "R") {
+                    remove.innerText = ''
+                }
+            })
+            document.getElementById("red-player-name").style.textDecoration = "line-through";
+            redlost = 0
+        }
+        if (tog == 1 && redlost == 0) {
+            tog = 2
+            clocks()
+        }
+        if (tog == 2 && bluelost == 0) {
+            tog = 3
+            clocks()
+        }
+        if (tog == 3 && yellowlost == 0) {
+            tog = 4
+            clocks()
+        }
     } else {
         rsec--;
         if (rsec < 60) {
@@ -22,7 +48,7 @@ function startclockred() {
         }
     }
 }
-//      BLUE COUNTER
+//!      BLUE COUNTER
 var bmin = playtime - 1;
 var bsec = 60;
 var blueinterval = 0;
@@ -46,7 +72,7 @@ function startclockblue() {
         }
     }
 }
-//      GREEN COUNTER
+//!      YELLOW COUNTER
 var ymin = playtime - 1;
 var ysec = 60;
 var yellowinterval = 0;
@@ -70,7 +96,7 @@ function startclockyellow() {
         }
     }
 }
-//      GREEN COUNTER
+//!      GREEN COUNTER
 var gmin = playtime - 1;
 var gsec = 60;
 var greeninterval = 0;
