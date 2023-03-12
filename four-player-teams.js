@@ -142,18 +142,27 @@ function clocks() {
     if (tog == 1) {
         clearInterval(greeninterval)
         redinterval = setInterval(startclockred,1000);
+        document.getElementById("G-time").style.boxShadow = "none";
+        document.getElementById("R-time").style.boxShadow = "0px 0px 30px #b54040";
     }
     if (tog == 2) {
         clearInterval(redinterval)
         blueinterval = setInterval(startclockblue,1000);
+        document.getElementById("R-time").style.boxShadow = "none";
+        document.getElementById("B-time").style.boxShadow = "0px 0px 30px #4085B6";
     }
     if (tog == 3) {
         clearInterval(blueinterval)
         yellowinterval = setInterval(startclockyellow,1000);
+        document.getElementById("B-time").style.boxShadow = "none";
+        document.getElementById("Y-time").style.boxShadow = "0px 0px 30px #ca9a28";
+
     }
     if (tog == 4) {
         clearInterval(yellowinterval)
         greeninterval = setInterval(startclockgreen,1000);
+        document.getElementById("G-time").style.boxShadow = "0px 0px 30px #538e60";
+        document.getElementById("Y-time").style.boxShadow = "none";
     }
 }
 

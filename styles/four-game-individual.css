@@ -28,25 +28,38 @@ li img{
 .dead-box{
     border: 1px solid transparent;
 }
-.board div{
-    display: flex;
+.board {
+    position: relative;
 }
 .stats {
-    padding: 20px;
     font-size: 30px;
-    width: 12vw;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+}
+.container div{
+    display: flex;
+    flex-direction: row;
 }
 .red{
-    margin: 80px 0px;
+    bottom: 3vw;
+    right: 3vw;
 }
 .yellow{
-    margin: 80px 0px;
+    top: 2vw;
+    left: 3vw;
 }
 .green{
-    margin: 80px 0px;
+    top: 2vw;
+    right: 1vw;
 }
 .blue{
-    margin: 80px 0px;
+    bottom: 3vw;
+    left: 3vw;
 }
 .profile{
     padding: 10px 0px;
@@ -58,6 +71,8 @@ li img{
     background-color: white;
     color: black;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
 } 
 #R-time{
     background-color: #B54040;
@@ -72,7 +87,8 @@ li img{
 #B-time{
     background-color: #4085B6;
     color: white;
-    /* box-shadow: 0px 0px 39px -1px #4085b6; */
+    /* box-shadow: 0px 0px 39px -1px #4085B6; */
+
 }
 #G-time{
     background-color: #538E60;

@@ -20,306 +20,314 @@
         Individual
     </div>
     <div class="main-container">
-        <div class="stats">
-            <div class="red">
+        <div class="board">
+            <div class="red stats">
                 <div class="profile">
                     <div class="name" id="red-player-name">Red player</div>                    
                 </div>
                 <div class="time" id="R-time">
-                    15:00
+                    <div id="rmin">15</div>:
+                    <div id="rsec">00</div>
                 </div>
             </div>
-            <div class="blue">
+            <div class="blue stats">
                 <div class="profile">
                     <div class="name" id="blue-player-name">Blue player</div>
                 </div>
-                <div class="time" id="B-time">15:00</div>
-            </div>
-            <div class="yellow">
-                <div class="profile">
-                    <div class="name" id="yellow-player-name">Yellow player</div>
+                <div class="time" id="B-time">
+                    <div id="bmin">15</div>:
+                    <div id="bsec">00</div>
                 </div>
-                <div class="time" id="Y-time">15:00</div>
             </div>
-            <div class="green">
+            <div class="green stats">
                 <div class="profile">
                     <div class="name" id="green-player-name">Green player</div>
                 </div>
-                <div class="time" id="G-time">15:00</div>
+                <div class="time" id="G-time">
+                    <div id="gmin">15</div>:
+                    <div id="gsec">00</div>
+                </div>
             </div>
-        </div>
-        <div class="board">
-            <div>
-                <li class="dead-box"></li>
-                <li class="dead-box"></li>
-                <li class="dead-box"></li>
-                <li class="dead-box"></li>
-                <li class="box" id="b105">Yrook</li>
-                <li class="box" id="b106">Yknight</li>
-                <li class="box" id="b107">Ybishop</li>
-                <li class="box" id="b108">Yking</li>
-                <li class="box" id="b109">Yqueen</li>
-                <li class="box" id="b110">Ybishop</li>
-                <li class="box" id="b111">Yknight</li>
-                <li class="box" id="b112">Yrook</li>
-                <li class="dead-box"></li>
-                <li class="dead-box"></li>
-                <li class="dead-box"></li>
-                <li class="dead-box"></li>
+            <div class="yellow stats">
+                <div class="profile">
+                    <div class="name" id="yellow-player-name">Yellow player</div>
+                </div>
+                <div class="time" id="Y-time">
+                    <div id="ymin">15</div>:
+                    <div id="ysec">00</div>
+                </div>
             </div>
-            <div>
-                <li class="dead-box"></li>
-                <li class="dead-box"></li>
-                <li class="dead-box"></li>
-                <li class="dead-box"></li>
-                <li class="box" id="b205">Ypawn</li>
-                <li class="box" id="b206">Ypawn</li>
-                <li class="box" id="b207">Ypawn</li>
-                <li class="box" id="b208">Ypawn</li>
-                <li class="box" id="b209">Ypawn</li>
-                <li class="box" id="b210">Ypawn</li>
-                <li class="box" id="b211">Ypawn</li>
-                <li class="box" id="b212">Ypawn</li>
-                <li class="dead-box"></li>
-                <li class="dead-box"></li>
-                <li class="dead-box"></li>
-                <li class="dead-box"></li>
-            </div>
-            <div>
-                <li class="dead-box"></li>
-                <li class="dead-box"></li>
-                <li class="dead-box"></li>
-                <li class="dead-box"></li>
-                <li class="box" id="b305"></li>
-                <li class="box" id="b306"></li>
-                <li class="box" id="b307"></li>
-                <li class="box" id="b308"></li>
-                <li class="box" id="b309"></li>
-                <li class="box" id="b310"></li>
-                <li class="box" id="b311"></li>
-                <li class="box" id="b312"></li>
-                <li class="dead-box"></li>
-                <li class="dead-box"></li>
-                <li class="dead-box"></li>
-                <li class="dead-box"></li>
-            </div>
-            <div>
-                <li class="dead-box"></li>
-                <li class="box" id="b402">Brook</li>
-                <li class="box" id="b403">Bpawn</li>
-                <li class="box" id="b404"></li>
-                <li class="box" id="b405"></li>
-                <li class="box" id="b406"></li>
-                <li class="box" id="b407"></li>
-                <li class="box" id="b408"></li>
-                <li class="box" id="b409"></li>
-                <li class="box" id="b410"></li>
-                <li class="box" id="b411"></li>
-                <li class="box" id="b412"></li>
-                <li class="box" id="b413"></li>    
-                <li class="box" id="b414">Gpawn</li>
-                <li class="box" id="b415">Grook</li>    
-                <li class="dead-box"></li>
-            </div>
-            <div>                
-                <li class="dead-box"></li>
-                <li class="box" id="b502">Bknight</li>
-                <li class="box" id="b503">Bpawn</li>
-                <li class="box" id="b504"></li>
-                <li class="box" id="b505"></li>
-                <li class="box" id="b506"></li>
-                <li class="box" id="b507"></li>
-                <li class="box" id="b508"></li>
-                <li class="box" id="b509"></li>
-                <li class="box" id="b510"></li>
-                <li class="box" id="b511"></li>
-                <li class="box" id="b512"></li>
-                <li class="box" id="b513"></li>    
-                <li class="box" id="b514">Gpawn</li>
-                <li class="box" id="b515">Gknight</li>    
-                <li class="dead-box"></li>
+            <div class="container">
+                <div>
+                    <li class="dead-box"></li>
+                    <li class="dead-box"></li>
+                    <li class="dead-box"></li>
+                    <li class="dead-box"></li>
+                    <li class="box" id="b105">Yrook</li>
+                    <li class="box" id="b106">Yknight</li>
+                    <li class="box" id="b107">Ybishop</li>
+                    <li class="box" id="b108">Yking</li>
+                    <li class="box" id="b109">Yqueen</li>
+                    <li class="box" id="b110">Ybishop</li>
+                    <li class="box" id="b111">Yknight</li>
+                    <li class="box" id="b112">Yrook</li>
+                    <li class="dead-box"></li>
+                    <li class="dead-box"></li>
+                    <li class="dead-box"></li>
+                    <li class="dead-box"></li>
+                </div>
+                <div>
+                    <li class="dead-box"></li>
+                    <li class="dead-box"></li>
+                    <li class="dead-box"></li>
+                    <li class="dead-box"></li>
+                    <li class="box" id="b205">Ypawn</li>
+                    <li class="box" id="b206">Ypawn</li>
+                    <li class="box" id="b207">Ypawn</li>
+                    <li class="box" id="b208">Ypawn</li>
+                    <li class="box" id="b209">Ypawn</li>
+                    <li class="box" id="b210">Ypawn</li>
+                    <li class="box" id="b211">Ypawn</li>
+                    <li class="box" id="b212">Ypawn</li>
+                    <li class="dead-box"></li>
+                    <li class="dead-box"></li>
+                    <li class="dead-box"></li>
+                    <li class="dead-box"></li>
+                </div>
+                <div>
+                    <li class="dead-box"></li>
+                    <li class="dead-box"></li>
+                    <li class="dead-box"></li>
+                    <li class="dead-box"></li>
+                    <li class="box" id="b305"></li>
+                    <li class="box" id="b306"></li>
+                    <li class="box" id="b307"></li>
+                    <li class="box" id="b308"></li>
+                    <li class="box" id="b309"></li>
+                    <li class="box" id="b310"></li>
+                    <li class="box" id="b311"></li>
+                    <li class="box" id="b312"></li>
+                    <li class="dead-box"></li>
+                    <li class="dead-box"></li>
+                    <li class="dead-box"></li>
+                    <li class="dead-box"></li>
+                </div>
+                <div>
+                    <li class="dead-box"></li>
+                    <li class="box" id="b402">Brook</li>
+                    <li class="box" id="b403">Bpawn</li>
+                    <li class="box" id="b404"></li>
+                    <li class="box" id="b405"></li>
+                    <li class="box" id="b406"></li>
+                    <li class="box" id="b407"></li>
+                    <li class="box" id="b408"></li>
+                    <li class="box" id="b409"></li>
+                    <li class="box" id="b410"></li>
+                    <li class="box" id="b411"></li>
+                    <li class="box" id="b412"></li>
+                    <li class="box" id="b413"></li>    
+                    <li class="box" id="b414">Gpawn</li>
+                    <li class="box" id="b415">Grook</li>    
+                    <li class="dead-box"></li>
+                </div>
+                <div>                
+                    <li class="dead-box"></li>
+                    <li class="box" id="b502">Bknight</li>
+                    <li class="box" id="b503">Bpawn</li>
+                    <li class="box" id="b504"></li>
+                    <li class="box" id="b505"></li>
+                    <li class="box" id="b506"></li>
+                    <li class="box" id="b507"></li>
+                    <li class="box" id="b508"></li>
+                    <li class="box" id="b509"></li>
+                    <li class="box" id="b510"></li>
+                    <li class="box" id="b511"></li>
+                    <li class="box" id="b512"></li>
+                    <li class="box" id="b513"></li>    
+                    <li class="box" id="b514">Gpawn</li>
+                    <li class="box" id="b515">Gknight</li>    
+                    <li class="dead-box"></li>
 
-            </div>
-            <div>
-                <li class="dead-box"></li>
+                </div>
+                <div>
+                    <li class="dead-box"></li>
 
-                <li class="box" id="b602">Bbishop</li>
-                <li class="box" id="b603">Bpawn</li>
-                <li class="box" id="b604"></li>
-                <li class="box" id="b605"></li>
-                <li class="box" id="b606"></li>
-                <li class="box" id="b607"></li>
-                <li class="box" id="b608"></li>
-                <li class="box" id="b609"></li>
-                <li class="box" id="b610"></li>
-                <li class="box" id="b611"></li>
-                <li class="box" id="b612"></li>
-                <li class="box" id="b613"></li>    
-                <li class="box" id="b614">Gpawn</li>
-                <li class="box" id="b615">Gbishop</li>   
-                <li class="dead-box"></li>
+                    <li class="box" id="b602">Bbishop</li>
+                    <li class="box" id="b603">Bpawn</li>
+                    <li class="box" id="b604"></li>
+                    <li class="box" id="b605"></li>
+                    <li class="box" id="b606"></li>
+                    <li class="box" id="b607"></li>
+                    <li class="box" id="b608"></li>
+                    <li class="box" id="b609"></li>
+                    <li class="box" id="b610"></li>
+                    <li class="box" id="b611"></li>
+                    <li class="box" id="b612"></li>
+                    <li class="box" id="b613"></li>    
+                    <li class="box" id="b614">Gpawn</li>
+                    <li class="box" id="b615">Gbishop</li>   
+                    <li class="dead-box"></li>
 
-            </div>
-            <div>
-                <li class="dead-box"></li>
+                </div>
+                <div>
+                    <li class="dead-box"></li>
 
-                <li class="box" id="b702">Bking</li>
-                <li class="box" id="b703">Bpawn</li>
-                <li class="box" id="b704"></li>
-                <li class="box" id="b705"></li>
-                <li class="box" id="b706"></li>
-                <li class="box" id="b707"></li>
-                <li class="box" id="b708"></li>
-                <li class="box" id="b709"></li>
-                <li class="box" id="b710"></li>
-                <li class="box" id="b711"></li>
-                <li class="box" id="b712"></li>
-                <li class="box" id="b713"></li>    
-                <li class="box" id="b714">Gpawn</li>
-                <li class="box" id="b715">Gqueen</li> 
-                <li class="dead-box"></li>
-            </div>
-            <div>
-                <li class="dead-box"></li>
+                    <li class="box" id="b702">Bking</li>
+                    <li class="box" id="b703">Bpawn</li>
+                    <li class="box" id="b704"></li>
+                    <li class="box" id="b705"></li>
+                    <li class="box" id="b706"></li>
+                    <li class="box" id="b707"></li>
+                    <li class="box" id="b708"></li>
+                    <li class="box" id="b709"></li>
+                    <li class="box" id="b710"></li>
+                    <li class="box" id="b711"></li>
+                    <li class="box" id="b712"></li>
+                    <li class="box" id="b713"></li>    
+                    <li class="box" id="b714">Gpawn</li>
+                    <li class="box" id="b715">Gqueen</li> 
+                    <li class="dead-box"></li>
+                </div>
+                <div>
+                    <li class="dead-box"></li>
 
-                <li class="box" id="b802">Bqueen</li>
-                <li class="box" id="b803">Bpawn</li>
-                <li class="box" id="b804"></li>
-                <li class="box" id="b805"></li>
-                <li class="box" id="b806"></li>
-                <li class="box" id="b807"></li>
-                <li class="box" id="b808"></li>
-                <li class="box" id="b809"></li>
-                <li class="box" id="b810"></li>
-                <li class="box" id="b811"></li>
-                <li class="box" id="b812"></li>
-                <li class="box" id="b813"></li>    
-                <li class="box" id="b814">Gpawn</li>
-                <li class="box" id="b815">Gking</li> 
-                <li class="dead-box"></li>
+                    <li class="box" id="b802">Bqueen</li>
+                    <li class="box" id="b803">Bpawn</li>
+                    <li class="box" id="b804"></li>
+                    <li class="box" id="b805"></li>
+                    <li class="box" id="b806"></li>
+                    <li class="box" id="b807"></li>
+                    <li class="box" id="b808"></li>
+                    <li class="box" id="b809"></li>
+                    <li class="box" id="b810"></li>
+                    <li class="box" id="b811"></li>
+                    <li class="box" id="b812"></li>
+                    <li class="box" id="b813"></li>    
+                    <li class="box" id="b814">Gpawn</li>
+                    <li class="box" id="b815">Gking</li> 
+                    <li class="dead-box"></li>
 
-            </div>
-            <div>
-                <li class="dead-box"></li>
+                </div>
+                <div>
+                    <li class="dead-box"></li>
 
-                <li class="box" id="b902">Bbishop</li>
-                <li class="box" id="b903">Bpawn</li>
-                <li class="box" id="b904"></li>
-                <li class="box" id="b905"></li>
-                <li class="box" id="b906"></li>
-                <li class="box" id="b907"></li>
-                <li class="box" id="b908"></li>
-                <li class="box" id="b909"></li>
-                <li class="box" id="b910"></li>
-                <li class="box" id="b911"></li>
-                <li class="box" id="b912"></li>
-                <li class="box" id="b913"></li>    
-                <li class="box" id="b914">Gpawn</li>
-                <li class="box" id="b915">Gbishop</li> 
-                <li class="dead-box"></li>
+                    <li class="box" id="b902">Bbishop</li>
+                    <li class="box" id="b903">Bpawn</li>
+                    <li class="box" id="b904"></li>
+                    <li class="box" id="b905"></li>
+                    <li class="box" id="b906"></li>
+                    <li class="box" id="b907"></li>
+                    <li class="box" id="b908"></li>
+                    <li class="box" id="b909"></li>
+                    <li class="box" id="b910"></li>
+                    <li class="box" id="b911"></li>
+                    <li class="box" id="b912"></li>
+                    <li class="box" id="b913"></li>    
+                    <li class="box" id="b914">Gpawn</li>
+                    <li class="box" id="b915">Gbishop</li> 
+                    <li class="dead-box"></li>
 
-            </div>
-            <div>
-                <li class="dead-box"></li>
+                </div>
+                <div>
+                    <li class="dead-box"></li>
 
-                <li class="box" id="b1002">Bknight</li>
-                <li class="box" id="b1003">Bpawn</li>
-                <li class="box" id="b1004"></li>
-                <li class="box" id="b1005"></li>
-                <li class="box" id="b1006"></li>
-                <li class="box" id="b1007"></li>
-                <li class="box" id="b1008"></li>
-                <li class="box" id="b1009"></li>
-                <li class="box" id="b1010"></li>
-                <li class="box" id="b1011"></li>
-                <li class="box" id="b1012"></li>
-                <li class="box" id="b1013"></li>    
-                <li class="box" id="b1014">Gpawn</li>
-                <li class="box" id="b1015">Gknight</li> 
-                <li class="dead-box"></li>
+                    <li class="box" id="b1002">Bknight</li>
+                    <li class="box" id="b1003">Bpawn</li>
+                    <li class="box" id="b1004"></li>
+                    <li class="box" id="b1005"></li>
+                    <li class="box" id="b1006"></li>
+                    <li class="box" id="b1007"></li>
+                    <li class="box" id="b1008"></li>
+                    <li class="box" id="b1009"></li>
+                    <li class="box" id="b1010"></li>
+                    <li class="box" id="b1011"></li>
+                    <li class="box" id="b1012"></li>
+                    <li class="box" id="b1013"></li>    
+                    <li class="box" id="b1014">Gpawn</li>
+                    <li class="box" id="b1015">Gknight</li> 
+                    <li class="dead-box"></li>
 
-            </div>
-            <div>
-                <li class="dead-box"></li>
+                </div>
+                <div>
+                    <li class="dead-box"></li>
 
-                <li class="box" id="b1102">Brook</li>
-                <li class="box" id="b1103">Bpawn</li>
-                <li class="box" id="b1104"></li>
-                <li class="box" id="b1105"></li>
-                <li class="box" id="b1106"></li>
-                <li class="box" id="b1107"></li>
-                <li class="box" id="b1108"></li>
-                <li class="box" id="b1109"></li>
-                <li class="box" id="b1110"></li>
-                <li class="box" id="b1111"></li>
-                <li class="box" id="b1112"></li>
-                <li class="box" id="b1113"></li>    
-                <li class="box" id="b1114">Gpawn</li>
-                <li class="box" id="b1115">Grook</li> 
-                <li class="dead-box"></li>
+                    <li class="box" id="b1102">Brook</li>
+                    <li class="box" id="b1103">Bpawn</li>
+                    <li class="box" id="b1104"></li>
+                    <li class="box" id="b1105"></li>
+                    <li class="box" id="b1106"></li>
+                    <li class="box" id="b1107"></li>
+                    <li class="box" id="b1108"></li>
+                    <li class="box" id="b1109"></li>
+                    <li class="box" id="b1110"></li>
+                    <li class="box" id="b1111"></li>
+                    <li class="box" id="b1112"></li>
+                    <li class="box" id="b1113"></li>    
+                    <li class="box" id="b1114">Gpawn</li>
+                    <li class="box" id="b1115">Grook</li> 
+                    <li class="dead-box"></li>
 
-            </div>
-            <div>
-                <li class="dead-box"></li>
-                <li class="dead-box"></li>
-                <li class="dead-box"></li>
-                <li class="dead-box"></li>
-                <li class="box" id="b1205"></li>
-                <li class="box" id="b1206"></li>
-                <li class="box" id="b1207"></li>
-                <li class="box" id="b1208"></li>
-                <li class="box" id="b1209"></li>
-                <li class="box" id="b1210"></li>
-                <li class="box" id="b1211"></li>
-                <li class="box" id="b1212"></li>
-                <li class="dead-box"></li>
-                <li class="dead-box"></li>
-                <li class="dead-box"></li>
-                <li class="dead-box"></li>
+                </div>
+                <div>
+                    <li class="dead-box"></li>
+                    <li class="dead-box"></li>
+                    <li class="dead-box"></li>
+                    <li class="dead-box"></li>
+                    <li class="box" id="b1205"></li>
+                    <li class="box" id="b1206"></li>
+                    <li class="box" id="b1207"></li>
+                    <li class="box" id="b1208"></li>
+                    <li class="box" id="b1209"></li>
+                    <li class="box" id="b1210"></li>
+                    <li class="box" id="b1211"></li>
+                    <li class="box" id="b1212"></li>
+                    <li class="dead-box"></li>
+                    <li class="dead-box"></li>
+                    <li class="dead-box"></li>
+                    <li class="dead-box"></li>
 
-            </div>
-            <div>
-                <li class="dead-box"></li>
-                <li class="dead-box"></li>
-                <li class="dead-box"></li>
-                <li class="dead-box"></li>
-                <li class="box" id="b1305">Rpawn</li>
-                <li class="box" id="b1306">Rpawn</li>
-                <li class="box" id="b1307">Rpawn</li>
-                <li class="box" id="b1308">Rpawn</li>
-                <li class="box" id="b1309">Rpawn</li>
-                <li class="box" id="b1310">Rpawn</li>
-                <li class="box" id="b1311">Rpawn</li>
-                <li class="box" id="b1312">Rpawn</li>
-                <li class="dead-box"></li>
-                <li class="dead-box"></li>
-                <li class="dead-box"></li>
-                <li class="dead-box"></li>
+                </div>
+                <div>
+                    <li class="dead-box"></li>
+                    <li class="dead-box"></li>
+                    <li class="dead-box"></li>
+                    <li class="dead-box"></li>
+                    <li class="box" id="b1305">Rpawn</li>
+                    <li class="box" id="b1306">Rpawn</li>
+                    <li class="box" id="b1307">Rpawn</li>
+                    <li class="box" id="b1308">Rpawn</li>
+                    <li class="box" id="b1309">Rpawn</li>
+                    <li class="box" id="b1310">Rpawn</li>
+                    <li class="box" id="b1311">Rpawn</li>
+                    <li class="box" id="b1312">Rpawn</li>
+                    <li class="dead-box"></li>
+                    <li class="dead-box"></li>
+                    <li class="dead-box"></li>
+                    <li class="dead-box"></li>
 
-            </div>
-            <div>
-                <li class="dead-box"></li>
-                <li class="dead-box"></li>
-                <li class="dead-box"></li>
-                <li class="dead-box"></li>
-                <li class="box" id="b1405">Rrook</li>
-                <li class="box" id="b1406">Rknight</li>
-                <li class="box" id="b1407">Rbishop</li>
-                <li class="box" id="b1408">Rqueen</li>
-                <li class="box" id="b1409">Rking</li>
-                <li class="box" id="b1410">Rbishop</li>
-                <li class="box" id="b1411">Rknight</li>
-                <li class="box" id="b1412">Rrook</li>
-                <li class="dead-box"></li>
-                <li class="dead-box"></li>
-                <li class="dead-box"></li>
-                <li class="dead-box"></li>
+                </div>
+                <div>
+                    <li class="dead-box"></li>
+                    <li class="dead-box"></li>
+                    <li class="dead-box"></li>
+                    <li class="dead-box"></li>
+                    <li class="box" id="b1405">Rrook</li>
+                    <li class="box" id="b1406">Rknight</li>
+                    <li class="box" id="b1407">Rbishop</li>
+                    <li class="box" id="b1408">Rqueen</li>
+                    <li class="box" id="b1409">Rking</li>
+                    <li class="box" id="b1410">Rbishop</li>
+                    <li class="box" id="b1411">Rknight</li>
+                    <li class="box" id="b1412">Rrook</li>
+                    <li class="dead-box"></li>
+                    <li class="dead-box"></li>
+                    <li class="dead-box"></li>
+                    <li class="dead-box"></li>
 
+                </div>
             </div>
         </div>
     </div>
-    <script src="four-player-individual.js"></script>
-    <script src="test.js"></script>
     <script>
         var playtime = localStorage.getItem("timevalue");
         var redName = localStorage.getItem("redname");
@@ -331,8 +339,13 @@
         document.getElementById("blue-player-name").innerHTML = blueName;
         document.getElementById("yellow-player-name").innerHTML = yellowName;
         document.getElementById("green-player-name").innerHTML = greenName;
+        document.getElementById("rmin").innerHTML = playtime;
         document.getElementById("bmin").innerHTML = playtime;
-        document.getElementById("wmin").innerHTML = playtime;
+        document.getElementById("ymin").innerHTML = playtime;
+        document.getElementById("gmin").innerHTML = playtime;
     </script>
+    <script src="four-player-individual.js"></script>
+    <script src="countdown-four-player-individual.js"></script>
+    <script src="test.js"></script>
 </body>
 </html>

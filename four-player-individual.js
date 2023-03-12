@@ -103,8 +103,33 @@ function reddish() {
         }
     })
 }
+function clocks() {
+    if (tog == 1) {
+        clearInterval(greeninterval)
+        redinterval = setInterval(startclockred,1000);
+        document.getElementById("G-time").style.boxShadow = "none";
+        document.getElementById("R-time").style.boxShadow = "0px 0px 30px #b54040";
+    }
+    if (tog == 2) {
+        clearInterval(redinterval)
+        blueinterval = setInterval(startclockblue,1000);
+        document.getElementById("R-time").style.boxShadow = "none";
+        document.getElementById("B-time").style.boxShadow = "0px 0px 30px #4085B6";
+    }
+    if (tog == 3) {
+        clearInterval(blueinterval)
+        yellowinterval = setInterval(startclockyellow,1000);
+        document.getElementById("B-time").style.boxShadow = "none";
+        document.getElementById("Y-time").style.boxShadow = "0px 0px 30px #ca9a28";
 
-
+    }
+    if (tog == 4) {
+        clearInterval(yellowinterval)
+        greeninterval = setInterval(startclockgreen,1000);
+        document.getElementById("G-time").style.boxShadow = "0px 0px 30px #538e60";
+        document.getElementById("Y-time").style.boxShadow = "none";
+    }
+}
 
 
 tog = 1
@@ -121,6 +146,8 @@ document.querySelectorAll('.box').forEach(item => {
             {
                 tog = 1
             }
+            clocks()
+
         }
         if (item.style.backgroundColor == 'yellow' && item.innerText.length == 0) {
             if (tog<4) {
@@ -130,6 +157,8 @@ document.querySelectorAll('.box').forEach(item => {
             {
                 tog = 1
             }
+            clocks()
+
         }
         
         else if (item.style.backgroundColor == 'green' && item.innerText.length !== 0) {
@@ -148,6 +177,8 @@ document.querySelectorAll('.box').forEach(item => {
                     {
                         tog = 1
                     }
+                    clocks()
+
                     coloring()
                     insertImage()
                 }
@@ -629,47 +660,5 @@ document.querySelectorAll('.box').forEach(ee => {
         if (z % 2 == 0 && ee.style.backgroundColor !== 'green') {
             coloring()
         }
-    })
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-document.querySelectorAll('.box').forEach(tile=> {
-    tile.addEventListener('click',function(){
-        getId = tile.id     //b104
-        arr = Array.from(getId)
-        arr.shift()     //104
-        current = arr.join('')      //current = "104"
-        current = parseInt(arr.join(''))        //current = 104
-        aside = eval(arr.pop())
-
-        arr = Array.from(getId)
-        arr.shift() 
-        // console.log("arr is " + arr)
-
-        if (arr.length == 4) {
-            aside = parseInt(arr.slice(2).join(''))
-            // console.log("aside is "+ aside)
-        }
-
-        // console.log("outside aside is " + aside)
-        // console.log(current)
-        aup = eval(arr.shift())
-        a = aside + aup
-
-        // console.log(current)
-
     })
 })
