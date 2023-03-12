@@ -1,6 +1,6 @@
 //!     RED COUNTER
 var rmin = playtime - 1;
-var rsec = 30;
+var rsec = 60;
 var redinterval = 0;
 function startclockred() {
     if (rsec == 0 && rmin == 0) {
@@ -54,10 +54,35 @@ var bsec = 60;
 var blueinterval = 0;
 function startclockblue() {
     if (bsec == 0 && bmin == 0) {
-        document.getElementById("bsec").innerHTML = bsec;
-        document.getElementById("bmin").innerHTML = bmin;
-        window.alert(redName + ' and ' + yellowName + " wins by timeout!!!")
-        location.reload()
+        var blueking = 0
+        if (blueking == 0 && bluelost == 1) {
+            setTimeout(() => {
+                alert('Blue eliminated by timeout!!')
+            }, 500)
+            document.querySelectorAll('.box').forEach(remove => {
+                removeId = remove.innerText
+                arr = Array.from(removeId)
+                firstletter = arr.shift()
+                if (firstletter == "B") {
+                    remove.innerText = ''
+                }
+            })
+            document.getElementById("blue-player-name").style.textDecoration = "line-through";
+            bluelost = 0
+        }
+
+        if (tog == 1 && redlost == 0) {
+            tog = 2
+            clocks()
+        }
+        if (tog == 2 && bluelost == 0) {
+            tog = 3
+            clocks()
+        }
+        if (tog == 3 && yellowlost == 0) {
+            tog = 4
+            clocks()
+        }
     } else {
         bsec--;
         if (bsec < 60) {
@@ -78,10 +103,35 @@ var ysec = 60;
 var yellowinterval = 0;
 function startclockyellow() {
     if (ysec == 0 && ymin == 0) {
-        document.getElementById("ysec").innerHTML = ysec;
-        document.getElementById("ymin").innerHTML = ymin;
-        window.alert(redName + ' and ' + yellowName + " wins by timeout!!!")
-        location.reload()
+        var yellowking = 0
+
+        if (yellowking == 0 && yellowlost == 1) {
+            setTimeout(() => {
+                alert('Yellow eliminated by king capture!!')
+            }, 500)
+            document.querySelectorAll('.box').forEach(remove => {
+                removeId = remove.innerText
+                arr = Array.from(removeId)
+                firstletter = arr.shift()
+                if (firstletter == "Y") {
+                    remove.innerText = ''
+                }
+            })
+            document.getElementById("yellow-player-name").style.textDecoration = "line-through";
+            yellowlost = 0
+        }
+        if (tog == 1 && redlost == 0) {
+            tog = 2
+            clocks()
+        }
+        if (tog == 2 && bluelost == 0) {
+            tog = 3
+            clocks()
+        }
+        if (tog == 3 && yellowlost == 0) {
+            tog = 4
+            clocks()
+        }
     } else {
         ysec--;
         if (ysec < 60) {
@@ -102,10 +152,34 @@ var gsec = 60;
 var greeninterval = 0;
 function startclockgreen() {
     if (gsec == 0 && gmin == 0) {
-        document.getElementById("gsec").innerHTML = gsec;
-        document.getElementById("gmin").innerHTML = gmin;
-        window.alert(blueName + ' and ' + greenName + " wins by timeout!!!")
-        location.reload()
+        var greenking = 0
+        if (greenking == 0 && greenlost == 1) {
+            setTimeout(() => {
+                alert('Green eliminated by king capture!!')
+            }, 500)
+            document.querySelectorAll('.box').forEach(remove => {
+                removeId = remove.innerText
+                arr = Array.from(removeId)
+                firstletter = arr.shift()
+                if (firstletter == "G") {
+                    remove.innerText = ''
+                }
+            })
+            document.getElementById("green-player-name").style.textDecoration = "line-through";
+            greenlost = 0
+        }
+        if (tog == 1 && redlost == 0) {
+            tog = 2
+            clocks()
+        }
+        if (tog == 2 && bluelost == 0) {
+            tog = 3
+            clocks()
+        }
+        if (tog == 3 && yellowlost == 0) {
+            tog = 4
+            clocks()
+        }
     } else {
         gsec--;
         if (gsec < 60) {
