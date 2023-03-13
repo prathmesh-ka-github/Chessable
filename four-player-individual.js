@@ -156,8 +156,8 @@ function clocks() {
 tog = 1
 document.querySelectorAll('.box').forEach(item => {
     item.addEventListener('click', function(){
-        console.log("tog - "+ tog)
-        console.log("blue lost - "+ bluelost)
+        // console.log("tog - "+ tog)
+        // console.log("blue lost - "+ bluelost)
 
                 // To delete the opposite element
         if (item.style.backgroundColor == 'green' && item.innerText.length == 0) {
@@ -268,10 +268,10 @@ document.querySelectorAll('.box').forEach(item => {
 
 
         a = current
-        // console.log(a)
-        // console.log("aup is " +aup)
-        // console.log("aside is " +aside)
-        // console.log('aup = ' + aup)
+        console.log(a)
+        console.log("aup is " +aup)
+        console.log("aside is " +aside)
+        console.log('aup = ' + aup)
 
         // Function to display the available paths for all piece
         function whosTurn(toggle) {
@@ -596,53 +596,69 @@ document.querySelectorAll('.box').forEach(item => {
                     if (document.getElementById(`b${a + i * 100 + i}`) && document.getElementById(`b${a + i * 100 + i}`).innerText.length == 0) {
                         document.getElementById(`b${a + i * 100 + i}`).style.backgroundColor = 'green'
                     }
-                    else if (document.getElementById(`b${a + i * 100 + i}`) && document.getElementById(`b${a + i * 100 + i}`).innerText.length !== 0) {
-                        document.getElementById(`b${a + i * 100 + i}`).style.backgroundColor = 'green'
+                    else if (document.getElementById(`b${a + i * 100 + i}`)) {
+                        if (document.getElementById(`b${a + i * 100 + i}`).innerText.length !== 0) {
+                            document.getElementById(`b${a + i * 100 + i}`).style.backgroundColor = 'green'
+                            break
+                        }
+                    }
+                    else
+                    {
                         break
                     }
                 }
 
 
-                for (let i = 1; i < 9; i++) {
+                for (let i = 1; i < 15; i++) {
                     if (document.getElementById(`b${a - i * 100 + i}`) && document.getElementById(`b${a - i * 100 + i}`).innerText.length == 0) {
                         document.getElementById(`b${a - i * 100 + i}`).style.backgroundColor = 'green'
                     }
-                    else if (document.getElementById(`b${a - i * 100 + i}`) && document.getElementById(`b${a - i * 100 + i}`).innerText.length !== 0) {
-                        document.getElementById(`b${a - i * 100 + i}`).style.backgroundColor = 'green'
+                    else if (document.getElementById(`b${a - i * 100 + i}`) ) {
+                        if (document.getElementById(`b${a - i * 100 + i}`).innerText.length !== 0) {
+                            document.getElementById(`b${a - i * 100 + i}`).style.backgroundColor = 'green'
+                            break   
+                        }
+                    }
+                    else {
                         break
                     }
                 }
 
 
-                for (let i = 1; i < 9; i++) {
+                for (let i = 1; i < 15; i++) {
                     if (document.getElementById(`b${a + i * 100 - i}`) && document.getElementById(`b${a + i * 100 - i}`).innerText.length == 0) {
                         document.getElementById(`b${a + i * 100 - i}`).style.backgroundColor = 'green'
                     }
-                    else if (document.getElementById(`b${a + i * 100 - i}`) && document.getElementById(`b${a + i * 100 - i}`).innerText.length !== 0) {
-                        document.getElementById(`b${a + i * 100 - i}`).style.backgroundColor = 'green'
+                    else if (document.getElementById(`b${a + i * 100 - i}`) ) {
+                        if (document.getElementById(`b${a + i * 100 - i}`).innerText.length !== 0) {
+                            document.getElementById(`b${a + i * 100 - i}`).style.backgroundColor = 'green'
+                            break   
+                        }
+
+                    }
+                    else{
                         break
                     }
 
                 }
 
 
-                for (let i = 1; i < 9; i++) {
+                for (let i = 1; i < 15; i++) {
                     if (document.getElementById(`b${a - i * 100 - i}`) && document.getElementById(`b${a - i * 100 - i}`).innerText.length == 0) {
                         document.getElementById(`b${a - i * 100 - i}`).style.backgroundColor = 'green'
                     }
-                    else if (document.getElementById(`b${a - i * 100 - i}`) && document.getElementById(`b${a - i * 100 - i}`).innerText.length !== 0) {
-                        document.getElementById(`b${a - i * 100 - i}`).style.backgroundColor = 'green'
+                    else if (document.getElementById(`b${a - i * 100 - i}`) ) {
+                        if (document.getElementById(`b${a - i * 100 - i}`).innerText.length !== 0) {
+                            document.getElementById(`b${a - i * 100 - i}`).style.backgroundColor = 'green'
+                            break
+                        }
+                    }
+                    else {
                         break
                     }
                 }
-
-
-
                 item.style.backgroundColor = 'cadetblue'
-
             }
-
-
         }
 
 
