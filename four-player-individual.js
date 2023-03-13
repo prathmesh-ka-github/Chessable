@@ -165,10 +165,7 @@ document.querySelectorAll('.box').forEach(item => {
                 tog++
             }
             else{tog = 1}
-
-
             clocks()
-            
         }
 
         // if (item.style.backgroundColor == 'yellow' && item.innerText.length == 0) {
@@ -203,15 +200,6 @@ document.querySelectorAll('.box').forEach(item => {
                     else
                     {
                         tog = 1
-                    }
-                    if (tog == 1 && redlost == 0) {
-                        tog = 2
-                    }
-                    if (tog == 2 && bluelost == 0) {
-                        tog = 3
-                    }
-                    if (tog == 3 && yellowlost == 0) {
-                        tog = 3
                     }
                     clocks()
                     coloring()
@@ -263,10 +251,6 @@ document.querySelectorAll('.box').forEach(item => {
 
         arr.push('0')
         aup = eval(arr.join(''))
-
-
-
-
         a = current
         console.log(a)
         console.log("aup is " +aup)
@@ -410,8 +394,14 @@ document.querySelectorAll('.box').forEach(item => {
                     if (document.getElementById(`b${a + i * 100 + i}`) && document.getElementById(`b${a + i * 100 + i}`).innerText.length == 0) {
                         document.getElementById(`b${a + i * 100 + i}`).style.backgroundColor = 'green'
                     }
-                    else if (document.getElementById(`b${a + i * 100 + i}`) && document.getElementById(`b${a + i * 100 + i}`).innerText.length !== 0) {
-                        document.getElementById(`b${a + i * 100 + i}`).style.backgroundColor = 'green'
+                    else if (document.getElementById(`b${a + i * 100 + i}`)) {
+                        if (document.getElementById(`b${a + i * 100 + i}`).innerText.length !== 0) {                            
+                            document.getElementById(`b${a + i * 100 + i}`).style.backgroundColor = 'green'
+                            break
+                        }
+                    }
+                    else
+                    {
                         break
                     }
                 }
@@ -421,8 +411,13 @@ document.querySelectorAll('.box').forEach(item => {
                     if (document.getElementById(`b${a - i * 100 + i}`) && document.getElementById(`b${a - i * 100 + i}`).innerText.length == 0) {
                         document.getElementById(`b${a - i * 100 + i}`).style.backgroundColor = 'green'
                     }
-                    else if (document.getElementById(`b${a - i * 100 + i}`) && document.getElementById(`b${a - i * 100 + i}`).innerText.length !== 0) {
-                        document.getElementById(`b${a - i * 100 + i}`).style.backgroundColor = 'green'
+                    else if (document.getElementById(`b${a - i * 100 + i}`)) {
+                        if ( document.getElementById(`b${a - i * 100 + i}`).innerText.length !== 0) {
+                            document.getElementById(`b${a - i * 100 + i}`).style.backgroundColor = 'green'
+                            break
+                        }
+                    }
+                    else {
                         break
                     }
                 }
@@ -432,10 +427,13 @@ document.querySelectorAll('.box').forEach(item => {
                     if (document.getElementById(`b${a + i * 100 - i}`) && document.getElementById(`b${a + i * 100 - i}`).innerText.length == 0) {
                         document.getElementById(`b${a + i * 100 - i}`).style.backgroundColor = 'green'
                     }
-                    else if (document.getElementById(`b${a + i * 100 - i}`) && document.getElementById(`b${a + i * 100 - i}`).innerText.length !== 0) {
-                        document.getElementById(`b${a + i * 100 - i}`).style.backgroundColor = 'green'
-                        break
+                    else if (document.getElementById(`b${a + i * 100 - i}`)) {
+                        if (document.getElementById(`b${a + i * 100 - i}`).innerText.length !== 0) {
+                            document.getElementById(`b${a + i * 100 - i}`).style.backgroundColor = 'green'
+                            break
+                        }
                     }
+                    else{break}
 
                 }
 
@@ -444,10 +442,13 @@ document.querySelectorAll('.box').forEach(item => {
                     if (document.getElementById(`b${a - i * 100 - i}`) && document.getElementById(`b${a - i * 100 - i}`).innerText.length == 0) {
                         document.getElementById(`b${a - i * 100 - i}`).style.backgroundColor = 'green'
                     }
-                    else if (document.getElementById(`b${a - i * 100 - i}`) && document.getElementById(`b${a - i * 100 - i}`).innerText.length !== 0) {
-                        document.getElementById(`b${a - i * 100 - i}`).style.backgroundColor = 'green'
-                        break
+                    else if (document.getElementById(`b${a - i * 100 - i}`) ) {
+                        if ( document.getElementById(`b${a - i * 100 - i}`).innerText.length !== 0) {
+                            document.getElementById(`b${a - i * 100 - i}`).style.backgroundColor = 'green'
+                            break
+                        }
                     }
+                    else{break}
                 }
                 item.style.backgroundColor = 'cadetblue'
             }
