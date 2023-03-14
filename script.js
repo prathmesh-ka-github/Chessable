@@ -121,17 +121,6 @@ function checkpawn(){
     })
 }
 
-// if (800<a && a<809) {
-//     console.log('promoted')
-//     item.innerText = `${toggle}queen`
-//     insertImage()
-// }
-// if (100<a && a<109) {
-//     console.log('promoted')
-//     item.innerText = `${toggle}queen`
-//     insertImage()
-// }
-
 tog = 1
 document.querySelectorAll('.box').forEach(item => {
     
@@ -2728,6 +2717,7 @@ document.querySelectorAll('.box').forEach(item => {
                     }
                 }
                 item.style.backgroundColor = 'cadetblue'
+                reddish()
             }
 
             // CASTLING
@@ -3154,7 +3144,7 @@ function checkchecks(){
                 if (document.getElementById(`b${kingid + i * 100}`) && document.getElementById(`b${kingid + i * 100}`).innerText == 0) {
                 }
                 else if (document.getElementById(`b${kingid + i * 100}`) && document.getElementById(`b${kingid + i * 100}`).innerText !== 0) {
-                    if (document.getElementById(`b${kingid + i * 100}`).innerText == 'Bqueen' || document.getElementById(`b${kingid + i * 100}`).innerText == 'Bbishop') {   
+                    if (document.getElementById(`b${kingid + i * 100}`).innerText == 'Bqueen' || document.getElementById(`b${kingid + i * 100}`).innerText == 'Brook') {   
                         king.style.backgroundColor = 'red'
                         break
                     }
@@ -3165,7 +3155,7 @@ function checkchecks(){
                 if (document.getElementById(`b${kingid - i * 100}`) && document.getElementById(`b${kingid - i * 100}`).innerText == 0) {
                 }
                 else if (document.getElementById(`b${kingid - i * 100}`) && document.getElementById(`b${kingid - i * 100}`).innerText !== 0) {
-                    if (document.getElementById(`b${kingid - i * 100}`).innerText == 'Bqueen' || document.getElementById(`b${kingid - i * 100}`).innerText == 'Bbishop') {   
+                    if (document.getElementById(`b${kingid - i * 100}`).innerText == 'Bqueen' || document.getElementById(`b${kingid - i * 100}`).innerText == 'Brook') {   
                         king.style.backgroundColor = 'red'
                         break
                     }
@@ -3176,7 +3166,7 @@ function checkchecks(){
                 if (document.getElementById(`b${kingid - i}`) && document.getElementById(`b${kingid - i}`).innerText == 0) {
                 }
                 else if (document.getElementById(`b${kingid - i}`) && document.getElementById(`b${kingid - i}`).innerText !== 0) {
-                    if (document.getElementById(`b${kingid - i}`).innerText == 'Bqueen' || document.getElementById(`b${kingid - i}`).innerText == 'Bbishop') {   
+                    if (document.getElementById(`b${kingid - i}`).innerText == 'Bqueen' || document.getElementById(`b${kingid - i}`).innerText == 'Brook') {   
                         king.style.backgroundColor = 'red'
                         break
                     }
@@ -3187,7 +3177,7 @@ function checkchecks(){
                 if (document.getElementById(`b${kingid + i}`) && document.getElementById(`b${kingid + i}`).innerText == 0) {
                 }
                 else if (document.getElementById(`b${kingid + i}`) && document.getElementById(`b${kingid + i}`).innerText !== 0) {
-                    if (document.getElementById(`b${kingid + i}`).innerText == 'Bqueen' || document.getElementById(`b${kingid + i}`).innerText == 'Bbishop') {   
+                    if (document.getElementById(`b${kingid + i}`).innerText == 'Bqueen' || document.getElementById(`b${kingid + i}`).innerText == 'Brook') {   
                         king.style.backgroundColor = 'red'
                         break
                     }
