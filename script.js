@@ -622,13 +622,27 @@ function checkchecks(){
         kingid = eval(array.join(''))
         if (king.innerText == 'Wking') 
         {
+            // Pawns
+            if (document.getElementById(`b${kingid + 100 + 1}`)) 
+            {
+                if (document.getElementById(`b${kingid + 100 + 1}`).innerText == 'Bpawn') 
+                {
+                    king.style.backgroundColor = 'red'
+                }
+            }
+            if (document.getElementById(`b${kingid + 100 - 1}`)) 
+            {
+                if (document.getElementById(`b${kingid + 100 - 1}`).innerText == 'Bpawn') 
+                {
+                    king.style.backgroundColor = 'red'
+                }
+            }
             // ROOK and QUEEN
             for (let i = 1; i < 9; i++) {
                 if (document.getElementById(`b${kingid + i * 100}`)) 
                 {
                     if (document.getElementById(`b${kingid + i * 100}`).innerText == 'Brook' || document.getElementById(`b${kingid + i * 100}`).innerText == 'Bqueen') 
                     {
-                        console.log('CHECK TO WHITE KING!')
                         king.style.backgroundColor = 'red'
                         break
                     }
@@ -639,7 +653,6 @@ function checkchecks(){
                 {
                     if (document.getElementById(`b${kingid - i * 100}`).innerText == 'Brook' || document.getElementById(`b${kingid - i * 100}`).innerText == 'Bqueen') 
                     {
-                        console.log('CHECK TO WHITE KING!')
                         king.style.backgroundColor = 'red'
                         break
                     }
@@ -650,7 +663,6 @@ function checkchecks(){
                 {
                     if (document.getElementById(`b${kingid - i}`).innerText == 'Brook' || document.getElementById(`b${kingid - i}`).innerText == 'Bqueen') 
                     {
-                        console.log('CHECK TO WHITE KING!')
                         king.style.backgroundColor = 'red'
                         break
                     }
@@ -661,20 +673,18 @@ function checkchecks(){
                 {
                     if (document.getElementById(`b${kingid + i}`).innerText == 'Brook' || document.getElementById(`b${kingid + i}`).innerText == 'Bqueen') 
                     {
-                        console.log('CHECK TO WHITE KING!')
                         king.style.backgroundColor = 'red'
                         break
                     }
                 }
             }
 
-            // BISHOP
+            // BISHOP and QUEEN
             for (let i = 1; i < 9; i++) {
                 if (document.getElementById(`b${kingid + i * 100 + i}`)) 
                 {
                     if (document.getElementById(`b${kingid + i * 100 + i}`).innerText == 'Bbishop' || document.getElementById(`b${kingid + i * 100 + i}`).innerText == 'Bqueen') 
                     {
-                        console.log('CHECK TO WHITE KING!')
                         king.style.backgroundColor = 'red'
                         break
                     }
@@ -685,7 +695,6 @@ function checkchecks(){
                 {
                     if (document.getElementById(`b${kingid - i * 100 + i}`).innerText == 'Bbishop' || document.getElementById(`b${kingid - i * 100 + i}`).innerText == 'Bqueen') 
                     {
-                        console.log('CHECK TO WHITE KING!')
                         king.style.backgroundColor = 'red'
                         break
                     }
@@ -696,7 +705,6 @@ function checkchecks(){
                 {
                     if (document.getElementById(`b${kingid + i * 100 - i}`).innerText == 'Bbishop' || document.getElementById(`b${kingid + i * 100 - i}`).innerText == 'Bqueen') 
                     {
-                        console.log('CHECK TO WHITE KING!')
                         king.style.backgroundColor = 'red'
                         break
                     }
@@ -707,7 +715,6 @@ function checkchecks(){
                 {
                     if (document.getElementById(`b${kingid - i * 100 - i}`).innerText == 'Bbishop' || document.getElementById(`b${kingid - i * 100 - i}`).innerText == 'Bqueen') 
                     {
-                        console.log('CHECK TO WHITE KING!')
                         king.style.backgroundColor = 'red'
                         break
                     }
@@ -716,58 +723,50 @@ function checkchecks(){
 
             // KNIGHT
             if (document.getElementById(`b${kingid + 100 + 2}`)) {
-                if (document.getElementById(`b${kingid + 100 + 2}`).innerText == 'Bknight' || document.getElementById(`b${kingid + 100 + 2}`).innerText == 'Bqueen') 
+                if (document.getElementById(`b${kingid + 100 + 2}`).innerText == 'Bknight') 
                 {
-                    console.log('CHECK TO WHITE KING!')
                     king.style.backgroundColor = 'red'
                 }
             }
             if (document.getElementById(`b${kingid - 100 + 2}`)) {
-                if (document.getElementById(`b${kingid - 100 + 2}`).innerText == 'Bknight' || document.getElementById(`b${kingid - 100 + 2}`).innerText == 'Bqueen') 
+                if (document.getElementById(`b${kingid - 100 + 2}`).innerText == 'Bknight') 
                 {
-                    console.log('CHECK TO WHITE KING!')
                     king.style.backgroundColor = 'red'
                 }
             }
             if (document.getElementById(`b${kingid + 200 + 1}`)) {
-                if (document.getElementById(`b${kingid + 200 + 1}`).innerText == 'Bknight' || document.getElementById(`b${kingid + 200 + 1}`).innerText == 'Bqueen') 
+                if (document.getElementById(`b${kingid + 200 + 1}`).innerText == 'Bknight') 
                 {
-                    console.log('CHECK TO WHITE KING!')
                     king.style.backgroundColor = 'red'
                 }
             }
             if (document.getElementById(`b${kingid + 200 - 1}`)) {
-                if (document.getElementById(`b${kingid + 200 - 1}`).innerText == 'Bknight' || document.getElementById(`b${kingid + 200 - 1}`).innerText == 'Bqueen') 
+                if (document.getElementById(`b${kingid + 200 - 1}`).innerText == 'Bknight') 
                 {
-                    console.log('CHECK TO WHITE KING!')
                     king.style.backgroundColor = 'red'
                 }
             }
             if (document.getElementById(`b${kingid - 2 + 100}`)) {
-                if (document.getElementById(`b${kingid - 2 + 100}`).innerText == 'Bknight' || document.getElementById(`b${kingid - 2 + 100}`).innerText == 'Bqueen') 
+                if (document.getElementById(`b${kingid - 2 + 100}`).innerText == 'Bknight') 
                 {
-                    console.log('CHECK TO WHITE KING!')
                     king.style.backgroundColor = 'red'
                 }
             }
             if (document.getElementById(`b${kingid - 2 - 100}`)) {
-                if (document.getElementById(`b${kingid - 2 - 100}`).innerText == 'Bknight' || document.getElementById(`b${kingid - 2 - 100}`).innerText == 'Bqueen') 
+                if (document.getElementById(`b${kingid - 2 - 100}`).innerText == 'Bknight') 
                 {
-                    console.log('CHECK TO WHITE KING!')
                     king.style.backgroundColor = 'red'
                 }
             }
             if (document.getElementById(`b${kingid - 200 + 1}`)) {
-                if (document.getElementById(`b${kingid - 200 + 1}`).innerText == 'Bknight' || document.getElementById(`b${kingid - 200 + 1}`).innerText == 'Bqueen') 
+                if (document.getElementById(`b${kingid - 200 + 1}`).innerText == 'Bknight') 
                 {
-                    console.log('CHECK TO WHITE KING!')
                     king.style.backgroundColor = 'red'
                 }
             }
             if (document.getElementById(`b${kingid - 200 - 1}`)) {
-                if (document.getElementById(`b${kingid - 200 - 1}`).innerText == 'Bknight' || document.getElementById(`b${kingid - 200 - 1}`).innerText == 'Bqueen') 
+                if (document.getElementById(`b${kingid - 200 - 1}`).innerText == 'Bknight') 
                 {
-                    console.log('CHECK TO WHITE KING!')
                     king.style.backgroundColor = 'red'
                 }
             }
