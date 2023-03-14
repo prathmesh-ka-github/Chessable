@@ -120,7 +120,6 @@ document.querySelectorAll('.box').forEach(item => {
             tog = tog + 1
             setTimeout(flip, 800);
         }
-        
         else if (item.style.backgroundColor == 'green' && item.innerText.length !== 0) {
             
             document.querySelectorAll('.box').forEach(i => {
@@ -146,10 +145,10 @@ document.querySelectorAll('.box').forEach(item => {
         arr.shift()
         current = eval(arr.join(''))
         aside = eval(arr.pop())
-        // console.log('aside = ' + aside)
+        console.log('aside = ' + aside)
         arr.push('0')
         aup = eval(arr.join(''))
-        // console.log('aup = ' + aup)
+        console.log('aup = ' + aup)
         a = aside + aup
         console.log('a = ' + a)
 
@@ -157,7 +156,6 @@ document.querySelectorAll('.box').forEach(item => {
         // Function to display the available paths for all pieces
         function whosTurn(toggle) {
             // PAWN
-
             if (item.innerText == `${toggle}pawn`) {
                 if (tog % 2 !== 0 && aup < 800) {
                     // For white side
@@ -3070,41 +3068,54 @@ function checkchecks(){
             for (let i = 1; i < 9; i++) {
                 if (document.getElementById(`b${kingid + i * 100}`)) 
                 {
-                    if (document.getElementById(`b${kingid + i * 100}`).innerText == 'Brook' || document.getElementById(`b${kingid + i * 100}`).innerText == 'Bqueen') 
-                    {
-                        king.style.backgroundColor = 'red'
-                        break
+                    if (document.getElementById(`b${kingid + i * 100}`).innerText.length !==0) {
+                        
+                        if (document.getElementById(`b${kingid + i * 100}`).innerText == 'Brook' || document.getElementById(`b${kingid + i * 100}`).innerText == 'Bqueen') 
+                        {
+                            king.style.backgroundColor = 'red'
+                            break
+                        }
                     }
+                    else{break}
                 }
             }
             for (let i = 1; i < 9; i++) {
                 if (document.getElementById(`b${kingid - i * 100}`)) 
                 {
-                    if (document.getElementById(`b${kingid - i * 100}`).innerText == 'Brook' || document.getElementById(`b${kingid - i * 100}`).innerText == 'Bqueen') 
-                    {
-                        king.style.backgroundColor = 'red'
-                        break
+                    if (document.getElementById(`b${kingid - i * 100}`).innerText.length !== 0) {
+                        if (document.getElementById(`b${kingid - i * 100}`).innerText == 'Brook' || document.getElementById(`b${kingid - i * 100}`).innerText == 'Bqueen') 
+                        {
+                            king.style.backgroundColor = 'red'
+                            break
+                        }
                     }
+                    else{break}
                 }
             }
             for (let i = 1; i < 9; i++) {
                 if (document.getElementById(`b${kingid - i}`)) 
                 {
-                    if (document.getElementById(`b${kingid - i}`).innerText == 'Brook' || document.getElementById(`b${kingid - i}`).innerText == 'Bqueen') 
-                    {
-                        king.style.backgroundColor = 'red'
-                        break
+                    if (document.getElementById(`b${kingid - i}`).innerText.length !== 0) {
+                        if (document.getElementById(`b${kingid - i}`).innerText == 'Brook' || document.getElementById(`b${kingid - i}`).innerText == 'Bqueen') 
+                        {
+                            king.style.backgroundColor = 'red'
+                            break
+                        }
                     }
+                    else{break}
                 }
             }
             for (let i = 1; i < 9; i++) {
                 if (document.getElementById(`b${kingid + i}`)) 
                 {
-                    if (document.getElementById(`b${kingid + i}`).innerText == 'Brook' || document.getElementById(`b${kingid + i}`).innerText == 'Bqueen') 
-                    {
-                        king.style.backgroundColor = 'red'
-                        break
+                    if (document.getElementById(`b${kingid + i}`).innerText.length !== 0) {
+                        if (document.getElementById(`b${kingid + i}`).innerText == 'Brook' || document.getElementById(`b${kingid + i}`).innerText == 'Bqueen') 
+                        {
+                            king.style.backgroundColor = 'red'
+                            break
+                        }
                     }
+                    else {break}
                 }
             }
 
@@ -3112,41 +3123,53 @@ function checkchecks(){
             for (let i = 1; i < 9; i++) {
                 if (document.getElementById(`b${kingid + i * 100 + i}`)) 
                 {
-                    if (document.getElementById(`b${kingid + i * 100 + i}`).innerText == 'Bbishop' || document.getElementById(`b${kingid + i * 100 + i}`).innerText == 'Bqueen') 
-                    {
-                        king.style.backgroundColor = 'red'
-                        break
+                    if (document.getElementById(`b${kingid + i * 100 + i}`).innerText.length !== 0) {
+                        if (document.getElementById(`b${kingid + i * 100 + i}`).innerText == 'Bbishop' || document.getElementById(`b${kingid + i * 100 + i}`).innerText == 'Bqueen') 
+                        {
+                            king.style.backgroundColor = 'red'
+                            break
+                        }
                     }
+                    else {break}
                 }
             }
             for (let i = 1; i < 9; i++) {
                 if (document.getElementById(`b${kingid - i * 100 + i}`)) 
                 {
-                    if (document.getElementById(`b${kingid - i * 100 + i}`).innerText == 'Bbishop' || document.getElementById(`b${kingid - i * 100 + i}`).innerText == 'Bqueen') 
-                    {
-                        king.style.backgroundColor = 'red'
-                        break
+                    if (document.getElementById(`b${kingid - i * 100 + i}`).innerText.length !== 0) {
+                        if (document.getElementById(`b${kingid - i * 100 + i}`).innerText == 'Bbishop' || document.getElementById(`b${kingid - i * 100 + i}`).innerText == 'Bqueen') 
+                        {
+                            king.style.backgroundColor = 'red'
+                            break
+                        }
                     }
+                    else {break}
                 }
             }
             for (let i = 1; i < 9; i++) {
                 if (document.getElementById(`b${kingid + i * 100 - i}`)) 
                 {
-                    if (document.getElementById(`b${kingid + i * 100 - i}`).innerText == 'Bbishop' || document.getElementById(`b${kingid + i * 100 - i}`).innerText == 'Bqueen') 
-                    {
-                        king.style.backgroundColor = 'red'
-                        break
+                    if (document.getElementById(`b${kingid + i * 100 - i}`).innerText.length !== 0) {   
+                        if (document.getElementById(`b${kingid + i * 100 - i}`).innerText == 'Bbishop' || document.getElementById(`b${kingid + i * 100 - i}`).innerText == 'Bqueen') 
+                        {
+                            king.style.backgroundColor = 'red'
+                            break
+                        }
                     }
+                    else {break}
                 }
             }
             for (let i = 1; i < 9; i++) {
                 if (document.getElementById(`b${kingid - i * 100 - i}`)) 
                 {
-                    if (document.getElementById(`b${kingid - i * 100 - i}`).innerText == 'Bbishop' || document.getElementById(`b${kingid - i * 100 - i}`).innerText == 'Bqueen') 
-                    {
-                        king.style.backgroundColor = 'red'
-                        break
+                    if (document.getElementById(`b${kingid - i * 100 - i}`).innerText.length !== 0) {
+                        if (document.getElementById(`b${kingid - i * 100 - i}`).innerText == 'Bbishop' || document.getElementById(`b${kingid - i * 100 - i}`).innerText == 'Bqueen') 
+                        {
+                            king.style.backgroundColor = 'red'
+                            break
+                        }
                     }
+                    else {break}
                 }
             }
 
