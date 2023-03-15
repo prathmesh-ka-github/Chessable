@@ -173,6 +173,7 @@ document.querySelectorAll('.box').forEach(item => {
         function whosTurn(toggle) {
             // PAWN
             if (item.innerText == `${toggle}pawn`) {
+
                 if (tog % 2 !== 0 && aup < 800) {
                     // For white side
                     if (aup == 200) {
@@ -214,9 +215,11 @@ document.querySelectorAll('.box').forEach(item => {
 
                     }
                 }
+
                 item.style.backgroundColor = 'cadetblue'
                 reddish()
-                checkchecks()
+
+                    
             }
 
 
@@ -228,13 +231,13 @@ document.querySelectorAll('.box').forEach(item => {
                 if (document.getElementById(`b${a + 1}`)) {
                     document.getElementById(`b${a + 1}`).style.backgroundColor = 'green'
                     var king = document.getElementById(`b${a + 1}`)
-                    var cantid = document.getElementById(`b${a + 1}`).id
-                    array = Array.from(cantid)
+                    var kingid = document.getElementById(`b${a + 1}`).id
+                    array = Array.from(kingid)
                     array.shift()
-                    cantid = eval(array.join(''))
+                    kingid = eval(array.join(''))
                     // WHITE KING
                     // Pawns
-                    if (king.innerText == 'Wking') 
+                    if (item.innerText == 'Wking') 
                     {
                         // Pawns
                         if (document.getElementById(`b${kingid + 100 + 1}`)) 
@@ -395,7 +398,7 @@ document.querySelectorAll('.box').forEach(item => {
                     }
                     // BLACK KING
                     // Pawns
-                    if (king.innerText == 'Bking') 
+                    if (item.innerText == 'Bking') 
                     {
                         // Pawns
                         if (document.getElementById(`b${kingid + 100 + 1}`)) 
@@ -560,13 +563,13 @@ document.querySelectorAll('.box').forEach(item => {
                 if (document.getElementById(`b${a - 1}`)) {
                     document.getElementById(`b${a - 1}`).style.backgroundColor = 'green'
                     var king = document.getElementById(`b${a - 1}`)
-                    var cantid = document.getElementById(`b${a - 1}`).id
-                    array = Array.from(cantid)
+                    var kingid = document.getElementById(`b${a - 1}`).id
+                    array = Array.from(kingid)
                     array.shift()
-                    cantid = eval(array.join(''))
+                    kingid = eval(array.join(''))
                         // WHITE KING
                         // Pawns
-                        if (king.innerText == 'Wking') 
+                        if (item.innerText == 'Wking') 
                         {
                             // Pawns
                             if (document.getElementById(`b${kingid + 100 + 1}`)) 
@@ -725,7 +728,7 @@ document.querySelectorAll('.box').forEach(item => {
                                 }
                             }
                         }
-                    if (king.innerText == 'Bking') 
+                    if (item.innerText == 'Bking') 
                     {
                         // Pawns
                         if (document.getElementById(`b${kingid + 100 + 1}`)) 
@@ -889,13 +892,13 @@ document.querySelectorAll('.box').forEach(item => {
                 if (document.getElementById(`b${a + 100}`)) {
                     document.getElementById(`b${a + 100}`).style.backgroundColor = 'green'
                     var king = document.getElementById(`b${a + 100}`)
-                    var cantid = document.getElementById(`b${a + 100}`).id
-                    array = Array.from(cantid)
+                    var kingid = document.getElementById(`b${a + 100}`).id
+                    array = Array.from(kingid)
                     array.shift()
-                    cantid = eval(array.join(''))
+                    kingid = eval(array.join(''))
                         // WHITE KING
                         // Pawns
-                        if (king.innerText == 'Wking') 
+                        if (item.innerText == 'Wking') 
                         {
                             // Pawns
                             if (document.getElementById(`b${kingid + 100 + 1}`)) 
@@ -1054,7 +1057,7 @@ document.querySelectorAll('.box').forEach(item => {
                                 }
                             }
                         }
-                        if (king.innerText == 'Bking') 
+                        if (item.innerText == 'Bking') 
                         {
                             // Pawns
                             if (document.getElementById(`b${kingid + 100 + 1}`)) 
@@ -1218,11 +1221,11 @@ document.querySelectorAll('.box').forEach(item => {
                 if (document.getElementById(`b${a - 100}`)) {
                     document.getElementById(`b${a - 100}`).style.backgroundColor = 'green'
                     var king = document.getElementById(`b${a - 100}`)
-                    var cantid = document.getElementById(`b${a - 100}`).id
-                    array = Array.from(cantid)
+                    var kingid = document.getElementById(`b${a - 100}`).id
+                    array = Array.from(kingid)
                     array.shift()
-                    cantid = eval(array.join(''))
-                    if (king.innerText == 'Wking') 
+                    kingid = eval(array.join(''))
+                    if (item.innerText == 'Wking') 
                     {
                         // Pawns
                         if (document.getElementById(`b${kingid + 100 + 1}`)) 
@@ -1381,7 +1384,7 @@ document.querySelectorAll('.box').forEach(item => {
                             }
                         }
                     }
-                    if (king.innerText == 'Bking') 
+                    if (item.innerText == 'Bking') 
                     {
                         // Pawns
                         if (document.getElementById(`b${kingid + 100 + 1}`)) 
@@ -1545,11 +1548,11 @@ document.querySelectorAll('.box').forEach(item => {
                 if (document.getElementById(`b${a - 100 + 1}`)) {
                     document.getElementById(`b${a - 100 + 1}`).style.backgroundColor = 'green'
                     var king = document.getElementById(`b${a - 100 + 1}`)
-                    var cantid = document.getElementById(`b${a - 100 + 1}`).id
-                    array = Array.from(cantid)
+                    var kingid = document.getElementById(`b${a - 100 + 1}`).id
+                    array = Array.from(kingid)
                     array.shift()
-                    cantid = eval(array.join(''))
-                    if (king.innerText == 'Wking') 
+                    kingid = eval(array.join(''))
+                    if (item.innerText == 'Wking') 
                     {
                         // Pawns
                         if (document.getElementById(`b${kingid + 100 + 1}`)) 
@@ -1708,7 +1711,7 @@ document.querySelectorAll('.box').forEach(item => {
                             }
                         }
                     }
-                    if (king.innerText == 'Bking') 
+                    if (item.innerText == 'Bking') 
                     {
                         // Pawns
                         if (document.getElementById(`b${kingid + 100 + 1}`)) 
@@ -1872,11 +1875,11 @@ document.querySelectorAll('.box').forEach(item => {
                 if (document.getElementById(`b${a - 100 - 1}`)) {
                     document.getElementById(`b${a - 100 - 1}`).style.backgroundColor = 'green'
                     var king = document.getElementById(`b${a - 100 - 1}`)
-                    var cantid = document.getElementById(`b${a - 100 - 1}`).id
-                    array = Array.from(cantid)
+                    var kingid = document.getElementById(`b${a - 100 - 1}`).id
+                    array = Array.from(kingid)
                     array.shift()
-                    cantid = eval(array.join(''))
-                    if (king.innerText == 'Wking') 
+                    kingid = eval(array.join(''))
+                    if (item.innerText == 'Wking') 
                     {
                         // Pawns
                         if (document.getElementById(`b${kingid + 100 + 1}`)) 
@@ -2035,7 +2038,7 @@ document.querySelectorAll('.box').forEach(item => {
                             }
                         }
                     }
-                    if (king.innerText == 'Bking') 
+                    if (item.innerText == 'Bking') 
                     {
                         // Pawns
                         if (document.getElementById(`b${kingid + 100 + 1}`)) 
@@ -2199,11 +2202,11 @@ document.querySelectorAll('.box').forEach(item => {
                 if (document.getElementById(`b${a + 100 + 1}`)) {
                     document.getElementById(`b${a + 100 + 1}`).style.backgroundColor = 'green'
                     var king = document.getElementById(`b${a + 100 + 1}`)
-                    var cantid = document.getElementById(`b${a + 100 + 1}`).id
-                    array = Array.from(cantid)
+                    var kingid = document.getElementById(`b${a + 100 + 1}`).id
+                    array = Array.from(kingid)
                     array.shift()
-                    cantid = eval(array.join(''))
-                    if (king.innerText == 'Wking') 
+                    kingid = eval(array.join(''))
+                    if (item.innerText == 'Wking') 
                     {
                         // Pawns
                         if (document.getElementById(`b${kingid + 100 + 1}`)) 
@@ -2362,7 +2365,7 @@ document.querySelectorAll('.box').forEach(item => {
                             }
                         }
                     }
-                    if (king.innerText == 'Bking') 
+                    if (item.innerText == 'Bking') 
                     {
                         // Pawns
                         if (document.getElementById(`b${kingid + 100 + 1}`)) 
@@ -2526,11 +2529,11 @@ document.querySelectorAll('.box').forEach(item => {
                 if (document.getElementById(`b${a + 100 - 1}`)) {
                     document.getElementById(`b${a + 100 - 1}`).style.backgroundColor = 'green'
                     var king = document.getElementById(`b${a + 100 - 1}`)
-                    var cantid = document.getElementById(`b${a + 100 - 1}`).id
-                    array = Array.from(cantid)
+                    var kingid = document.getElementById(`b${a + 100 - 1}`).id
+                    array = Array.from(kingid)
                     array.shift()
-                    cantid = eval(array.join(''))
-                    if (king.innerText == 'Wking') 
+                    kingid = eval(array.join(''))
+                    if (item.innerText == 'Wking') 
                     {
                         // Pawns
                         if (document.getElementById(`b${kingid + 100 + 1}`)) 
@@ -2689,7 +2692,7 @@ document.querySelectorAll('.box').forEach(item => {
                             }
                         }
                     }
-                    if (king.innerText == 'Bking') 
+                    if (item.innerText == 'Bking') 
                     {
                         // Pawns
                         if (document.getElementById(`b${kingid + 100 + 1}`)) 
@@ -2930,7 +2933,6 @@ document.querySelectorAll('.box').forEach(item => {
 
                 item.style.backgroundColor = 'cadetblue'
                 reddish()
-                checkchecks()
             }
 
 
@@ -2979,7 +2981,6 @@ document.querySelectorAll('.box').forEach(item => {
                 }
                 item.style.backgroundColor = 'cadetblue'
                 reddish()
-                checkchecks()
             }
 
 
@@ -3066,7 +3067,6 @@ document.querySelectorAll('.box').forEach(item => {
                 }
                 item.style.backgroundColor = 'cadetblue'
                 reddish()
-                checkchecks()
 
             }
 
@@ -3099,9 +3099,9 @@ document.querySelectorAll('.box').forEach(item => {
                 }
                 item.style.backgroundColor = 'cadetblue'
                 reddish()
-                checkchecks()
 
             }
+
         }
 
         
