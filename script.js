@@ -3624,3 +3624,7 @@ function flip() {
     }
 }
 flip()
+
+function reloadd(){
+    location.reload();
+}
