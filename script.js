@@ -123,7 +123,6 @@ function checkpawn(){
 
 tog = 1
 document.querySelectorAll('.box').forEach(item => {
-    
     item.addEventListener('click', function () {
         // To delete the opposite element
         
@@ -2861,22 +2860,20 @@ document.querySelectorAll('.box').forEach(item => {
             if (item.innerText == `${toggle}king`)
             {
                 item.style.backgroundColor = 'cadetblue'
-
+                checkchecks()
                 // SHORT CASTLE
                 if(item.id == 'b105' || item.id == 'b805'){
                     if (document.getElementById(`b${current+1}`).innerText == '' && document.getElementById(`b${current+2}`).innerText == '') {
-                        if (document.getElementById(`b${current+3}`).innerText == `${toggle}rook`) {
+                        if (document.getElementById(`b${current+3}`).innerText == `${toggle}rook` && item.style.backgroundColor !== "red") {
                             document.getElementById(`b${current+2}`).style.backgroundColor = 'yellow';
                             reddish()
-                            checkchecks()
                         }
                     }
                     // LONG CASTLE
                     if ( document.getElementById(`b${current-1}`).innerText == '' && document.getElementById(`b${current-2}`).innerText == '' && document.getElementById(`b${current-3}`).innerText == ''){
-                        if (document.getElementById(`b${current-4}`).innerText == `${toggle}rook`) {
+                        if (document.getElementById(`b${current-4}`).innerText == `${toggle}rook` && item.style.backgroundColor !== "red") {
                             document.getElementById(`b${current-2}`).style.backgroundColor = 'yellow';
                             reddish()
-                            checkchecks()
                         }
                     }
                 }
@@ -3191,9 +3188,8 @@ whiteking.addEventListener('click', function(){
     if (whiteking.innerText == 'Wking' && f1.innerText == '' && g1.innerText=='' && whiteking.style.backgroundColor == 'cadetblue' ) {
         g1.addEventListener('click', function() {
             if( g1.innerText == '' && whiteking.innerText == 'Wking'){
-                console.log('yellow tile selected')
                 g1.innerText = 'Wking'
-                whiteking.innerText = ' '
+                whiteking.innerText = ''
                 h1.innerText = ''
                 f1.innerText = 'Wrook'
                 coloring()
@@ -3205,9 +3201,8 @@ whiteking.addEventListener('click', function(){
     if (whiteking.innerText == 'Wking' && c1.innerText == '' && d1.innerText == '' && b1.innerText=='' && whiteking.style.backgroundColor == 'cadetblue' ) {
         c1.addEventListener('click', function() {
             if( c1.innerText == '' && whiteking.innerText == 'Wking'){
-                console.log('yellow tile selected')
                 c1.innerText = 'Wking'
-                whiteking.innerText = ' '
+                whiteking.innerText = ''
                 a1.innerText = ''
                 d1.innerText = 'Wrook'
                 coloring()
@@ -3221,9 +3216,8 @@ blackking.addEventListener('click', function(){
     if (blackking.innerText == 'Bking' && f8.innerText == '' && g8.innerText=='' && blackking.style.backgroundColor == 'cadetblue' ) {
         g8.addEventListener('click', function() {
             if( g8.innerText == '' && blackking.innerText == 'Bking'){
-                console.log('yellow tile selected')
                 g8.innerText = 'Bking'
-                blackking.innerText = ' '
+                blackking.innerText = ''
                 h8.innerText = ''
                 f8.innerText = 'Brook'
                 coloring()
@@ -3235,9 +3229,8 @@ blackking.addEventListener('click', function(){
     if (blackking.innerText == 'Bking' && c8.innerText == '' && d8.innerText == '' && b8.innerText=='' && blackking.style.backgroundColor == 'cadetblue' ) {
         c8.addEventListener('click', function() {
             if( c8.innerText == '' && blackking.innerText == 'Bking'){
-                console.log('yellow tile selected')
                 c8.innerText = 'Bking'
-                blackking.innerText = ' '
+                blackking.innerText = ''
                 a8.innerText = ''
                 d8.innerText = 'Brook'
                 coloring()
@@ -3250,6 +3243,7 @@ blackking.addEventListener('click', function(){
 
 function checkchecks(){
     // DETECT CHECKS
+    console.log("checkchecks function triggered")
     document.querySelectorAll('.box').forEach(king =>{
         var kingid = king.id
         array = Array.from(kingid)
