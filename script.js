@@ -221,7 +221,32 @@ document.querySelectorAll('.box').forEach(item => {
                     
             }
 
+            // CASTLING
+            if (item.innerText == `${toggle}king`)
+            {
+                // SHORT CASTLE
+                if(item.id == 'b105' || item.id == 'b805'){
+                    if (document.getElementById(`b${current+1}`).innerText == '' && document.getElementById(`b${current+2}`).innerText == '') {
+                        if (document.getElementById(`b${current+3}`).innerText == `${toggle}rook` && item.style.backgroundColor !== "red") {
+                            document.getElementById(`b${current+2}`).style.backgroundColor = 'yellow';
+                            reddish()
+                        }
+                    }
+                    // LONG CASTLE
+                    if ( document.getElementById(`b${current-1}`).innerText == '' && document.getElementById(`b${current-2}`).innerText == '' && document.getElementById(`b${current-3}`).innerText == ''){
+                        if (document.getElementById(`b${current-4}`).innerText == `${toggle}rook` && item.style.backgroundColor !== "red") {
+                            document.getElementById(`b${current-2}`).style.backgroundColor = 'yellow';
+                            reddish()
+                        }
+                    }
+                }
+                item.style.backgroundColor = 'cadetblue'
 
+                if (document.getElementById(`b${current+2}`).style.backgroundColor == 'yellow' || document.getElementById(`b${current-2}`).style.backgroundColor == 'yellow') {
+                    checkchecks()                    
+                }
+
+            }
 
             // KING
 
@@ -2856,29 +2881,7 @@ document.querySelectorAll('.box').forEach(item => {
                 reddish()
             }
 
-            // CASTLING
-            if (item.innerText == `${toggle}king`)
-            {
-                item.style.backgroundColor = 'cadetblue'
-                checkchecks()
-                // SHORT CASTLE
-                if(item.id == 'b105' || item.id == 'b805'){
-                    if (document.getElementById(`b${current+1}`).innerText == '' && document.getElementById(`b${current+2}`).innerText == '') {
-                        if (document.getElementById(`b${current+3}`).innerText == `${toggle}rook` && item.style.backgroundColor !== "red") {
-                            document.getElementById(`b${current+2}`).style.backgroundColor = 'yellow';
-                            reddish()
-                        }
-                    }
-                    // LONG CASTLE
-                    if ( document.getElementById(`b${current-1}`).innerText == '' && document.getElementById(`b${current-2}`).innerText == '' && document.getElementById(`b${current-3}`).innerText == ''){
-                        if (document.getElementById(`b${current-4}`).innerText == `${toggle}rook` && item.style.backgroundColor !== "red") {
-                            document.getElementById(`b${current-2}`).style.backgroundColor = 'yellow';
-                            reddish()
-                        }
-                    }
-                }
 
-            }
 
             // ROOK
 
@@ -3243,7 +3246,6 @@ blackking.addEventListener('click', function(){
 
 function checkchecks(){
     // DETECT CHECKS
-    console.log("checkchecks function triggered")
     document.querySelectorAll('.box').forEach(king =>{
         var kingid = king.id
         array = Array.from(kingid)
