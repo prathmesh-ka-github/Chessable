@@ -813,3 +813,6 @@ document.querySelectorAll('.box').forEach(tile=> {
 
     })
 })
+function reloadd(){
+    location.reload();
+}

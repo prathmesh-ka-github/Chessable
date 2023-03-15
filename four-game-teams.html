@@ -332,6 +332,22 @@
             </div>
         </div>
     </div>
+    <div class="winner-screen-container">
+        <div class="winner-screen">
+            <div class="team-win">
+            Team &#8544; wins!
+            </div>
+            <div class="winner-name" id="winner-name">
+                <p>Congrats <span id="winner-name1">red-player-name</span> & <span id="winner-name2">yellow-player-name</span> You win!</p>
+            </div>
+            <div class="rematch" onclick="reloadd()">
+                <button>Rematch</button>
+                <a href="index.html">
+                    <button>Home</button>
+                </a>
+            </div>
+        </div>
+    </div>
     <script>
         var playtime = localStorage.getItem("timevalue");
         var redName = localStorage.getItem("redname");
@@ -347,6 +363,8 @@
         document.getElementById("bmin").innerHTML = playtime;
         document.getElementById("ymin").innerHTML = playtime;
         document.getElementById("gmin").innerHTML = playtime;
+        document.getElementById("winner-name1").innerHTML = redName;
+        document.getElementById("winner-name2").innerHTML = yellowName;
     </script>
     <script src="four-player-teams.js"></script>
     <script src="countdown-four-player.js"></script>
