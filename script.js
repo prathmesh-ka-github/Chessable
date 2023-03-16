@@ -491,14 +491,19 @@ document.querySelectorAll('.box').forEach(item => {
                     // Pawns
                     if (item.innerText == 'Wking') 
                     {
-                        // Cant go there coz Black King
+
+                        // Cant go there coz White King
                         if (document.getElementById(`b${kingid + 1}`)) {
                             if (document.getElementById(`b${kingid + 1}`).innerText == "Bking") {
                                 king.style.backgroundColor = "red"
                             }
-                            if (document.getElementById(`b${kingid + 1 + 100}`).innerText == "Bking" ) {
+                        }
+                        if (document.getElementById(`b${kingid + 1}`) && document.getElementById(`b${kingid + 1 + 100}`)) {
+                            if (document.getElementById(`b${kingid + 1 + 100}`).innerText == "Bking") {
                                 king.style.backgroundColor = "red"
                             }
+                        }
+                        if (document.getElementById(`b${kingid + 1}`) && document.getElementById(`b${kingid + 1 - 100}`)) {
                             if (document.getElementById(`b${kingid + 1 - 100}`).innerText == "Bking") {
                                 king.style.backgroundColor = "red"
                             }
@@ -669,9 +674,13 @@ document.querySelectorAll('.box').forEach(item => {
                             if (document.getElementById(`b${kingid + 1}`).innerText == "Wking") {
                                 king.style.backgroundColor = "red"
                             }
-                            if (document.getElementById(`b${kingid + 1 + 100}`).innerText == "Wking" ) {
+                        }
+                        if (document.getElementById(`b${kingid + 1}`) && document.getElementById(`b${kingid + 1 + 100}`)) {
+                            if (document.getElementById(`b${kingid + 1 + 100}`).innerText == "Wking") {
                                 king.style.backgroundColor = "red"
                             }
+                        }
+                        if (document.getElementById(`b${kingid + 1}`) && document.getElementById(`b${kingid + 1 - 100}`)) {
                             if (document.getElementById(`b${kingid + 1 - 100}`).innerText == "Wking") {
                                 king.style.backgroundColor = "red"
                             }
@@ -852,9 +861,13 @@ document.querySelectorAll('.box').forEach(item => {
                                 if (document.getElementById(`b${kingid - 1}`).innerText == "Bking") {
                                     king.style.backgroundColor = "red"
                                 }
-                                if (document.getElementById(`b${kingid - 1 + 100}`).innerText == "Bking" ) {
+                            }
+                            if (document.getElementById(`b${kingid - 1}`) && document.getElementById(`b${kingid - 1 + 100}`)) {
+                                if (document.getElementById(`b${kingid - 1 + 100}`).innerText == "Bking") {
                                     king.style.backgroundColor = "red"
                                 }
+                            }
+                            if (document.getElementById(`b${kingid - 1}`) && document.getElementById(`b${kingid - 1 - 100}`)) {
                                 if (document.getElementById(`b${kingid - 1 - 100}`).innerText == "Bking") {
                                     king.style.backgroundColor = "red"
                                 }
@@ -1018,14 +1031,18 @@ document.querySelectorAll('.box').forEach(item => {
                     }
                     if (item.innerText == 'Bking') 
                     {
-                        // Cant go there coz Black King
+                        // Cant go there coz White King
                         if (document.getElementById(`b${kingid - 1}`)) {
                             if (document.getElementById(`b${kingid - 1}`).innerText == "Wking") {
                                 king.style.backgroundColor = "red"
                             }
-                            if (document.getElementById(`b${kingid - 1 + 100}`).innerText == "Wking" ) {
+                        }
+                        if (document.getElementById(`b${kingid - 1}`) && document.getElementById(`b${kingid - 1 + 100}`)) {
+                            if (document.getElementById(`b${kingid - 1 + 100}`).innerText == "Wking") {
                                 king.style.backgroundColor = "red"
                             }
+                        }
+                        if (document.getElementById(`b${kingid - 1}`) && document.getElementById(`b${kingid - 1 - 100}`)) {
                             if (document.getElementById(`b${kingid - 1 - 100}`).innerText == "Wking") {
                                 king.style.backgroundColor = "red"
                             }
@@ -1197,9 +1214,25 @@ document.querySelectorAll('.box').forEach(item => {
                     array.shift()
                     kingid = eval(array.join(''))
                         // WHITE KING
-                        // Pawns
                         if (item.innerText == 'Wking') 
                         {
+                            // Cant go there coz White King
+                            if (document.getElementById(`b${kingid + 100}`)) {
+                                if (document.getElementById(`b${kingid + 100}`).innerText == "Bking") {
+                                    king.style.backgroundColor = "red"
+                                }
+                            }
+                            if (document.getElementById(`b${kingid + 100}`) && document.getElementById(`b${kingid + 1 + 100}`)) {
+                                if (document.getElementById(`b${kingid + 1 + 100}`).innerText == "Bking") {
+                                    king.style.backgroundColor = "red"
+                                }
+                            }
+                            if (document.getElementById(`b${kingid + 100}`) && document.getElementById(`b${kingid - 1 + 100}`)) {
+                                if (document.getElementById(`b${kingid - 1 + 100}`).innerText == "Bking") {
+                                    king.style.backgroundColor = "red"
+                                }
+                            }
+
                             // Pawns
                             if (document.getElementById(`b${kingid + 100 + 1}`)) 
                             {
@@ -1359,6 +1392,23 @@ document.querySelectorAll('.box').forEach(item => {
                         }
                         if (item.innerText == 'Bking') 
                         {
+                            // Cant go there coz White King
+                            if (document.getElementById(`b${kingid + 100}`)) {
+                                if (document.getElementById(`b${kingid + 100}`).innerText == "Wking") {
+                                    king.style.backgroundColor = "red"
+                                }
+                            }
+                            if (document.getElementById(`b${kingid + 100}`) && document.getElementById(`b${kingid + 1 + 100}`)) {
+                                if (document.getElementById(`b${kingid + 1 + 100}`).innerText == "Wking") {
+                                    king.style.backgroundColor = "red"
+                                }
+                            }
+                            if (document.getElementById(`b${kingid + 100}`) && document.getElementById(`b${kingid - 1 + 100}`)) {
+                                if (document.getElementById(`b${kingid - 1 + 100}`).innerText == "Wking") {
+                                    king.style.backgroundColor = "red"
+                                }
+                            }
+
                             // Pawns
                             if (document.getElementById(`b${kingid - 100 + 1}`)) 
                             {
@@ -1527,6 +1577,22 @@ document.querySelectorAll('.box').forEach(item => {
                     kingid = eval(array.join(''))
                     if (item.innerText == 'Wking') 
                     {
+                        // Cant go there coz black King
+                        if (document.getElementById(`b${kingid - 100}`)) {
+                            if (document.getElementById(`b${kingid - 100}`).innerText == "Bking") {
+                                king.style.backgroundColor = "red"
+                            }
+                        }
+                        if (document.getElementById(`b${kingid - 100}`) && document.getElementById(`b${kingid + 1 - 100}`)) {
+                            if (document.getElementById(`b${kingid + 1 - 100}`).innerText == "Bking") {
+                                king.style.backgroundColor = "red"
+                            }
+                        }
+                        if (document.getElementById(`b${kingid - 100}`) && document.getElementById(`b${kingid - 1 - 100}`)) {
+                            if (document.getElementById(`b${kingid - 1 - 100}`).innerText == "Bking") {
+                                king.style.backgroundColor = "red"
+                            }
+                        }
                         // Pawns
                         if (document.getElementById(`b${kingid + 100 + 1}`)) 
                         {
@@ -1686,6 +1752,22 @@ document.querySelectorAll('.box').forEach(item => {
                     }
                     if (item.innerText == 'Bking') 
                     {
+                        // Cant go there coz White King
+                        if (document.getElementById(`b${kingid - 100}`)) {
+                            if (document.getElementById(`b${kingid - 100}`).innerText == "Wking") {
+                                king.style.backgroundColor = "red"
+                            }
+                        }
+                        if (document.getElementById(`b${kingid - 100}`) && document.getElementById(`b${kingid + 1 - 100}`)) {
+                            if (document.getElementById(`b${kingid + 1 - 100}`).innerText == "Wking") {
+                                king.style.backgroundColor = "red"
+                            }
+                        }
+                        if (document.getElementById(`b${kingid - 100}`) && document.getElementById(`b${kingid - 1 - 100}`)) {
+                            if (document.getElementById(`b${kingid - 1 - 100}`).innerText == "Wking") {
+                                king.style.backgroundColor = "red"
+                            }
+                        }
                         // Pawns
                         if (document.getElementById(`b${kingid - 100 + 1}`)) 
                         {
@@ -1854,6 +1936,38 @@ document.querySelectorAll('.box').forEach(item => {
                     kingid = eval(array.join(''))
                     if (item.innerText == 'Wking') 
                     {
+                        // Cant go there coz black King
+                        if (document.getElementById(`b${kingid - 100 + 1}`)) {
+                            if (document.getElementById(`b${kingid - 100 + 1}`).innerText == "Bking") {
+                                king.style.backgroundColor = "red"
+                            }
+                        }
+                        if (document.getElementById(`b${kingid + 1}`)) {
+                            if (document.getElementById(`b${kingid + 1}`).innerText == "Bking") {
+                                king.style.backgroundColor = "red"
+                            }
+                        }
+                        if (document.getElementById(`b${kingid - 100}`)) {
+                            if (document.getElementById(`b${kingid - 100}`).innerText == "Bking") {
+                                king.style.backgroundColor = "red"
+                            }
+                        }
+                        if (document.getElementById(`b${kingid - 100}`)) {
+                            if (document.getElementById(`b${kingid - 100}`).innerText == "Bking") {
+                                king.style.backgroundColor = "red"
+                            }
+                        }
+                        if (document.getElementById(`b${kingid + 100 + 1}`)) {
+                            if (document.getElementById(`b${kingid + 100 + 1}`).innerText == "Bking") {
+                                king.style.backgroundColor = "red"
+                            }
+                        }
+                        if (document.getElementById(`b${kingid - 100 - 1}`)) {
+                            if (document.getElementById(`b${kingid - 100 - 1}`).innerText == "Bking") {
+                                king.style.backgroundColor = "red"
+                            }
+                        }
+
                         // Pawns
                         if (document.getElementById(`b${kingid + 100 + 1}`)) 
                         {
@@ -2013,6 +2127,37 @@ document.querySelectorAll('.box').forEach(item => {
                     }
                     if (item.innerText == 'Bking') 
                     {
+                        // Cant go there coz black King
+                        if (document.getElementById(`b${kingid - 100 + 1}`)) {
+                            if (document.getElementById(`b${kingid - 100 + 1}`).innerText == "Wking") {
+                                king.style.backgroundColor = "red"
+                            }
+                        }
+                        if (document.getElementById(`b${kingid + 1}`)) {
+                            if (document.getElementById(`b${kingid + 1}`).innerText == "Wking") {
+                                king.style.backgroundColor = "red"
+                            }
+                        }
+                        if (document.getElementById(`b${kingid - 100}`)) {
+                            if (document.getElementById(`b${kingid - 100}`).innerText == "Wking") {
+                                king.style.backgroundColor = "red"
+                            }
+                        }
+                        if (document.getElementById(`b${kingid - 100}`)) {
+                            if (document.getElementById(`b${kingid - 100}`).innerText == "Wking") {
+                                king.style.backgroundColor = "red"
+                            }
+                        }
+                        if (document.getElementById(`b${kingid + 100 + 1}`)) {
+                            if (document.getElementById(`b${kingid + 100 + 1}`).innerText == "Wking") {
+                                king.style.backgroundColor = "red"
+                            }
+                        }
+                        if (document.getElementById(`b${kingid - 100 - 1}`)) {
+                            if (document.getElementById(`b${kingid - 100 - 1}`).innerText == "Wking") {
+                                king.style.backgroundColor = "red"
+                            }
+                        }
                         // Pawns
                         if (document.getElementById(`b${kingid - 100 + 1}`)) 
                         {
@@ -2181,6 +2326,33 @@ document.querySelectorAll('.box').forEach(item => {
                     kingid = eval(array.join(''))
                     if (item.innerText == 'Wking') 
                     {
+                        // Cant go there coz black King
+                        if (document.getElementById(`b${kingid - 100 - 1}`)) {
+                            if (document.getElementById(`b${kingid - 100 - 1}`).innerText == "Bking") {
+                                king.style.backgroundColor = "red"
+                            }
+                        }
+                        if (document.getElementById(`b${kingid - 100 - 1}`) && document.getElementById(`b${kingid - 100}`)) {
+                            if (document.getElementById(`b${kingid - 100}`).innerText == "Bking") {
+                                king.style.backgroundColor = "red"
+                            }
+                        }
+                        if (document.getElementById(`b${kingid - 100 - 1}`) && document.getElementById(`b${kingid - 100 + 1}`)) {
+                            if (document.getElementById(`b${kingid - 100 + 1}`).innerText == "Bking") {
+                                king.style.backgroundColor = "red"
+                            }
+                        }
+                        if (document.getElementById(`b${kingid - 100 - 1}`) && document.getElementById(`b${kingid - 1}`)) {
+                            if (document.getElementById(`b${kingid - 1}`).innerText == "Bking") {
+                                king.style.backgroundColor = "red"
+                            }
+                        }
+                        if (document.getElementById(`b${kingid - 100 - 1}`) && document.getElementById(`b${kingid - 1 + 100}`)) {
+                            if (document.getElementById(`b${kingid - 1 + 100}`).innerText == "Bking") {
+                                king.style.backgroundColor = "red"
+                            }
+                        }
+
                         // Pawns
                         if (document.getElementById(`b${kingid + 100 + 1}`)) 
                         {
@@ -2340,6 +2512,32 @@ document.querySelectorAll('.box').forEach(item => {
                     }
                     if (item.innerText == 'Bking') 
                     {
+                        // Cant go there coz White King
+                        if (document.getElementById(`b${kingid - 100 - 1}`)) {
+                            if (document.getElementById(`b${kingid - 100 - 1}`).innerText == "Wking") {
+                                king.style.backgroundColor = "red"
+                            }
+                        }
+                        if (document.getElementById(`b${kingid - 100 - 1}`) && document.getElementById(`b${kingid - 100}`)) {
+                            if (document.getElementById(`b${kingid - 100}`).innerText == "Wking") {
+                                king.style.backgroundColor = "red"
+                            }
+                        }
+                        if (document.getElementById(`b${kingid - 100 - 1}`) && document.getElementById(`b${kingid - 100 + 1}`)) {
+                            if (document.getElementById(`b${kingid - 100 + 1}`).innerText == "Wking") {
+                                king.style.backgroundColor = "red"
+                            }
+                        }
+                        if (document.getElementById(`b${kingid - 100 - 1}`) && document.getElementById(`b${kingid - 1}`)) {
+                            if (document.getElementById(`b${kingid - 1}`).innerText == "Wking") {
+                                king.style.backgroundColor = "red"
+                            }
+                        }
+                        if (document.getElementById(`b${kingid - 100 - 1}`) && document.getElementById(`b${kingid - 1 + 100}`)) {
+                            if (document.getElementById(`b${kingid - 1 + 100}`).innerText == "Wking") {
+                                king.style.backgroundColor = "red"
+                            }
+                        }
                         // Pawns
                         if (document.getElementById(`b${kingid - 100 + 1}`)) 
                         {
@@ -2508,6 +2706,32 @@ document.querySelectorAll('.box').forEach(item => {
                     kingid = eval(array.join(''))
                     if (item.innerText == 'Wking') 
                     {
+                        // Cant go there coz black King
+                        if (document.getElementById(`b${kingid  + 100 + 1}`)) {
+                            if (document.getElementById(`b${kingid  + 100 + 1}`).innerText == "Bking") {
+                                king.style.backgroundColor = "red"
+                            }
+                        }
+                        if (document.getElementById(`b${kingid  + 100 + 1}`) && document.getElementById(`b${kingid  + 100 }`)) {
+                            if (document.getElementById(`b${kingid  + 100 }`).innerText == "Bking") {
+                                king.style.backgroundColor = "red"
+                            }
+                        }
+                        if (document.getElementById(`b${kingid  + 100 + 1}`) && document.getElementById(`b${kingid  + 100 - 1}`)) {
+                            if (document.getElementById(`b${kingid  + 100 - 1}`).innerText == "Bking") {
+                                king.style.backgroundColor = "red"
+                            }
+                        }
+                        if (document.getElementById(`b${kingid  + 100 + 1}`) && document.getElementById(`b${kingid  + 1}`)) {
+                            if (document.getElementById(`b${kingid  + 1}`).innerText == "Bking") {
+                                king.style.backgroundColor = "red"
+                            }
+                        }
+                        if (document.getElementById(`b${kingid  + 100 + 1}`) && document.getElementById(`b${kingid  + 1 - 100}`)) {
+                            if (document.getElementById(`b${kingid  + 1 - 100}`).innerText == "Bking") {
+                                king.style.backgroundColor = "red"
+                            }
+                        }
                         // Pawns
                         if (document.getElementById(`b${kingid + 100 + 1}`)) 
                         {
@@ -2667,6 +2891,32 @@ document.querySelectorAll('.box').forEach(item => {
                     }
                     if (item.innerText == 'Bking') 
                     {
+                        // Cant go there coz black King
+                        if (document.getElementById(`b${kingid  + 100 + 1}`)) {
+                            if (document.getElementById(`b${kingid  + 100 + 1}`).innerText == "Wking") {
+                                king.style.backgroundColor = "red"
+                            }
+                        }
+                        if (document.getElementById(`b${kingid  + 100 + 1}`) && document.getElementById(`b${kingid  + 100 }`)) {
+                            if (document.getElementById(`b${kingid  + 100 }`).innerText == "Wking") {
+                                king.style.backgroundColor = "red"
+                            }
+                        }
+                        if (document.getElementById(`b${kingid  + 100 + 1}`) && document.getElementById(`b${kingid  + 100 - 1}`)) {
+                            if (document.getElementById(`b${kingid  + 100 - 1}`).innerText == "Wking") {
+                                king.style.backgroundColor = "red"
+                            }
+                        }
+                        if (document.getElementById(`b${kingid  + 100 + 1}`) && document.getElementById(`b${kingid  + 1}`)) {
+                            if (document.getElementById(`b${kingid  + 1}`).innerText == "Wking") {
+                                king.style.backgroundColor = "red"
+                            }
+                        }
+                        if (document.getElementById(`b${kingid  + 100 + 1}`) && document.getElementById(`b${kingid  + 1 - 100}`)) {
+                            if (document.getElementById(`b${kingid  + 1 - 100}`).innerText == "Wking") {
+                                king.style.backgroundColor = "red"
+                            }
+                        }
                         // Pawns
                         if (document.getElementById(`b${kingid - 100 + 1}`)) 
                         {
@@ -2835,6 +3085,32 @@ document.querySelectorAll('.box').forEach(item => {
                     kingid = eval(array.join(''))
                     if (item.innerText == 'Wking') 
                     {
+                        // Cant go there coz black King
+                        if (document.getElementById(`b${kingid  + 100 - 1}`)) {
+                            if (document.getElementById(`b${kingid  + 100 - 1}`).innerText == "Bking") {
+                                king.style.backgroundColor = "red"
+                            }
+                        }
+                        if (document.getElementById(`b${kingid  + 100 - 1}`) && document.getElementById(`b${kingid  + 100}`)) {
+                            if (document.getElementById(`b${kingid  + 100}`).innerText == "Bking") {
+                                king.style.backgroundColor = "red"
+                            }
+                        }
+                        if (document.getElementById(`b${kingid  + 100 - 1}`) && document.getElementById(`b${kingid  + 100 + 1}`)) {
+                            if (document.getElementById(`b${kingid  + 100 + 1}`).innerText == "Bking") {
+                                king.style.backgroundColor = "red"
+                            }
+                        }
+                        if (document.getElementById(`b${kingid  + 100 - 1}`) && document.getElementById(`b${kingid - 1}`)) {
+                            if (document.getElementById(`b${kingid - 1}`).innerText == "Bking") {
+                                king.style.backgroundColor = "red"
+                            }
+                        }
+                        if (document.getElementById(`b${kingid  + 100 - 1}`) && document.getElementById(`b${kingid - 1 - 100}`)) {
+                            if (document.getElementById(`b${kingid - 1 - 100}`).innerText == "Bking") {
+                                king.style.backgroundColor = "red"
+                            }
+                        }
                         // Pawns
                         if (document.getElementById(`b${kingid + 100 + 1}`)) 
                         {
@@ -2994,6 +3270,33 @@ document.querySelectorAll('.box').forEach(item => {
                     }
                     if (item.innerText == 'Bking') 
                     {
+
+                        // Cant go there coz white King
+                        if (document.getElementById(`b${kingid  + 100 - 1}`)) {
+                            if (document.getElementById(`b${kingid  + 100 - 1}`).innerText == "Wking") {
+                                king.style.backgroundColor = "red"
+                            }
+                        }
+                        if (document.getElementById(`b${kingid  + 100 - 1}`) && document.getElementById(`b${kingid  + 100}`)) {
+                            if (document.getElementById(`b${kingid  + 100}`).innerText == "Wking") {
+                                king.style.backgroundColor = "red"
+                            }
+                        }
+                        if (document.getElementById(`b${kingid  + 100 - 1}`) && document.getElementById(`b${kingid  + 100 + 1}`)) {
+                            if (document.getElementById(`b${kingid  + 100 + 1}`).innerText == "Wking") {
+                                king.style.backgroundColor = "red"
+                            }
+                        }
+                        if (document.getElementById(`b${kingid  + 100 - 1}`) && document.getElementById(`b${kingid - 1}`)) {
+                            if (document.getElementById(`b${kingid - 1}`).innerText == "Wking") {
+                                king.style.backgroundColor = "red"
+                            }
+                        }
+                        if (document.getElementById(`b${kingid  + 100 - 1}`) && document.getElementById(`b${kingid - 1 - 100}`)) {
+                            if (document.getElementById(`b${kingid - 1 - 100}`).innerText == "Wking") {
+                                king.style.backgroundColor = "red"
+                            }
+                        }
                         // Pawns
                         if (document.getElementById(`b${kingid - 100 + 1}`)) 
                         {
