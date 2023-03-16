@@ -89,7 +89,7 @@ li img{
     width: 100%;
     height:100%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    scale:1;
+    scale: 0;
 }
 .winner-screen{
     display: flex;
@@ -104,8 +104,14 @@ li img{
 .team-win{
     font-size: 50px;
     padding-bottom: 50px;
+    font-weight: 600;
 }
-
+#winner-name1{
+    color: #B54040;
+}
+#winner-name2{
+    color:#CA9A28;
+}
 .winner-screen-container p{
     margin-top: 0;
     font-weight:400;
