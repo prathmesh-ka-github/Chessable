@@ -55,8 +55,20 @@ p5{
     white-space: pre-line;
 }
 .sub-container {
-   display:table-row;
+   display:flex;
   }
+.sub-container div{
+    border: 1px;
+    
+}
+.History_2{
+flex:3;
+font-size: 25;
+}
+.hist2_img{
+    flex:1;
+    
+}
   
 img {
     vertical-align: middle;
