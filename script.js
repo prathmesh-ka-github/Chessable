@@ -3473,10 +3473,6 @@ document.querySelectorAll('.box').forEach(item => {
             whosTurn('B')
         }
 
-
-
-
-
         // winning()
         numOfKings = 0
         document.querySelectorAll('.box').forEach(win => {
@@ -3500,21 +3496,6 @@ document.querySelectorAll('.box').forEach(item => {
         }
     })
 })
-var f1 = document.getElementById('b106')
-var g1 = document.getElementById('b107')
-var h1 = document.getElementById('b108')
-var d1 = document.getElementById('b104')
-var c1 = document.getElementById('b103')
-var b1 = document.getElementById('b102')
-var a1 = document.getElementById('b101')
-
-var f8 = document.getElementById('b806')
-var g8 = document.getElementById('b807')
-var h8 = document.getElementById('b808')
-var d8 = document.getElementById('b804')
-var c8 = document.getElementById('b803')
-var b8 = document.getElementById('b802')
-var a8 = document.getElementById('b801')
 
 // Moving the element
 document.querySelectorAll('.box').forEach(select => {
@@ -3543,26 +3524,26 @@ var whiteking = document.getElementById('b105')
 var blackking = document.getElementById('b805')
 whiteking.addEventListener('click', function(){
     //SHORT CASTLE WHITE
-    if (whiteking.innerText == 'Wking' && f1.innerText == '' && g1.innerText=='' && whiteking.style.backgroundColor == 'cadetblue' ) {
-        g1.addEventListener('click', function() {
-            if( g1.innerText == '' && whiteking.innerText == 'Wking'){
-                g1.innerText = 'Wking'
+    if (whiteking.innerText == 'Wking' && document.getElementById('b106').innerText == '' && document.getElementById('b107').innerText=='' && whiteking.style.backgroundColor == 'cadetblue' ) {
+        document.getElementById('b107').addEventListener('click', function() {
+            if( document.getElementById('b107').innerText == '' && whiteking.innerText == 'Wking'){
+                document.getElementById('b107').innerText = 'Wking'
                 whiteking.innerText = ''
-                h1.innerText = ''
-                f1.innerText = 'Wrook'
+                document.getElementById('b108').innerText = ''
+                document.getElementById('b106').innerText = 'Wrook'
                 coloring()
                 insertImage()
             }
         })
     }
     //LONG CASTLE WHITE
-    if (whiteking.innerText == 'Wking' && c1.innerText == '' && d1.innerText == '' && b1.innerText=='' && whiteking.style.backgroundColor == 'cadetblue' ) {
-        c1.addEventListener('click', function() {
-            if( c1.innerText == '' && whiteking.innerText == 'Wking'){
-                c1.innerText = 'Wking'
+    if (whiteking.innerText == 'Wking' && document.getElementById('b103').innerText == '' && document.getElementById('b104').innerText == '' && document.getElementById('b102').innerText=='' && whiteking.style.backgroundColor == 'cadetblue' ) {
+        document.getElementById('b103').addEventListener('click', function() {
+            if( document.getElementById('b103').innerText == '' && whiteking.innerText == 'Wking'){
+                document.getElementById('b103').innerText = 'Wking'
                 whiteking.innerText = ''
-                a1.innerText = ''
-                d1.innerText = 'Wrook'
+                document.getElementById('b101').innerText = ''
+                document.getElementById('b104').innerText = 'Wrook'
                 coloring()
                 insertImage()
             }
@@ -3571,26 +3552,26 @@ whiteking.addEventListener('click', function(){
 })
 blackking.addEventListener('click', function(){
     //SHORT CASTLE BLACK
-    if (blackking.innerText == 'Bking' && f8.innerText == '' && g8.innerText=='' && blackking.style.backgroundColor == 'cadetblue' ) {
-        g8.addEventListener('click', function() {
-            if( g8.innerText == '' && blackking.innerText == 'Bking'){
-                g8.innerText = 'Bking'
+    if (blackking.innerText == 'Bking' && document.getElementById('b806').innerText == '' && document.getElementById('b807').innerText=='' && blackking.style.backgroundColor == 'cadetblue' ) {
+        document.getElementById('b807').addEventListener('click', function() {
+            if( document.getElementById('b807').innerText == '' && blackking.innerText == 'Bking'){
+                document.getElementById('b807').innerText = 'Bking'
                 blackking.innerText = ''
-                h8.innerText = ''
-                f8.innerText = 'Brook'
+                document.getElementById('b808').innerText = ''
+                document.getElementById('b806').innerText = 'Brook'
                 coloring()
                 insertImage()
             }
         })
     }
     //LONG CASTLE BLACK
-    if (blackking.innerText == 'Bking' && c8.innerText == '' && d8.innerText == '' && b8.innerText=='' && blackking.style.backgroundColor == 'cadetblue' ) {
-        c8.addEventListener('click', function() {
-            if( c8.innerText == '' && blackking.innerText == 'Bking'){
-                c8.innerText = 'Bking'
+    if (blackking.innerText == 'Bking' && document.getElementById('b803').innerText == '' && document.getElementById('b804').innerText == '' && document.getElementById('b802').innerText=='' && blackking.style.backgroundColor == 'cadetblue' ) {
+        document.getElementById('b803').addEventListener('click', function() {
+            if( document.getElementById('b803').innerText == '' && blackking.innerText == 'Bking'){
+                document.getElementById('b803').innerText = 'Bking'
                 blackking.innerText = ''
-                a8.innerText = ''
-                d8.innerText = 'Brook'
+                document.getElementById('b801').innerText = ''
+                document.getElementById('b804').innerText = 'Brook'
                 coloring()
                 insertImage()
             }
