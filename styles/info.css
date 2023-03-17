@@ -12,6 +12,16 @@ body {
     bottom: 0;
 }
 
+.container{
+    margin-top: 50px;
+    margin-left: 400px;
+    margin-right: 200px;
+    background-color: #3E3A37;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-bottom: 20px;
+}
+
 .Know-more{
     color: #ffffff;
     text-align: center;
@@ -44,7 +54,7 @@ p5{
     font-weight: 200;
     white-space: pre-line;
 }
-.container {
+.sub-container {
    display:table-row;
   }
   
