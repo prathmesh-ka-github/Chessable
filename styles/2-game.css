@@ -132,7 +132,7 @@ li {
 .winner-name{
     font-weight:700;
     font-size: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
     display: flex;
 }
 .winner-screen-container p{

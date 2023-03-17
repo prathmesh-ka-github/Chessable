@@ -3492,7 +3492,7 @@ document.querySelectorAll('.box').forEach(item => {
                     document.getElementById("winner-screen-container").style.scale = "1"
                     clearInterval(whiteinterval)
                 }
-            }, 500)
+            }, 1200)
         }
     })
 })
