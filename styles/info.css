@@ -11,18 +11,27 @@ body {
     z-index: -1;
     bottom: 0;
 }
-
+.main {
+    width: 100%;
+    padding-top: 80px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 80px;
+}
 .container{
-    margin-top: 50px;
-    margin-left: 400px;
-    margin-right: 200px;
+    border-radius: 10px;
+    width: 70%;
+    height: 100%;
     background-color: #3E3A37;
-    padding-top: 20px;
-    padding-left: 30px;
-    padding-bottom: 20px;
+    padding: 100px;
+    padding-top: 60px;
+    text-align: justify;
+    font-size: 25;
+    font-weight: 200;
+
 }
 
-.Know-more{
+.title{
     color: #ffffff;
     text-align: center;
     width:"40";
@@ -34,13 +43,6 @@ body {
     text-align: left;
     font-size: 30;
     font-weight: 600;
-}
-
-p3{
-    text-align:left;
-    font-size: 25;
-    font-weight: 200;
-    white-space: pre-line;
 }
 
 .Hist{
@@ -62,20 +64,20 @@ p5{
     
 }
 .History_2{
-flex:3;
-font-size: 25;
+    flex:3;
+    font-size: 25;
 }
 .hist2_img{
-    flex:1;
-    
+    float: right;    
 }
   
 img {
     vertical-align: middle;
     display: table-cell;
-    padding:20px;
-    border-radius: 50px;
-  }
+    margin:30px;
+    margin-top:0px;
+    border-radius: 30px;
+}
   
 span {
     vertical-align: middle;
