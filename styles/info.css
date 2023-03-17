@@ -58,18 +58,38 @@ p5{
    display:flex;
   }
 .sub-container div{
-    border: 1px;
-    
+    border: 0px;
 }
-.History_2{
+
+.hist_1{
 flex:3;
 font-size: 25;
+padding-bottom: 0%;
 }
-.hist2_img{
+
+.hist1_img{
     flex:1;
-    
+    padding-bottom: 0%;
 }
   
+.container-2 {
+    display:flex;
+   }
+.container-2 div{
+     border: 1px;
+ }
+ 
+.hist2_img{
+    flex:1;
+}
+.hist_2{
+ flex:1;
+ font-size: 25;
+
+ }
+ 
+ 
+
 img {
     vertical-align: middle;
     display: table-cell;
