@@ -11,6 +11,7 @@
     padding: 20px;
     font-size: 25px;
 }
+
 li {
     list-style: none;
     border: 1px solid #C3CDDC;
@@ -20,7 +21,6 @@ li {
     height: 70px; */
     font-size: 0px;
     transition: background-color 500ms;
-
 }
 li img{
     width: 100%;
@@ -28,38 +28,24 @@ li img{
 .dead-box{
     border: 1px solid transparent;
 }
-.board {
-    position: relative;
+.board div{
+    display: flex;
 }
 .stats {
+    padding: 20px;
     font-size: 30px;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-}
-.container {
-    display: flex;
-    flex-direction: column;
-}
-.container div{
-    display: flex;
-    flex-direction: row;
 }
 .red{
-    bottom: 3vw;
-    right: 3vw;
+    margin: 130px 0px;
 }
 .yellow{
-    top: 2vw;
-    left: 3vw;
+    margin: 130px 0px;
 }
 .green{
-    top: 2vw;
-    right: 1vw;
+    margin: 130px 0px;
 }
 .blue{
-    bottom: 3vw;
-    left: 3vw;
+    margin: 130px 0px;
 }
 .profile{
     padding: 10px 0px;
@@ -73,7 +59,7 @@ li img{
     border-radius: 10px;
     display: flex;
     justify-content: center;
-} 
+}
 #R-time{
     background-color: #B54040;
     color: white;
@@ -87,60 +73,72 @@ li img{
 #B-time{
     background-color: #4085B6;
     color: white;
-    /* box-shadow: 0px 0px 39px -1px #4085B6; */
-
+    /* box-shadow: 0px 0px 39px -1px #4085b6; */
 }
 #G-time{
     background-color: #538E60;
     color: white;
     /* box-shadow: 0px 0px 39px -1px #538e60; */
 }
-.winner-screen-container {
+.winner-screen-container{
     position: fixed;
-    top: 0;
     display: flex;
-    width: 100%;
-    height: 100%;
     justify-content: center;
     align-items: center;
-    font-family:Geneva, Verdana, sans-serif;
+    top: 0;
+    width: 100%;
+    height:100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     scale: 0;
 }
-.winner-screen {
-    padding: 80px;
-    background-color: #454241;
-    font-size: 20px;
-    text-align: center;
-    border-radius: 50px;
-    /* display: flex;
+.winner-screen{
+    display: flex;
     flex-direction: column;
-    align-items: center; */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #454241;
+    padding: 90px;
+    border-radius: 30px;
 }
-.winner-name {
-    padding: 20px;
-    color: #bf3535;
-    font-weight: 700;
-    font-size: 60px;
+.team-win{
+    font-size: 50px;
+    padding-bottom: 50px;
+    font-weight: 600;
 }
-.rematch {
-    margin-top: 30px;
+#winner-name1{
+    color: #B54040;
+}
+#winner-name2{
+    color:#CA9A28;
+}
+.winner-screen-container p{
+    margin-top: 0;
+    font-weight:400;
+    font-size: 30px;
+}
+.rematch{
+    display: flex;
 }
 .rematch button{
     all: unset;
     background-color: #64863a;
     padding: 20px;
-    font-size: 20px;
+    font-size: 25px;
     border-radius: 15px;
     cursor: pointer;
     transition: background-color 300ms;
     box-shadow: 0px 0px 31px -7px rgb(0 0 0 / 75%);
     width: 100px;
     height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* text-align: center;
+    line-height: 0; */
 }
 .rematch button:hover {
     background-color: rgb(82, 109, 50);   
 }
-.lastplayer {
-    display: flex;
-    justify-content: center;
-}
+.rematch a{margin-left: 20px;}
+

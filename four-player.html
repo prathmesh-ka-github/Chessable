@@ -4,7 +4,7 @@
     <link rel="icon" href="./Assets/favicon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chessable</title>
+    <title>Chessable - 4 Player</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="styles/four-player.css">
 </head>
@@ -39,5 +39,75 @@
             </div>
         </div>
     </div>
+    <script>
+        var redName = "Red Player"
+        var blueName = "Blue Player"
+        var yellowName = "Yellow Player"
+        var greenName = "Green Player"
+        var playtime = 10;
+
+        function setlocalstorage(){
+            localStorage.setItem("timevalue", playtime);
+            localStorage.setItem("redname", redName);
+            localStorage.setItem("bluename", blueName);
+            localStorage.setItem("yellowname", yellowName);
+            localStorage.setItem("greenname", greenName);
+        }
+        function savedefaults(){
+            if (redName == "") {
+                redName = "Red Player";
+            }
+            if (blueName == "") {
+                blueName = "Blue Player";
+            }
+            if (yellowName == "") {
+                yellowName = "Yellow Player";
+            }
+            if (greenName == "") {
+                greenName = "Green Player";
+            }
+        }
+        savedefaults()
+        setlocalstorage()
+        function fivemin() {
+            console.log('Time set to 5 mins');
+            playtime = 5;
+            redName = document.getElementById("red-player").value
+            blueName = document.getElementById("blue-player").value
+            yellowName = document.getElementById("yellow-player").value
+            greenName = document.getElementById("green-player").value
+            savedefaults();
+            setlocalstorage();
+            document.getElementById("b_5min").style.backgroundColor = "#7FA650"//b_5min btn is selected
+            document.getElementById("b_10min").style.backgroundColor = "#4F4844"
+            document.getElementById("b_15min").style.backgroundColor = "#4F4844"
+        }
+        function tenmin() {
+            console.log('Time set to 10 mins');
+            playtime = 10;
+            redName = document.getElementById("red-player").value
+            blueName = document.getElementById("blue-player").value
+            yellowName = document.getElementById("yellow-player").value
+            greenName = document.getElementById("green-player").value
+            savedefaults();
+            setlocalstorage();
+            document.getElementById("b_5min").style.backgroundColor = "#4F4844"
+            document.getElementById("b_10min").style.backgroundColor = "#7FA650"
+            document.getElementById("b_15min").style.backgroundColor = "#4F4844"
+        }
+        function fifteenmin() {
+            console.log('Time set to 15 mins');
+            playtime = 15;
+            redName = document.getElementById("red-player").value
+            blueName = document.getElementById("blue-player").value
+            yellowName = document.getElementById("yellow-player").value
+            greenName = document.getElementById("green-player").value
+            savedefaults();
+            setlocalstorage();
+            document.getElementById("b_5min").style.backgroundColor = "#4F4844"
+            document.getElementById("b_10min").style.backgroundColor = "#4F4844"
+            document.getElementById("b_15min").style.backgroundColor = "#7FA650"
+        }
+        </script>
 </body>
 </html>
