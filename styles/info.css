@@ -55,15 +55,10 @@ body {
 
 .Hist{
     text-align:unset;
-    font-size: 30;
-    font-weight: 600;
-}
-p5{
-    text-align:left;
     font-size: 25;
     font-weight: 200;
-    white-space: pre-line;
 }
+
 .sub-container {
    display:flex;
   }
@@ -105,33 +100,18 @@ span {
     font-size: 25;
   }
 
-p6{
-    text-align:left;
-    font-size: 25;
-    font-weight: 200;
-    white-space: pre-line;
-}
 .container-2 {
     display:table-row;
    }
 
-p7{
-    text-align:left;
-    font-size: 25;
-    font-weight: 200;
-    white-space: pre-line;
-}   
+  
 
 h2{
     font-size: 35;
     font-weight:bold;
     font-style: underline;
 }
-p8{
-    text-align:left;
-    font-size: 25;
-    
-}  
+
 
 .chess-3{
     width: 100%;
