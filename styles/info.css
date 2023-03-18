@@ -66,6 +66,10 @@ body {
     border: 1px;
     
 }
+.sub-container-2{
+    display: flex;
+}
+
 .History_2{
     flex:3;
     font-size: 25;
@@ -87,23 +91,10 @@ body {
 }
   
 .info-img {
-    vertical-align: middle;
-    display: table-cell;
-    margin:30px;
-    margin-top:0px;
+    
+    margin: 30px;
     border-radius: 30px;
 }
-  
-span {
-    vertical-align: middle;
-    display: table-cell;
-    font-size: 25;
-  }
-
-.container-2 {
-    display:table-row;
-   }
-
   
 
 h2{
