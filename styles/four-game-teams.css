@@ -90,6 +90,7 @@ li img{
     height:100%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     scale: 0;
+    transition: 400ms;
 }
 .winner-screen{
     display: flex;

@@ -721,11 +721,16 @@ document.querySelectorAll('.box').forEach(item => {
             setTimeout(() => {
                 // console.log(`${toggle}`) 
                 if (tog == 1 || tog == 3) {
-                    alert('Team Blue and Green Wins by king capture!!')
+
+                    //style-scale-1
+                    //pop-up;
+                    // alert('Team Blue and Green Wins by king capture!!')
+                    document.getElementById("pop-up").style.scale = "1"
                     location.reload()
                 }
                 else if (tog == 2 || tog == 4 ) {
-                    alert('Team Red and Yellow Wins by king capture!!')
+                    // alert('Team Red and Yellow Wins by king capture!!')
+                    document.getElementById("pop-up").style.scale = "1"
                     location.reload()
                 }
             }, 500)
