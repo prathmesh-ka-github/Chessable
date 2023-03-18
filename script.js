@@ -450,7 +450,6 @@ document.querySelectorAll('.box').forEach(item => {
 
             }
 
-
             // CASTLING
             if (item.innerText == `${toggle}king`)
             {
