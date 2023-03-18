@@ -732,15 +732,19 @@ document.querySelectorAll('.box').forEach(item => {
                     winner1.style.color = "#4085B6"
                     winner2.style.color = "#538E60"
                     document.getElementById("pop-up").style.scale = "1"
+                    clearInterval(redinterval)
+                    clearInterval(yellowinterval)
+
                     // location.reload()
                 }
                 else if (tog == 2 || tog == 4 ) {
-                    // alert('Team Red and Yellow Wins by king capture!!')
                     winner1.innerText = redName
                     winner2.innerText = yellowName
                     winner1.style.color = "#B54040"
                     winner2.style.color = "#CA9A28"
                     document.getElementById("pop-up").style.scale = "1"
+                    clearInterval(blueinterval)
+                    clearInterval(greeninterval)
                 }
             }, 500)
         }
