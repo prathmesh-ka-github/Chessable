@@ -719,22 +719,32 @@ document.querySelectorAll('.box').forEach(item => {
         console.log(numOfKings)
         if (numOfKings < 4) {
             setTimeout(() => {
+                document.getElementById("red-player-name").innerHTML = redName;
+                document.getElementById("blue-player-name").innerHTML = blueName;
+                document.getElementById("yellow-player-name").innerHTML = yellowName;
+                document.getElementById("green-player-name").innerHTML = greenName;
+                winner1 = document.getElementById("winner-name1")
+                winner2 = document.getElementById("winner-name2")
                 // console.log(`${toggle}`) 
                 if (tog == 1 || tog == 3) {
-
-                    //style-scale-1
-                    //pop-up;
-                    // alert('Team Blue and Green Wins by king capture!!')
+                    winner1.innerText = blueName
+                    winner2.innerText = greenName
+                    winner1.style.color = "#4085B6"
+                    winner2.style.color = "#538E60"
                     document.getElementById("pop-up").style.scale = "1"
-                    location.reload()
+                    // location.reload()
                 }
                 else if (tog == 2 || tog == 4 ) {
                     // alert('Team Red and Yellow Wins by king capture!!')
+                    winner1.innerText = redName
+                    winner2.innerText = yellowName
+                    winner1.style.color = "#B54040"
+                    winner2.style.color = "#CA9A28"
                     document.getElementById("pop-up").style.scale = "1"
-                    location.reload()
                 }
             }, 500)
         }
+        // location.reload()
 
 
 
