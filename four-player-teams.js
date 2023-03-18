@@ -26,6 +26,7 @@ function coloring() {
         }
         
     })
+    checkchecks()
 }
 coloring()
 
@@ -78,11 +79,20 @@ function reddish() {
                     aup = eval(arr.shift())
                     a = aside + aup
             
+                    // SAME COLOR PIECE CANT TAKE
                     if (a % 2 == 0 && cadetblueColor == greenColor) {
                         i2.style.backgroundColor = '#8F9EB8'
                     }
                     if (a % 2 !== 0 && cadetblueColor == greenColor) {
                         i2.style.backgroundColor = '#C3CDDC'
+                    }
+                    if ( current >1000 && current<1016 || current>1204 && current<1213 || current>1404 && current<1413) {
+                        if (a % 2 !== 0) {
+                            i2.style.backgroundColor = '#8F9EB8'
+                        }
+                        if (a % 2 == 0) {
+                            i2.style.backgroundColor = '#C3CDDC'
+                        }
                     }
 
                     // CODE FOR TEAM FOR RED AND YELLOW
@@ -115,24 +125,6 @@ function reddish() {
                     if (a % 2 !== 0 && cadetblueColor=='G' && greenColor=='B') {
                         i2.style.backgroundColor = '#C3CDDC'
                     }
-
-
-
-
-                    // if (cadetblueColor == greenColor) {
-                    //     if ( current >1000 && current<1016 || current>1204 && current<1213 || current>1404 && current<1413) {
-                    //         if (a % 2 !== 0) {
-                    //             i2.style.backgroundColor = '#8F9EB8'
-                    //         }
-                    //         if (a % 2 == 0) {
-                    //             i2.style.backgroundColor = '#C3CDDC'
-                    //         }
-                    //     }
-                    // }
-
-                    // if (cadetblueColor == greenColor) {
-                    //     i2.style.backgroundColor = 'rgb(253, 60, 60)'
-                    // }
                 }
             })
         }
@@ -791,47 +783,167 @@ document.querySelectorAll('.box').forEach(ee => {
     })
 })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-document.querySelectorAll('.box').forEach(tile=> {
-    tile.addEventListener('click',function(){
-        getId = tile.id     //b104
-        arr = Array.from(getId)
-        arr.shift()     //104
-        current = arr.join('')      //current = "104"
-        current = parseInt(arr.join(''))        //current = 104
-        aside = eval(arr.pop())
-
-        arr = Array.from(getId)
-        arr.shift() 
-        // console.log("arr is " + arr)
-
-        if (arr.length == 4) {
-            aside = parseInt(arr.slice(2).join(''))
-            // console.log("aside is "+ aside)
-        }
-
-        // console.log("outside aside is " + aside)
-        // console.log(current)
-        aup = eval(arr.shift())
-        a = aside + aup
-
-        // console.log(current)
-
-    })
-})
 function reloadd(){
     location.reload();
+}
+function checkchecks(){
+    // DETECT CHECKS
+    document.querySelectorAll('.box').forEach(king =>{
+        var kingid = king.id
+        array = Array.from(kingid)
+        array.shift()
+        kingid = eval(array.join(''))
+        checkking('R','B','G')
+        checkking('B','R','Y')
+        checkking('Y','B','G')
+        checkking('G','R','Y')
+
+        // checkking function
+        function checkking(player, opponent1, opponent2, opponent3){
+            if (king.innerText == `${player}king`) {
+                
+                // ROOK and QUEEN
+                for (let i = 1; i < 9; i++) {
+                    if (document.getElementById(`b${kingid + i * 100}`) && document.getElementById(`b${kingid + i * 100}`).innerText == 0) {
+                    }
+                    else if (document.getElementById(`b${kingid + i * 100}`) && document.getElementById(`b${kingid + i * 100}`).innerText !== 0) {
+                        if (document.getElementById(`b${kingid + i * 100}`).innerText == `${opponent1}rook` || document.getElementById(`b${kingid + i * 100}`).innerText == `${opponent1}queen` || document.getElementById(`b${kingid + i * 100}`).innerText == `${opponent2}rook` || document.getElementById(`b${kingid + i * 100}`).innerText == `${opponent2}queen` || document.getElementById(`b${kingid + i * 100}`).innerText == `${opponent3}rook` || document.getElementById(`b${kingid + i * 100}`).innerText == `${opponent3}queen`) {   
+                            king.style.backgroundColor = 'red'
+                            break
+                        }
+                        else{break}
+                    }
+                }
+                for (let i = 1; i < 9; i++) {
+                    if (document.getElementById(`b${kingid - i * 100}`) && document.getElementById(`b${kingid - i * 100}`).innerText == 0) {
+                    }
+                    else if (document.getElementById(`b${kingid - i * 100}`) && document.getElementById(`b${kingid - i * 100}`).innerText !== 0) {
+                        if (document.getElementById(`b${kingid - i * 100}`).innerText == `${opponent1}rook` || document.getElementById(`b${kingid - i * 100}`).innerText == `${opponent1}queen` || document.getElementById(`b${kingid - i * 100}`).innerText == `${opponent2}rook` || document.getElementById(`b${kingid - i * 100}`).innerText == `${opponent2}queen` || document.getElementById(`b${kingid - i * 100}`).innerText == `${opponent3}rook` || document.getElementById(`b${kingid - i * 100}`).innerText == `${opponent3}queen`) {   
+                            king.style.backgroundColor = 'red'
+                            break
+                        }
+                        else{break}
+                    }
+                }
+                for (let i = 1; i < 9; i++) {
+                    if (document.getElementById(`b${kingid - i}`) && document.getElementById(`b${kingid - i}`).innerText == 0) {
+                    }
+                    else if (document.getElementById(`b${kingid - i}`) && document.getElementById(`b${kingid - i}`).innerText !== 0) {
+                        if (document.getElementById(`b${kingid - i}`).innerText == `${opponent1}rook` || document.getElementById(`b${kingid - i}`).innerText == `${opponent1}queen` || document.getElementById(`b${kingid - i}`).innerText == `${opponent2}rook` || document.getElementById(`b${kingid - i}`).innerText == `${opponent2}queen` || document.getElementById(`b${kingid - i}`).innerText == `${opponent3}rook` || document.getElementById(`b${kingid - i}`).innerText == `${opponent3}queen`) {   
+                            king.style.backgroundColor = 'red'
+                            break
+                        }
+                        else{break}
+                    }
+                }
+                for (let i = 1; i < 9; i++) {
+                    if (document.getElementById(`b${kingid + i}`) && document.getElementById(`b${kingid + i}`).innerText == 0) {
+                    }
+                    else if (document.getElementById(`b${kingid + i}`) && document.getElementById(`b${kingid + i}`).innerText !== 0) {
+                        if (document.getElementById(`b${kingid + i}`).innerText == `${opponent1}rook` || document.getElementById(`b${kingid + i}`).innerText == `${opponent1}queen`|| document.getElementById(`b${kingid + i}`).innerText == `${opponent2}rook` || document.getElementById(`b${kingid + i}`).innerText == `${opponent2}queen` || document.getElementById(`b${kingid + i}`).innerText == `${opponent3}rook` || document.getElementById(`b${kingid + i}`).innerText == `${opponent3}queen`) {   
+                            king.style.backgroundColor = 'red'
+                            break
+                        }
+                        else{break}
+                    }
+                }   
+                
+                // BISHOP and QUEEN
+                for (let i = 1; i < 9; i++) {
+                    if (document.getElementById(`b${kingid + i * 100 + i}`) && document.getElementById(`b${kingid + i * 100 + i}`).innerText == 0) {
+                    }
+                    else if (document.getElementById(`b${kingid + i * 100 + i}`) && document.getElementById(`b${kingid + i * 100 + i}`).innerText !== 0) {
+                        if (document.getElementById(`b${kingid + i * 100 + i}`).innerText == `${opponent1}queen` || document.getElementById(`b${kingid + i * 100 + i}`).innerText == `${opponent1}bishop` || document.getElementById(`b${kingid + i * 100 + i}`).innerText == `${opponent2}queen` || document.getElementById(`b${kingid + i * 100 + i}`).innerText == `${opponent2}bishop` || document.getElementById(`b${kingid + i * 100 + i}`).innerText == `${opponent3}queen` || document.getElementById(`b${kingid + i * 100 + i}`).innerText == `${opponent3}bishop`) {
+                            king.style.backgroundColor = 'red'
+                            break
+                        }
+                        else{break}
+                    }
+                }
+                for (let i = 1; i < 9; i++) {
+                    if (document.getElementById(`b${kingid - i * 100 + i}`) && document.getElementById(`b${kingid - i * 100 + i}`).innerText == 0) {
+                    }
+                    else if (document.getElementById(`b${kingid - i * 100 + i}`) && document.getElementById(`b${kingid - i * 100 + i}`).innerText !== 0) {
+                        if (document.getElementById(`b${kingid - i * 100 + i}`).innerText == `${opponent1}queen` || document.getElementById(`b${kingid - i * 100 + i}`).innerText == `${opponent1}bishop` || document.getElementById(`b${kingid - i * 100 + i}`).innerText == `${opponent2}queen` || document.getElementById(`b${kingid - i * 100 + i}`).innerText == `${opponent2}bishop` || document.getElementById(`b${kingid - i * 100 + i}`).innerText == `${opponent3}queen` || document.getElementById(`b${kingid - i * 100 + i}`).innerText == `${opponent3}bishop`) {
+                            king.style.backgroundColor = 'red'
+                            break
+                        }
+                        else{break}
+                    }
+                }
+                for (let i = 1; i < 9; i++) {
+                    if (document.getElementById(`b${kingid + i * 100 - i}`) && document.getElementById(`b${kingid + i * 100 - i}`).innerText == 0) {
+                    }
+                    else if (document.getElementById(`b${kingid + i * 100 - i}`) && document.getElementById(`b${kingid + i * 100 - i}`).innerText !== 0) {
+                        if (document.getElementById(`b${kingid + i * 100 - i}`).innerText == `${opponent1}queen` || document.getElementById(`b${kingid + i * 100 - i}`).innerText == `${opponent1}bishop` || document.getElementById(`b${kingid + i * 100 - i}`).innerText == `${opponent2}queen` || document.getElementById(`b${kingid + i * 100 - i}`).innerText == `${opponent2}bishop` || document.getElementById(`b${kingid + i * 100 - i}`).innerText == `${opponent3}queen` || document.getElementById(`b${kingid + i * 100 - i}`).innerText == `${opponent3}bishop`) {   
+                            king.style.backgroundColor = 'red'
+                            break
+                        }
+                        else{break}
+                    }
+                }
+                for (let i = 1; i < 9; i++) {
+                    if (document.getElementById(`b${kingid - i * 100 - i}`) && document.getElementById(`b${kingid - i * 100 - i}`).innerText == 0) {
+                    }
+                    else if (document.getElementById(`b${kingid - i * 100 - i}`) && document.getElementById(`b${kingid - i * 100 - i}`).innerText !== 0) {
+                        if (document.getElementById(`b${kingid - i * 100 - i}`).innerText == `${opponent1}queen` || document.getElementById(`b${kingid - i * 100 - i}`).innerText == `${opponent1}bishop` || document.getElementById(`b${kingid - i * 100 - i}`).innerText == `${opponent2}queen` || document.getElementById(`b${kingid - i * 100 - i}`).innerText == `${opponent2}bishop` || document.getElementById(`b${kingid - i * 100 - i}`).innerText == `${opponent3}queen` || document.getElementById(`b${kingid - i * 100 - i}`).innerText == `${opponent3}bishop`) {   
+                            king.style.backgroundColor = 'red'
+                            break
+                        }
+                        else{break}
+                    }
+                }   
+                
+                // KNIGHT
+                if (document.getElementById(`b${kingid + 100 + 2}`)) {
+                    if (document.getElementById(`b${kingid + 100 + 2}`).innerText == `${opponent1}knight` || document.getElementById(`b${kingid + 100 + 2}`).innerText == `${opponent2}knight` || document.getElementById(`b${kingid + 100 + 2}`).innerText == `${opponent3}knight`) 
+                    {
+                        king.style.backgroundColor = 'red'
+                    }
+                }
+                if (document.getElementById(`b${kingid - 100 + 2}`)) {
+                    if (document.getElementById(`b${kingid - 100 + 2}`).innerText == `${opponent1}knight` || document.getElementById(`b${kingid - 100 + 2}`).innerText == `${opponent2}knight` || document.getElementById(`b${kingid - 100 + 2}`).innerText == `${opponent3}knight`) 
+                    {
+                        king.style.backgroundColor = 'red'
+                    }
+                }
+                if (document.getElementById(`b${kingid + 200 + 1}`)) {
+                    if (document.getElementById(`b${kingid + 200 + 1}`).innerText == `${opponent1}knight` || document.getElementById(`b${kingid + 200 + 1}`).innerText == `${opponent2}knight` || document.getElementById(`b${kingid + 200 + 1}`).innerText == `${opponent3}knight`) 
+                    {
+                        king.style.backgroundColor = 'red'
+                    }
+                }
+                if (document.getElementById(`b${kingid + 200 - 1}`)) {
+                    if (document.getElementById(`b${kingid + 200 - 1}`).innerText == `${opponent1}knight` || document.getElementById(`b${kingid + 200 - 1}`).innerText == `${opponent2}knight` || document.getElementById(`b${kingid + 200 - 1}`).innerText == `${opponent3}knight`) 
+                    {
+                        king.style.backgroundColor = 'red'
+                    }
+                }
+                if (document.getElementById(`b${kingid - 2 + 100}`)) {
+                    if (document.getElementById(`b${kingid - 2 + 100}`).innerText == `${opponent1}knight` || document.getElementById(`b${kingid - 2 + 100}`).innerText == `${opponent2}knight` || document.getElementById(`b${kingid - 2 + 100}`).innerText == `${opponent3}knight`) 
+                    {
+                        king.style.backgroundColor = 'red'
+                    }
+                }
+                if (document.getElementById(`b${kingid - 2 - 100}`)) {
+                    if (document.getElementById(`b${kingid - 2 - 100}`).innerText == `${opponent1}knight` || document.getElementById(`b${kingid - 2 - 100}`).innerText == `${opponent2}knight` || document.getElementById(`b${kingid - 2 - 100}`).innerText == `${opponent3}knight`) 
+                    {
+                        king.style.backgroundColor = 'red'
+                    }
+                }
+                if (document.getElementById(`b${kingid - 200 + 1}`)) {
+                    if (document.getElementById(`b${kingid - 200 + 1}`).innerText == `${opponent1}knight` || document.getElementById(`b${kingid - 200 + 1}`).innerText == `${opponent2}knight` || document.getElementById(`b${kingid - 200 + 1}`).innerText == `${opponent3}knight`) 
+                    {
+                        king.style.backgroundColor = 'red'
+                    }
+                }
+                if (document.getElementById(`b${kingid - 200 - 1}`)) {
+                    if (document.getElementById(`b${kingid - 200 - 1}`).innerText == `${opponent1}knight` || document.getElementById(`b${kingid - 200 - 1}`).innerText == `${opponent2}knight` || document.getElementById(`b${kingid - 200 - 1}`).innerText == `${opponent3}knight`) 
+                    {
+                        king.style.backgroundColor = 'red'
+                    }
+                }
+            }
+        }
+    })   
 }
