@@ -33,6 +33,7 @@ body {
 .know-more{
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 .know-more img{
     width: 150px;
@@ -66,9 +67,9 @@ body {
     border: 1px;
     
 }
-.sub-container-2{
+/* .sub-container-2{
     display: flex;
-}
+} */
 
 .History_2{
     flex:3;
@@ -78,7 +79,11 @@ body {
     float: right;    
 }
 .chaturang{
-    float: left;    
+    float: left; 
+    height: 350px;
+    width: 500px; 
+    border-radius: 30px;  
+    margin-right: 20px;
 }
 .pieces {
     margin: 0;
@@ -91,8 +96,8 @@ body {
 }
   
 .info-img {
-    
-    margin: 30px;
+    float:right;
+    margin: 25px;
     border-radius: 30px;
 }
   
