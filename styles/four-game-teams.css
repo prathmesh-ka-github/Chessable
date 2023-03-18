@@ -101,6 +101,7 @@ li img{
     background-color: #454241;
     padding: 90px;
     border-radius: 30px;
+    position: relative;
 }
 .team-win{
     font-size: 50px;
@@ -138,3 +139,10 @@ li img{
 }
 .rematch a{margin-left: 20px;}
 
+.X{
+    position: absolute;
+    right: 20;
+    top: 20;
+    font-size: 30px;
+    cursor: pointer;
+}

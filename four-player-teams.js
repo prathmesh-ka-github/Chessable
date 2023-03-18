@@ -726,8 +726,6 @@ document.querySelectorAll('.box').forEach(item => {
                     document.getElementById("pop-up").style.scale = "1"
                     clearInterval(redinterval)
                     clearInterval(yellowinterval)
-
-                    // location.reload()
                 }
                 else if (tog == 2 || tog == 4 ) {
                     winner1.innerText = redName
@@ -738,7 +736,7 @@ document.querySelectorAll('.box').forEach(item => {
                     clearInterval(blueinterval)
                     clearInterval(greeninterval)
                 }
-            }, 500)
+            }, 2000)
         }
         // location.reload()
 
@@ -769,7 +767,9 @@ document.querySelectorAll('.box').forEach(select => {
         }
     })
 })
-
+function removewinnerscreen(){
+    document.getElementById("pop-up").style.scale = "0"
+}
 
 
 // Prvents from selecting multiple elements
