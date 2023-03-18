@@ -30,7 +30,14 @@ body {
     font-weight: 200;
 
 }
-
+.know-more{
+    display: flex;
+    justify-content: space-around;
+}
+.know-more img{
+    width: 150px;
+    height: 150px;
+}
 .title{
     color: #ffffff;
     text-align: center;
@@ -84,7 +91,7 @@ p5{
     justify-content: center;
 }
   
-img {
+.info-img {
     vertical-align: middle;
     display: table-cell;
     margin:30px;
@@ -137,7 +144,7 @@ li {
 /* SCROLL BAR */
 /* width */
 ::-webkit-scrollbar {
-    width: 20px;
+    width: 16px;
 }
 
 /* Track */
