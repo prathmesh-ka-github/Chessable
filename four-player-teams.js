@@ -52,14 +52,10 @@ insertImage()
 function reddish() {
     document.querySelectorAll('.box').forEach(i1 => {
         if (i1.style.backgroundColor == 'cadetblue') {
-
             document.querySelectorAll('.box').forEach(i2 => {
-
                 if (i2.style.backgroundColor == 'green' && i2.innerText.length !== 0) {
 
-
                     greenText = i2.innerText
-
                     cadetblueText = i1.innerText
 
                     cadetblueColor = ((Array.from(cadetblueText)).shift()).toString()
@@ -78,6 +74,7 @@ function reddish() {
                     }            
                     aup = eval(arr.shift())
                     a = aside + aup
+
             
                     // SAME COLOR PIECE CANT TAKE
                     if (a % 2 == 0 && cadetblueColor == greenColor) {
@@ -86,12 +83,14 @@ function reddish() {
                     if (a % 2 !== 0 && cadetblueColor == greenColor) {
                         i2.style.backgroundColor = '#C3CDDC'
                     }
-                    if ( current >1000 && current<1016 || current>1204 && current<1213 || current>1404 && current<1413) {
-                        if (a % 2 !== 0) {
-                            i2.style.backgroundColor = '#8F9EB8'
-                        }
-                        if (a % 2 == 0) {
-                            i2.style.backgroundColor = '#C3CDDC'
+                    if (cadetblueColor == greenColor) {
+                        if ( current >1000 && current<1016 || current>1204 && current<1213 || current>1404 && current<1413) {
+                            if (a % 2 !== 0) {
+                                i2.style.backgroundColor = '#8F9EB8'
+                            }
+                            if (a % 2 == 0) {
+                                i2.style.backgroundColor = '#C3CDDC'
+                            }
                         }
                     }
 
@@ -130,6 +129,9 @@ function reddish() {
         }
     })
 }
+
+
+
 function clocks() {
     if (tog == 1) {
         clearInterval(greeninterval)
@@ -253,18 +255,12 @@ document.querySelectorAll('.box').forEach(item => {
 
         arr.push('0')
         aup = eval(arr.join(''))
-
-
-
-
         a = current
-        console.log(a)
-        console.log("aup is " +aup)
-        console.log("aside is " +aside)
-        // console.log('aup = ' + aup)
+
 
         // Function to display the available paths for all piece
         function whosTurn(toggle) {
+
             //  PAWN
             if (item.innerText == "Rpawn" && tog == 1) 
             {
@@ -665,32 +661,32 @@ document.querySelectorAll('.box').forEach(item => {
                 }
                 item.style.backgroundColor = 'cadetblue'
             }
-
-
+            
+            
         }
-
-
+        
+        
         //toggling the turn
         if (tog == 1) {
             whosTurn('R')
-
+            
         }
         if (tog == 2) {
-
+            
             whosTurn('B')
         }
         if (tog == 3) {
-
+            
             whosTurn('Y')
         }
         if (tog == 4) {
-
+            
             whosTurn('G')
         }
+        
         reddish()
-
-
-
+        
+        
 
         // winning()
         numOfKings = 0
@@ -708,7 +704,6 @@ document.querySelectorAll('.box').forEach(item => {
                 numOfKings += 1
             }
         })
-        console.log(numOfKings)
         if (numOfKings < 4) {
             setTimeout(() => {
                 document.getElementById("red-player-name").innerHTML = redName;
@@ -739,7 +734,6 @@ document.querySelectorAll('.box').forEach(item => {
             }, 2000)
         }
         // location.reload()
-
 
 
 

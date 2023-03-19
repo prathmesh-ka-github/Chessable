@@ -167,23 +167,6 @@ document.querySelectorAll('.box').forEach(item => {
             checkchecks()
         }
 
-        // if (item.style.backgroundColor == 'yellow' && item.innerText.length == 0) {
-        //     if (tog<4) {
-        //         tog++
-        //     }
-        //     else
-        //     {
-        //         tog = 1
-        //     }
-        //     if (tog == 1 && redlost == 0) {
-        //         tog = 2
-        //     }
-        //     if (tog == 2 && bluelost == 0) {
-        //         tog = 3
-        //     }
-        //     clocks()
-        // }
-        
         // To delete the opposite element
         else if (item.style.backgroundColor == 'green' && item.innerText.length !== 0) {
             document.querySelectorAll('.box').forEach(i => {
