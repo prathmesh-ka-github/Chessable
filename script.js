@@ -3776,7 +3776,9 @@ function flip() {
     }
 }
 flip()
-
+function removewinnerscreen(){
+    document.getElementById("winner-screen-container").style.scale = "0"
+}
 function reloadd(){
     location.reload();
 }

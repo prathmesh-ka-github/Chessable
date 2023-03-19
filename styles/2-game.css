@@ -119,6 +119,7 @@ li {
     transition: scale 300ms;
 }
 .winner-screen {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -158,6 +159,13 @@ li {
 }
 .rematch button:hover {
     background-color: rgb(82, 109, 50);   
+}
+.X{
+    position: absolute;
+    right: 20;
+    top: 20;
+    font-size: 30px;
+    cursor: pointer;
 }
 
 
