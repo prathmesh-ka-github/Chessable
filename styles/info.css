@@ -190,14 +190,14 @@ li {
 
 @media only screen and (max-width: 600px) { 
     .container{
-        padding: 50 50;
+        padding: 25;
     }
     h1{
         font-size: 30px;
     }
     .info-img{
-        height: 200;
-        width: 250;
+        height: 150;
+        width: 200;
     }
     .chaturang{
         height: 200;
@@ -213,8 +213,19 @@ li {
         height: 80;
         width: 80;
     }
-    .sub-container-2 {
-
+    li{
+        font-size: 15px;
     }
-
+    .FAQ-container{
+        font-size: 15px;
+    }
+    .acc-btn{
+        height: 35px;
+        width: 35px;
+        margin-left: 8px;
+    }
+    .acc-btn svg{
+        height: 14px;
+        width: 14px;
+    }
 }
