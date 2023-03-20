@@ -113,7 +113,53 @@ h2{
 li {
     padding: 10px;
 }
-
+.FAQ-container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.FAQ-container h2{
+    margin-bottom: 0;
+}
+.accordion-option{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.accordion-container{
+    background-color: #2C2A2A;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-top: 25px;
+}
+.acc-btn{
+    all:unset;
+    width:50px;
+    height:50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+}
+.acc-btn svg{
+    height: 25px;
+    width: 25px;
+}
+.acc-btn:hover{
+    background-color: #3d3c3c;
+}
+.acc-btn:active{
+    background-color: #3d3c3c;
+}
+.accordion-container .panel{
+    height:0px;
+    font-size: 25px;
+    overflow: hidden;
+}
+/* .active .content {
+    height: 150px;
+  } */
 /* SCROLL BAR */
 /* width */
 ::-webkit-scrollbar {
