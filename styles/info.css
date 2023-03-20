@@ -49,8 +49,8 @@ body {
 
 .about{
     text-align: left;
-    font-size: 30;
-    font-weight: 600;
+    font-size: 25;
+    font-weight: 200;
 }
 
 .Hist{
@@ -141,6 +141,7 @@ li {
     justify-content: center;
     align-items: center;
     background-color: #333;
+    transition: all 300ms;
 }
 .acc-btn svg{
     height: 25px;
@@ -156,9 +157,11 @@ li {
     height:0px;
     font-size: 25px;
     overflow: hidden;
+    transition: all 300ms;
 }
-.active .panel{
-    height: 100px;
+.accordion-container.active .panel{
+    height: max-content;
+
 }
 /* .active .content {
   } */
@@ -183,4 +186,35 @@ li {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #332f2d; 
+}
+
+@media only screen and (max-width: 600px) { 
+    .container{
+        padding: 50 50;
+    }
+    h1{
+        font-size: 30px;
+    }
+    .info-img{
+        height: 200;
+        width: 250;
+    }
+    .chaturang{
+        height: 200;
+        width: 250;
+    }
+    p{
+        font-size: 15px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    .title img{
+        height: 80;
+        width: 80;
+    }
+    .sub-container-2 {
+
+    }
+
 }
