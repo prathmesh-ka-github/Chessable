@@ -157,8 +157,10 @@ li {
     font-size: 25px;
     overflow: hidden;
 }
+.active .panel{
+    height: 100px;
+}
 /* .active .content {
-    height: 150px;
   } */
 /* SCROLL BAR */
 /* width */
