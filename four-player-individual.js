@@ -2,6 +2,7 @@ var redlost = 1
 var bluelost = 1
 var yellowlost = 1
 var greenlost = 1
+var noofplayer = 4
 
 function coloring() {
     const color = document.querySelectorAll('.box')
@@ -668,6 +669,7 @@ document.querySelectorAll('.box').forEach(item => {
             })
             document.getElementById("red-player-name").style.textDecoration = "line-through";
             redlost = 0
+            noofplayer--
         }
 
         // BLUE KING ELIMINATED
@@ -691,6 +693,8 @@ document.querySelectorAll('.box').forEach(item => {
             })
             document.getElementById("blue-player-name").style.textDecoration = "line-through";
             bluelost = 0
+            noofplayer--
+
         }
         // YELLOW KING ELIMINATED
         var yellowking = 0
@@ -713,6 +717,8 @@ document.querySelectorAll('.box').forEach(item => {
             })
             document.getElementById("yellow-player-name").style.textDecoration = "line-through";
             yellowlost = 0
+            noofplayer--
+
         }
         // GREEN KING ELIMINATED
         var greenking = 0
@@ -735,6 +741,7 @@ document.querySelectorAll('.box').forEach(item => {
             })
             document.getElementById("green-player-name").style.textDecoration = "line-through";
             greenlost = 0
+            noofplayer--
         }
 
         // Eliminations 
@@ -766,6 +773,21 @@ document.querySelectorAll('.box').forEach(item => {
         }
         if (tog == 4 && greenlost == 1) {
             whosTurn('G')
+        }
+        // who wins
+        if (noofplayer == 1) {
+            if (tog == 1) {
+                console.log("red wins")
+            }
+            if (tog == 2) {
+                console.log("Blue wins")
+            }
+            if (tog == 3) {
+                console.log("yellow wins")
+            }
+            if (tog == 4) {
+                console.log("green wins")
+            }
         }
         reddish()
 
