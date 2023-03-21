@@ -733,10 +733,6 @@ document.querySelectorAll('.box').forEach(item => {
                 }
             }, 2000)
         }
-        // location.reload()
-
-
-
     })
 })
 
@@ -764,7 +760,6 @@ document.querySelectorAll('.box').forEach(select => {
 function removewinnerscreen(){
     document.getElementById("pop-up").style.scale = "0"
 }
-
 
 // Prvents from selecting multiple elements
 z = 0

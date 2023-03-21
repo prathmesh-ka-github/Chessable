@@ -646,11 +646,6 @@ document.querySelectorAll('.box').forEach(item => {
             }
         }
 
-
-
-
-
-
         //! Elimination()
         // RED KING ELIMINATED
         var redking = 0
@@ -742,11 +737,6 @@ document.querySelectorAll('.box').forEach(item => {
             greenlost = 0
         }
 
-
-
-
-
-
         // Eliminations 
         if (tog == 1 && redlost == 0) {
             tog = 2
@@ -764,9 +754,6 @@ document.querySelectorAll('.box').forEach(item => {
             tog = 1
             clocks()
         }
-
-
-        
         //toggling the turn
         if (tog == 1 && redlost == 1) {
             whosTurn('R')
