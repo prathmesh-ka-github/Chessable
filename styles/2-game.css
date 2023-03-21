@@ -160,6 +160,7 @@ li {
 .rematch button:hover {
     background-color: rgb(82, 109, 50);   
 }
+.rematch a{margin-left: 20px;}
 .X{
     position: absolute;
     right: 20;
