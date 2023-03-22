@@ -63,5 +63,18 @@
     }
     .four-player-info{
         display: flex;
+        flex-direction: column;
+    }
+
+    .know-more-btn{
+        all:unset;
+        background-color: #454241;
+        height: max-content;
+        width: max-content;
+        padding: 12px;
+        border-radius: 10px;
+    }
+    .know-more-btn:active{
+        background-color: #2c2a2a;
     }
   }

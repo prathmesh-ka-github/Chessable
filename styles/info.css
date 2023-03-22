@@ -50,7 +50,12 @@ body {
     font-size: 25px;
     font-weight: 200px;
 }
-
+u{
+    color: #5e5ef7;
+}
+u a{
+    color: #5e5ef7;
+}
 .sub-container {
    display:flex;
   }
