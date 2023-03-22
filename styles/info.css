@@ -189,9 +189,12 @@ li {
 }
 
 @media only screen and (max-width: 600px) { 
+    .logo-sm{
+        position: absolute;
+    }
     .container{
         padding: 25;
-        width: 75%;
+        width: 80%;
     }
     h1{
         font-size: 30px;
