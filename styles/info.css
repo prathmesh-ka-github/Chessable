@@ -191,6 +191,7 @@ li {
 @media only screen and (max-width: 600px) { 
     .container{
         padding: 25;
+        width: 75%;
     }
     h1{
         font-size: 30px;
@@ -198,10 +199,14 @@ li {
     .info-img{
         height: 150;
         width: 200;
+        margin: 0 0 5 10;
+        border-radius: 10px;
     }
     .chaturang{
-        height: 200;
-        width: 250;
+        height: 180;
+        width: 220;
+        margin:  0 10 5 0;
+        border-radius: 15px;
     }
     p{
         font-size: 15px;
