@@ -192,7 +192,7 @@
                     <li class="dead-box"></li>
 
                     <li class="box" id="b802">Bqueen</li>
-                    <li class="box" id="b803">Bpawn</li>
+                    <li class="box" id="b803">Bqueen</li>
                     <li class="box" id="b804"></li>
                     <li class="box" id="b805"></li>
                     <li class="box" id="b806"></li>
@@ -295,7 +295,7 @@
                     <li class="box" id="b1305">Rpawn</li>
                     <li class="box" id="b1306">Rpawn</li>
                     <li class="box" id="b1307">Rpawn</li>
-                    <li class="box" id="b1308">Rpawn</li>
+                    <li class="box" id="b1308"></li>
                     <li class="box" id="b1309">Rpawn</li>
                     <li class="box" id="b1310">Rpawn</li>
                     <li class="box" id="b1311">Rpawn</li>
@@ -328,16 +328,20 @@
             </div>
         </div>
     </div>
-    <div class="winner-screen-container">
+    <div class="winner-screen-container" id="winner-screen-container">
         <div class="winner-screen">
+            <span class="X" onclick="removewinnerscreen()">x</span>
             <div class="winner-name" id="winner-name">
-                Red Player wins!
+                <div id="winner-name-only">Red player</div>&nbsp;wins!
             </div>
             <div class="lastplayer">
-                <div id="winner-name-only">Red player</div>&nbsp;is the last player standing!!
+                <div id="winner-name-only2">Red player</div>&nbsp;is the last player standing!!
             </div>
             <div class="rematch" onclick="reloadd()">
                 <button>Rematch</button>
+                <a href="index.html">
+                    <button>Home</button>
+                </a>
             </div>
         </div>
     </div>

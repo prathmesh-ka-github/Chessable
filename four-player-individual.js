@@ -191,7 +191,6 @@ document.querySelectorAll('.box').forEach(item => {
             })
         }
 
-
         getId = item.id
         arr = Array.from(getId)
         arr.shift()
@@ -743,54 +742,82 @@ document.querySelectorAll('.box').forEach(item => {
             greenlost = 0
             noofplayer--
         }
+            // Eliminations 
+            for (let i = 0; i < 2 ; i++) {                
+                if (tog == 1 && redlost == 0) {
+                    tog = 2
+                    clocks()
+                }
+                if (tog == 2 && bluelost == 0) {
+                    tog = 3
+                    clocks()
+                }
+                if (tog == 3 && yellowlost == 0) {
+                    tog = 4
+                    clocks()
+                }
+                if (tog == 4 && greenlost == 0) {
+                    tog = 1
+                    clocks()
+                }
+            }
 
-        // Eliminations 
-        if (tog == 1 && redlost == 0) {
-            tog = 2
-            clocks()
-        }
-        if (tog == 2 && bluelost == 0) {
-            tog = 3
-            clocks()
-        }
-        if (tog == 3 && yellowlost == 0) {
-            tog = 4
-            clocks()
-        }
-        if (tog == 4 && greenlost == 0) {
-            tog = 1
-            clocks()
-        }
         //toggling the turn
         if (tog == 1 && redlost == 1) {
             whosTurn('R')
+            whowins()
         }
         if (tog == 2 && bluelost == 1) {
             whosTurn('B')
+            whowins()
         }
         if (tog == 3 && yellowlost == 1) {
             whosTurn('Y')
+            whowins()
         }
         if (tog == 4 && greenlost == 1) {
             whosTurn('G')
+            whowins()
         }
         // who wins
-        if (noofplayer == 1) {
-            if (tog == 1) {
-                console.log("red wins")
-            }
-            if (tog == 2) {
-                console.log("Blue wins")
-            }
-            if (tog == 3) {
-                console.log("yellow wins")
-            }
-            if (tog == 4) {
-                console.log("green wins")
+        function whowins(){
+            if (noofplayer == 1) {
+                console.log(tog)
+                if (tog == 1) {
+                    console.log("red wins")
+                    document.getElementById('winner-name-only').innerText = redName
+                    document.getElementById('winner-name-only2').innerText = redName
+                    document.getElementById('winner-name').style.color = "red"
+                    document.getElementById('winner-screen-container').style.scale = "1"
+                    clearInterval(redinterval)
+                }
+                if (tog == 2) {
+                    console.log("Blue wins")
+                    document.getElementById('winner-name-only').innerText = blueName
+                    document.getElementById('winner-name-only2').innerText = blueName
+                    document.getElementById('winner-name').style.color = "blue"
+                    document.getElementById('winner-screen-container').style.scale = "1"
+                    clearInterval(blueinterval)
+                }
+                if (tog == 3) {
+                    console.log("yellow wins")
+                    document.getElementById('winner-name-only').innerText = yellowName
+                    document.getElementById('winner-name-only2').innerText = yellowName
+                    document.getElementById('winner-name').style.color = "yellow"
+                    document.getElementById('winner-screen-container').style.scale = "1"
+                    clearInterval(yellowinterval)
+                }
+                if (tog == 4) {
+                    console.log("green wins")
+                    document.getElementById('winner-name-only').innerText = greenName
+                    document.getElementById('winner-name-only2').innerText = greenName
+                    document.getElementById('winner-name').style.color = "green"
+                    document.getElementById('winner-screen-container').style.scale = "1"
+                    clearInterval(greeninterval)
+                }
             }
         }
         reddish()
-
     })
 })
 
@@ -831,6 +858,9 @@ document.querySelectorAll('.box').forEach(ee => {
 
 function reloadd(){
     location.reload();
+}
+function removewinnerscreen(){
+    document.getElementById("winner-screen-container").style.scale = "0"
 }
 function checkchecks(){
     // DETECT CHECKS
