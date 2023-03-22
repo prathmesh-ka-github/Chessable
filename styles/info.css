@@ -20,37 +20,35 @@ body {
     padding: 100px;
     padding-top: 60px;
     text-align: justify;
-    font-size: 25;
-    font-weight: 200;
+    font-size: 25px;
+    font-weight: 200px;
 
 }
-.know-more{
+.title{
     display: flex;
     justify-content: space-around;
     align-items: center;
-}
-.know-more img{
-    width: 150px;
-    height: 150px;
-}
-.title{
     color: #ffffff;
     text-align: center;
-    font-size: 32;
+    font-size: 32px;
     font-weight: bolder;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.title img{
+    width: 150px;
+    height: 150px;
 }
 
 .about{
     text-align: left;
-    font-size: 25;
-    font-weight: 200;
+    font-size: 25px;
+    font-weight: 200px;
 }
 
 .Hist{
     text-align:unset;
-    font-size: 25;
-    font-weight: 200;
+    font-size: 25px;
+    font-weight: 200px;
 }
 
 .sub-container {
@@ -66,7 +64,7 @@ body {
 
 .History_2{
     flex:3;
-    font-size: 25;
+    font-size: 25px;
 }
 
 .chaturang{
@@ -88,13 +86,12 @@ body {
   
 .info-img {
     float:right;
-    margin: 25px 10 0 25px;
+    margin: 25px 10px 0px 25px;
     border-radius: 30px;
 }
   
-
 h2{
-    font-size: 35;
+    font-size: 35px;
     font-weight:bold;
 }
 
@@ -112,7 +109,7 @@ li {
     height: 100%;
 }
 .FAQ-container h2{
-    margin-bottom: 0;
+    margin-bottom: 0px;
 }
 .accordion-option{
     display: flex;
@@ -186,22 +183,22 @@ li {
         position: absolute;
     }
     .container{
-        padding: 25;
+        padding: 25px;
         width: 80%;
     }
     h1{
         font-size: 30px;
     }
     .info-img{
-        height: 150;
-        width: 200;
-        margin: 0 0 5 10;
+        height: 150px;
+        width: 200px;
+        margin: 0px 0px 5px 10px;
         border-radius: 10px;
     }
     .chaturang{
-        height: 180;
-        width: 220;
-        margin:  0 10 5 0;
+        height: 180px;
+        width: 220px;
+        margin: 0px 10px 5px 0px;
         border-radius: 15px;
     }
     p{
@@ -211,8 +208,10 @@ li {
         font-size: 20px;
     }
     .title img{
-        height: 80;
-        width: 80;
+        height: 80px;
+        width: 80px;
+        display: flex;
+        flex-direction: row;
     }
     ul{
         padding-left: 10px;
