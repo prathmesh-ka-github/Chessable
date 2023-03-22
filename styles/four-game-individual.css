@@ -125,6 +125,9 @@ li img{
 .rematch {
     margin-top: 30px;
 }
+.rematch a{
+    margin-left: 20px;
+}
 .rematch button{
     all: unset;
     background-color: #64863a;
