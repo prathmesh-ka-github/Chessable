@@ -182,7 +182,7 @@ li {
 }
 
 @media only screen and (max-width: 600px) { 
-    .logo-sm{
+    .logo-sm img{
         position: absolute;
     }
     .container{
