@@ -102,7 +102,6 @@ body {
 h2{
     font-size: 35;
     font-weight:bold;
-    font-style: underline;
 }
 
 
@@ -189,8 +188,12 @@ li {
 }
 
 @media only screen and (max-width: 600px) { 
+    .logo-sm{
+        position: absolute;
+    }
     .container{
         padding: 25;
+        width: 80%;
     }
     h1{
         font-size: 30px;
@@ -198,10 +201,14 @@ li {
     .info-img{
         height: 150;
         width: 200;
+        margin: 0 0 5 10;
+        border-radius: 10px;
     }
     .chaturang{
-        height: 200;
-        width: 250;
+        height: 180;
+        width: 220;
+        margin:  0 10 5 0;
+        border-radius: 15px;
     }
     p{
         font-size: 15px;
@@ -213,7 +220,11 @@ li {
         height: 80;
         width: 80;
     }
+    ul{
+        padding-left: 10px;
+    }
     li{
+        padding-right: 0;
         font-size: 15px;
     }
     .FAQ-container{
