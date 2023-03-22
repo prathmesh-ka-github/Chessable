@@ -5,12 +5,6 @@ body {
     font-family: "Arial", "Helvetica", sans-serif;
     color: #ffffff;
 }
-.bg-img{
-    width: 100%;
-    position: fixed;
-    z-index: -1;
-    bottom: 0;
-}
 .main {
     width: 100%;
     padding-top: 100px;
