@@ -742,25 +742,26 @@ document.querySelectorAll('.box').forEach(item => {
             greenlost = 0
             noofplayer--
         }
-            // Eliminations 
-            for (let i = 0; i < 2 ; i++) {                
-                if (tog == 1 && redlost == 0) {
-                    tog = 2
-                    clocks()
-                }
-                if (tog == 2 && bluelost == 0) {
-                    tog = 3
-                    clocks()
-                }
-                if (tog == 3 && yellowlost == 0) {
-                    tog = 4
-                    clocks()
-                }
-                if (tog == 4 && greenlost == 0) {
-                    tog = 1
-                    clocks()
-                }
+
+        //! Eliminations 
+        for (let i = 0; i < 2 ; i++) {                
+            if (tog == 1 && redlost == 0) {
+                tog = 2
+                clocks()
             }
+            if (tog == 2 && bluelost == 0) {
+                tog = 3
+                clocks()
+            }
+            if (tog == 3 && yellowlost == 0) {
+                tog = 4
+                clocks()
+            }
+            if (tog == 4 && greenlost == 0) {
+                tog = 1
+                clocks()
+            }
+        }
 
         //toggling the turn
         if (tog == 1 && redlost == 1) {
@@ -779,12 +780,11 @@ document.querySelectorAll('.box').forEach(item => {
             whosTurn('G')
             whowins()
         }
-        // who wins
+        //! Who wins
         function whowins(){
             if (noofplayer == 1) {
                 console.log(tog)
                 if (tog == 1) {
-                    console.log("red wins")
                     document.getElementById('winner-name-only').innerText = redName
                     document.getElementById('winner-name-only2').innerText = redName
                     document.getElementById('winner-name').style.color = "red"
@@ -792,7 +792,6 @@ document.querySelectorAll('.box').forEach(item => {
                     clearInterval(redinterval)
                 }
                 if (tog == 2) {
-                    console.log("Blue wins")
                     document.getElementById('winner-name-only').innerText = blueName
                     document.getElementById('winner-name-only2').innerText = blueName
                     document.getElementById('winner-name').style.color = "blue"
@@ -800,7 +799,6 @@ document.querySelectorAll('.box').forEach(item => {
                     clearInterval(blueinterval)
                 }
                 if (tog == 3) {
-                    console.log("yellow wins")
                     document.getElementById('winner-name-only').innerText = yellowName
                     document.getElementById('winner-name-only2').innerText = yellowName
                     document.getElementById('winner-name').style.color = "yellow"
@@ -808,7 +806,6 @@ document.querySelectorAll('.box').forEach(item => {
                     clearInterval(yellowinterval)
                 }
                 if (tog == 4) {
-                    console.log("green wins")
                     document.getElementById('winner-name-only').innerText = greenName
                     document.getElementById('winner-name-only2').innerText = greenName
                     document.getElementById('winner-name').style.color = "green"
