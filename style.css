@@ -7,6 +7,17 @@ body {
     font-family: "Monteserrat",'Open Sans', sans-serif;
     color: #ffffff;
 }
+.project-link{
+    position: fixed;
+    right: 0;
+    padding: 20px;
+}
+.project-link a{
+    color:#fff
+}
+.project-link a:hover{
+    color:#aeaeae;
+}
 .bg-img{
     width: 100%;
     position: fixed;
