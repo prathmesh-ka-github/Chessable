@@ -5,11 +5,3 @@
     align-items: center;
     height: 80%;
 }
-@media only screen and (max-width: 600px) {
-    img {
-        width: 90%;
-    }
-    .ply-btn{
-        font-size: 25px;
-    }
-}

@@ -35,6 +35,7 @@ body {
 }
 .btns-container{
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
     width: 100%;
@@ -88,4 +89,15 @@ a {
     width: 200px;
     padding: 20px;
     cursor: pointer;
+}
+@media only screen and (max-width: 600px) {
+    img {
+        width: 90%;
+    }
+    .ply-btn{
+        font-size: 25px;
+    }
+    .learn-btn{
+        font-size: 25px;
+    }
 }
