@@ -7,6 +7,17 @@ body {
     font-family: "Monteserrat",'Open Sans', sans-serif;
     color: #ffffff;
 }
+.project-link{
+    position: fixed;
+    right: 0;
+    padding: 20px;
+}
+.project-link a{
+    color:#fff
+}
+.project-link a:hover{
+    color:#aeaeae;
+}
 .bg-img{
     width: 100%;
     position: fixed;
@@ -21,6 +32,12 @@ body {
 }
 .logo-plybtn a{
     margin-top: 40px;
+}
+.btns-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 .ply-btn{
     all: unset;
@@ -46,6 +63,25 @@ body {
 }
 a {
     all: unset;
+}
+.learn-btn{
+    all:unset;
+    background-color: #BE9537;
+    color: #fff;
+    font-size: 36;
+    font-weight: 700;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    padding: 20 60;
+    border-radius: 20px;
+    transition: background-color 300ms;
+    cursor: pointer;
+    -webkit-box-shadow: 10px 10px 31px -7px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 31px -7px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 31px -7px rgba(0,0,0,0.75);
+}
+.learn-btn:hover{
+    background-color: #9e7e36;
 }
 .logo-sm img{
     position: fixed;
