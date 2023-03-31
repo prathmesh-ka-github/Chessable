@@ -21,3 +21,23 @@
 .container ul{
     list-style: none;
 }
+.about-board{
+    display: flex;
+}
+.about-board p{
+    margin: 0;
+    padding: 20px;
+}
+.chess-board-img{
+    height: 350px;
+    width: 350px;
+}
+.learn-pawn h2{
+    margin: 0;
+}
+.learn-pawn img{
+    position: relative;
+    top:20px;
+    height: 90px;
+    margin-top: 20px;
+}
