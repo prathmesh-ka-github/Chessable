@@ -6,10 +6,18 @@
     padding-bottom: 80px;
 }
 .container{
-    font-size: 30px;
     width:70%;
     height: 100%;
     background-color:#3E3A37 ;
     border-radius: 10px;
     padding: 100px;
+}
+.container h1{
+    font-size: 35px;
+}
+.container p{
+    font-size: 25px;
+}
+.container ul{
+    list-style: none;
 }
