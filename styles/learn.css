@@ -12,7 +12,7 @@
     border-radius: 10px;
     padding: 100px;
     font-size: 25px;
-    letter-spacing: 1px;
+    letter-spacing: 1xpx;
 }
 .container h1{
     font-size: 40px;
@@ -41,7 +41,7 @@
     margin: 0;
     margin-bottom: 20px;
 }
-.learn-pawn .pawn{
+.learn-pawn .pawn-img{
     position: relative;
     top:20px;
     height: 90px;
@@ -54,6 +54,20 @@
     height: auto;
     float: right;
     margin-left: 10px;
+}
+.learn-knight .knight-img{
+    position: relative;
+    top:20px;
+    height: 90px;
+    width: auto;
+    margin-top: 20px;
+}
+.knight-move-gif{
+    width:250px;
+    height: auto;
+    float: left;
+    margin-right: 30px;
+    margin-top: 10px;
 }
 ::-webkit-scrollbar {
     width: 16px;
