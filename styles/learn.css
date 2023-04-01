@@ -11,14 +11,14 @@
     background-color:#3E3A37 ;
     border-radius: 10px;
     padding: 100px;
-    font-size: 30px;
+    font-size: 25px;
     letter-spacing: 1px;
 }
 .container h1{
     font-size: 40px;
 }
 
-.container ul{
+.no-style{
     list-style: none;
 }
 .about-board{
@@ -32,8 +32,12 @@
     height: 350px;
     width: 350px;
 }
+.pieces-list{
+    padding-bottom: 20px;
+}
 .learn-pawn h2{
     margin: 0;
+    margin-bottom: 20px;
 }
 .learn-pawn .pawn{
     position: relative;
@@ -44,7 +48,8 @@
     height: auto; */
 }
 .pawn-move-gif{
-    width:200px;
+    width:250px;
     height: auto;
     float: right;
+    margin-left: 10px;
 }
