@@ -23,6 +23,8 @@
 }
 .about-board{
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .about-board p{
     margin: 0;
