@@ -6,8 +6,11 @@ function startclockblack() {
     if (bsec == 0 && bmin == 0) {
         document.getElementById("bsec").innerHTML = bsec;
         document.getElementById("bmin").innerHTML = bmin;
-        window.alert(whiteName + " wins by timeout!!!")
-        location.reload()
+        document.getElementById("winner-name").innerText = `${whiteName} Wins By timeout!`
+        document.getElementById("winner-screen-container").style.scale = "1"
+        clearInterval(blackinterval)
+        // window.alert(whiteName + " wins by timeout!!!")
+        // location.reload()
     } else {
         bsec--;
         if (bsec < 60) {
@@ -30,8 +33,10 @@ function startclockwhite() {
     if (wsec == 0 && wmin == 0) {
         document.getElementById("wsec").innerHTML = wsec;
         document.getElementById("wmin").innerHTML = wmin;
-        window.alert(blackName + " wins by timeout!!!")
-        location.reload()
+        document.getElementById("winner-name").innerText = `${blackName} Wins By timeout!`
+        document.getElementById("winner-screen-container").style.scale = "1"
+        clearInterval(whiteinterval)
+        // location.reload()
     } else {
         wsec--;
         if (wsec < 60) {
