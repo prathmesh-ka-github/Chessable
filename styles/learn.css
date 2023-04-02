@@ -122,6 +122,27 @@
     margin-right: 30px;
     margin-top: 10px;
 }
+
+.learn-queen h2{
+    margin: 0px;
+    margin-top: 150px;
+
+}
+.learn-king .king-img{
+    position: relative;
+    top:20px;
+    height: 90px;
+    width: auto;
+    margin-top: 20px;
+}
+
+.king-moves{
+    width:250px;
+    height: auto;
+    float: left;
+    margin-right: 30px;
+    margin-top: 10px;
+}
 ::-webkit-scrollbar {
     width: 16px;
 }
