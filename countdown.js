@@ -33,7 +33,7 @@ function startclockwhite() {
     if (wsec == 0 && wmin == 0) {
         document.getElementById("wsec").innerHTML = wsec;
         document.getElementById("wmin").innerHTML = wmin;
-        document.getElementById("winner-name").innerText = `${blackName} Wins By timeout!`
+        document.getElementById("winner-name").innerText = `${blackName} WinsBy timeout!`
         document.getElementById("winner-screen-container").style.scale = "1"
         clearInterval(whiteinterval)
         // location.reload()

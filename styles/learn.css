@@ -69,6 +69,59 @@
     margin-right: 30px;
     margin-top: 10px;
 }
+.learn-bishop h2{
+    margin: 0;
+    padding-top: 35px;
+}
+.learn-bishop .bishop-img{
+    position: relative;
+    top:20px;
+    height: 90px;
+    width: auto;
+    margin-top: 20px;
+}
+.bishop-moves-gif{
+    width:250px;
+    height: auto;
+    float: right;
+    margin-left: 10px;
+}
+
+.learn-rook .rook-img{
+    position: relative;
+    top:20px;
+    height: 90px;
+    width: auto;
+    margin-top: 20px;
+}
+.rook-moves-gif{
+    width:250px;
+    height: auto;
+    float: left;
+    margin-right: 30px;
+    margin-top: 10px;
+}
+
+.learn-queen h2{
+    margin: 0px;
+    margin-top: 150px;
+
+}
+.learn-queen .queen-img{
+    position: relative;
+    top:20px;
+    height: 90px;
+    width: auto;
+    margin-top: 20px;
+}
+
+.queen-moves-gif{
+    width:250px;
+    height: auto;
+    float: right;
+    margin-right: 30px;
+    margin-top: 10px;
+}
 ::-webkit-scrollbar {
     width: 16px;
 }
