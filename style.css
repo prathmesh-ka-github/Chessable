@@ -102,4 +102,7 @@ a {
         padding: 20px 45px;
         font-size: 25px;
     }
+    .btns-container{
+        justify-content: space-evenly;
+    }
 }
