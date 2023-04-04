@@ -143,6 +143,10 @@
     margin-right: 30px;
     margin-top: 10px;
 }
+.special-rules h2{
+    text-align: center;
+    padding-top: 90px;
+}
 .openings h2{
     margin: 0;
     text-align: center;
