@@ -5,6 +5,15 @@
     justify-content: center;
     padding-bottom: 80px;
 }
+.title-img{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.title-img img{
+    width: 150px;
+    height: 150px;
+}
 .container{
     width:70%;
     height: 100%;
@@ -14,9 +23,7 @@
     font-size: 25px;
     letter-spacing: 1xpx;
 }
-.container h1{
-    font-size: 40px;
-}
+ 
 
 .no-style{
     list-style: none;
