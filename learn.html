@@ -1,20 +1,152 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn Chess | Chessable</title>
+    <link rel="icon" href="./Assets/favicon.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="styles/learn.css">
 </head>
+
 <body>
     <a href="index.html">
         <div class="logo-sm">
             <img src="Assets/Chessable-logo-dark.png" alt="Chessable logo">
         </div>
     </a>
-    <div class="container">
-        Learn the AZ of chess!
+    <div class="main">
+        <div class="container">
+            <h1>Learn the AZ of chess!</h1>
+            <p>A beginner to chess?<br>
+                Learn basics of chess piece movements,
+                openings, castling, middle game, end games, checks, checkmates and en-passant.
+            </p>
+            <p>
+                Before starting to play, lets take a look on how each piece moves and the board.
+            </p>
+            <p>
+                There are 6 distinct pieces in chess.
+            </p>
+            <ol>
+                <li>First we have the pawn there are total 8 pawns for each player so total of 16 pawn on the board</li>
+                <li>The rook - Its an important piece which has 5 points and there 2 rooks for each player.</li>
+                <li>The bishop - Its also a powerful piece and has 3 points, each player has 2 bishops on dark squared
+                    and light sqauared</li>
+                <li>The kight (horsey) - This piece comes with an advantage to jump over other pieces we will see how
+                    below there are 2 horses for each player each has 3 points</li>
+                <li>The Queen - the most powerful piece with 9 points each player has one queen at the start</li>
+                <li>The King - The piece on which the whole game is actually played</li>
+            </ol>
+            <p>Let's take a look at the board.</p>
+            <div class="about-board">
+                <p>The board contains 8 rows and 8 columns, rows are called as ranks and columns are called as files.
+                    There are 64 four squares in total.</p>
+                <img class="chess-board-img" src="Assets/chess-board.png" alt="chess-board">
+            </div>
+            <div>
+                <div class="learn-pawn">
+                    <h2><img class="pawn-img" src="pieces/Wpawn.png" alt="">Pawn:</h2>
+                    <ul>
+                        <li>
+                            The pawns are the most basic and fundamental chessmen in the entire game.
+                        </li>
+                        <img class="pawn-move-gif" src="Assets/pawn-moves-promotesgif.gif" alt="pawn-moves-gif">
+                        <li>
+                            It moves one step forward only, but if its the first move of pawn then, it can move
+                            2 steps forward. It captures piece diagonally.
+                        </li>
+                        <li>
+                            The pawn has a special advantage over other piece i.e it can promote to either a
+                            Queen, Rook, Bishop or a Knight when it reaches the opposite end of the board.
+                        </li>
+                        <li>
+                            Also there is one special move called En Passant that the pwan can do, where when
+                            the pawn can capture opponent pawn which has its first move as 2 steps forward
+                            provided that both the pawn are besides each other.</p>
+                        </li>
+                        <li>You can see how pawn moves and captures here ↗️</li>
+                    </ul>
+                </div>
+                <div class="learn-knight">
+                    <h2><img class="knight-img" src="pieces/Bknight.png" alt="knight">Knight:</h2>
+                    <ul>
+                        <img class="knight-move-gif" src="Assets/knight-moves.gif" alt="">
+                        <li>The knight is a piece worth 3 points</li>
+                        <li>It moves one square forward then one square diagonally left or right.</li>
+                        <li>The green highlighted square indicate the possible move for the knight.</li>
+                        <li >You can also start you game by placing the knights first, which can help you to take control of more squares than a pawn.</li>
+                    </ul>
+                </div>
+                <div class="learn-bishop">
+                    <h2><img class="bishop-img" src="pieces/Wbishop.png" alt="bishop">Bishop:</h2>
+                    <ul>
+                        <li>The bishop takes control of the diagonal squares, wherever it resides</li>
+                        <li>It is worth 3 points as knight.</li>
+                        <img class="bishop-moves-gif" src="Assets/bishop-moves.gif" alt="bishop-moves-gif">
+                        <li>It can move anywhere on the diagonals it controls.</li>
+                        <li>Each player has two bishops one is the light sqaured and other is the dark-squared.</li>
+                        <li>The light squared bishop only controls and moves on light colored squares, and dark squared bishop controls and moves on dark squares.</li>
+                        <li>The green highlighted squares denote the possible squares each bishop can move.</li>
+                    </ul>
+                </div>
+                <div class="learn-rook">
+                    <h2><img src="pieces/Brook.png" alt="rook" class="rook-img">Rook:</h2>
+                    <ul>
+                        <img src="Assets/rook-moves.gif" alt="rook-moves-captures" class="rook-moves-gif">
+                        <li>The rook is a very powerful piece after the Queen.</li>
+                        <li>It takes control of the file and the rank where it is.</li>
+                        <li>It is worth 9 points.</li>
+                        <li>It has four possible directions to move</li>
+                    </ul>
+                </div>
+                <div class="learn-queen">
+                    <h2><img src="pieces/Wqueen.png" alt="queen" class="queen-img">Queen:</h2>
+                    <ul>
+                        <img src="Assets/queen-moves.gif" alt="queen-moves-captures" class="queen-moves-gif">
+                        <li>The Queen is the most powerful piece among all the pieces.</li>
+                        <li>Its a combination of a rook and a bishop</li>
+                        <li>It takes control of the file. the rank and the diagonals where it is.</li>
+                        <li>It is worth 10 points.</li>
+                        <li>It has eight possible move</li>
+                        <li>you can see how the queen moves in the above gif</li>
+                    </ul>
+                </div>
+                <div class="learn-king">
+                    <h2><img class="king-img" src="pieces/Bking.png" alt="king">King:</h2>
+                    <ul>
+                        <img class="king-moves" src="Assets/king-moves.gif" alt="king-moves">
+                        <li>The King is the most important piece of the game.</li>
+                        <li>The king moves 1 square in any direction as you can see here ⬅️</li>
+                        <li>The most important part of the chess is to protect the king and avoid getting a check</li>
+                        <li>Check is when you king is in danger that is opponents piece threats your king for capture but you can get out from a check by moving you king or blocking the check by other pieces</li>                    
+                    </ul>
+                </div>
+                <div class="special-rules">
+                    <h2>Special Moves</h2>
+                    <p>While starting to play chess as a beginner, you might be caught off guard by weird moves that look too odd to be legal.But The are not illegal, lets see few special moves that you come across while playing chess</p>
+                    <h3>1. Castling</h3> 
+                    <p>&emsp;Castling is the only move in chess that lets you move 2 pieces simultaneously the piece being the king and rook. 
+                        When castling is allowed, you can move your king two squares to the side, grab the rook from the side you're castling to, and place it over and next to the king. 
+                        Also you can only castle when there are on other pieces in between.
+                        </p>
+                        <p>There are 2 types of castle one is queen side castle(long) where you castle from the queen side and other the king side castle, where you caslte from king side.
+                        <br>Below you can see how castling is actually done.</p> 
+
+                </div>
+                <div class="openings">
+                    <h2>Openings</h2>
+                    <p>Now that we are familiar with the pieces we can learn how we should open our game, game openings gives you a good advantage over your opponent,it would help you develop your pieces efficiently</p>
+                    <p>Also it is totally okay as a beginner if you don't memorize openings moves but you should be familiar with opening principles few of which is controlling the center and developing pieces</p>
+                </div>
+                <div class="middle-game">
+                    <h2>The Middle Game</h2>
+                    <p>The middlegame is the portion of a chess game between the opening and the endgame. It is generally considered to begin when each player has completed the development of all or most of their pieces and brought their king to relative safety, and it is generally considered to end when only a few pieces remain on the board. However, there is no clear line between the opening and middlegame or between the middlegame and endgame.</p>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
+
 </html>

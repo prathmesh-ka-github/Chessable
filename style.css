@@ -96,8 +96,13 @@ a {
     }
     .ply-btn{
         font-size: 25px;
+        padding: 20px 50px;
     }
     .learn-btn{
+        padding: 20px 45px;
         font-size: 25px;
+    }
+    .btns-container{
+        justify-content: space-evenly;
     }
 }

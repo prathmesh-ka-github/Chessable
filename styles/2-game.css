@@ -182,3 +182,24 @@ li {
         height: 40px;
     }
 }
+@media only screen and (max-width:600px){
+    .winner-screen{
+        padding: 70px 80px;
+        height: 180px;
+        width: 50vw;
+        font-size: 10px;
+    }
+    .winner-screen-container p{
+        font-size: 25px;
+        margin: 0;
+    }
+    .winner-name{
+        font-size: 30px;
+        font-weight: 600;
+    }
+    
+    .rematch{
+        display: flex;
+        padding-bottom: 20px;
+    }
+}

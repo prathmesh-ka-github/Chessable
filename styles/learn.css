@@ -1,5 +1,175 @@
+.main{
+    width:100%;
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 80px;
+}
 .container{
-    padding: 90px;
-    font-size: 30px;
+    width:70%;
+    height: 100%;
+    background-color:#3E3A37 ;
+    border-radius: 10px;
+    padding: 100px;
+    font-size: 25px;
+    letter-spacing: 1xpx;
+}
+.container h1{
+    font-size: 40px;
+}
 
+.no-style{
+    list-style: none;
+}
+.about-board{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about-board p{
+    margin: 0;
+    padding: 20px;
+}
+.chess-board-img{
+    height: 350px;
+    width: 350px;
+}
+.pieces-list{
+    padding-bottom: 20px;
+}
+.learn-pawn h2{
+    margin: 0;
+    margin-bottom: 20px;
+}
+.learn-pawn .pawn-img{
+    position: relative;
+    top:20px;
+    height: 90px;
+    margin-top: 20px;
+    /* width:200px;
+    height: auto; */
+}
+.pawn-move-gif{
+    width:250px;
+    height: auto;
+    float: right;
+    margin-left: 10px;
+}
+.learn-knight .knight-img{
+    position: relative;
+    top:20px;
+    height: 90px;
+    width: auto;
+    margin-top: 20px;
+}
+.knight-move-gif{
+    width:250px;
+    height: auto;
+    float: left;
+    margin-right: 30px;
+    margin-top: 10px;
+}
+.learn-bishop h2{
+    margin: 0;
+    padding-top: 35px;
+}
+.learn-bishop .bishop-img{
+    position: relative;
+    top:20px;
+    height: 90px;
+    width: auto;
+    margin-top: 20px;
+}
+.bishop-moves-gif{
+    width:250px;
+    height: auto;
+    float: right;
+    margin-left: 10px;
+}
+
+.learn-rook .rook-img{
+    position: relative;
+    top:20px;
+    height: 90px;
+    width: auto;
+    margin-top: 20px;
+}
+.rook-moves-gif{
+    width:250px;
+    height: auto;
+    float: left;
+    margin-right: 30px;
+    margin-top: 10px;
+}
+
+.learn-queen h2{
+    margin: 0px;
+    margin-top: 150px;
+
+}
+.learn-queen .queen-img{
+    position: relative;
+    top:20px;
+    height: 90px;
+    width: auto;
+    margin-top: 20px;
+}
+
+.queen-moves-gif{
+    width:250px;
+    height: auto;
+    float: right;
+    margin-right: 30px;
+    margin-top: 10px;
+}
+
+.learn-queen h2{
+    margin: 0px;
+    margin-top: 150px;
+
+}
+.learn-king .king-img{
+    position: relative;
+    top:20px;
+    height: 90px;
+    width: auto;
+    margin-top: 20px;
+}
+
+.king-moves{
+    width:250px;
+    height: auto;
+    float: left;
+    margin-right: 30px;
+    margin-top: 10px;
+}
+.special-rules h2{
+    text-align: center;
+    padding-top: 90px;
+}
+.openings h2{
+    margin: 0;
+    text-align: center;
+    padding-top: 90px;
+}
+
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #4e4e4e; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #3E3A37; 
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #332f2d; 
 }
