@@ -180,3 +180,39 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #332f2d; 
 }
+
+@media only screen and (max-width:600px){
+    
+    .container{
+        padding:25px;
+        font-size: 17px;
+        width: 75%;
+    }
+    .container h1{
+     font-size: 25px;   
+    }
+    .title-img img{
+        width:100px;
+        height: auto;
+    }
+    .chess-board-img{
+        width: 200px;
+        height: auto;
+    }
+    ol{
+        padding-left:25px ;
+    }
+    ul{
+        padding-left: 25px;
+    }
+    .learn-pawn .pawn-img{
+        height: auto;
+        width: 70px;
+        margin-top: 0;
+    }
+    .learn-pawn h2{
+        margin-bottom: 30px;
+    }
+    
+
+}
