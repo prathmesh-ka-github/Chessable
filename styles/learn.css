@@ -48,13 +48,12 @@
     margin: 0;
     margin-bottom: 20px;
 }
-.learn-pawn .pawn-img{
+.learn-img{
     position: relative;
     top:20px;
     height: 90px;
     margin-top: 20px;
-    /* width:200px;
-    height: auto; */
+    width: auto;
 }
 .pawn-move-gif{
     width:250px;
@@ -62,13 +61,7 @@
     float: right;
     margin-left: 10px;
 }
-.learn-knight .knight-img{
-    position: relative;
-    top:20px;
-    height: 90px;
-    width: auto;
-    margin-top: 20px;
-}
+
 .knight-move-gif{
     width:250px;
     height: auto;
@@ -80,13 +73,7 @@
     margin: 0;
     padding-top: 35px;
 }
-.learn-bishop .bishop-img{
-    position: relative;
-    top:20px;
-    height: 90px;
-    width: auto;
-    margin-top: 20px;
-}
+
 .bishop-moves-gif{
     width:250px;
     height: auto;
@@ -114,13 +101,7 @@
     margin-top: 150px;
 
 }
-.learn-queen .queen-img{
-    position: relative;
-    top:20px;
-    height: 90px;
-    width: auto;
-    margin-top: 20px;
-}
+
 
 .queen-moves-gif{
     width:250px;
@@ -134,13 +115,6 @@
     margin: 0px;
     margin-top: 150px;
 
-}
-.learn-king .king-img{
-    position: relative;
-    top:20px;
-    height: 90px;
-    width: auto;
-    margin-top: 20px;
 }
 
 .king-moves{
@@ -191,8 +165,12 @@
     .container h1{
      font-size: 25px;   
     }
+    .about-board p{
+        padding: 0;
+        padding-bottom: 10px;
+    }
     .title-img img{
-        width:100px;
+        width:80px;
         height: auto;
     }
     .chess-board-img{
@@ -205,13 +183,21 @@
     ul{
         padding-left: 25px;
     }
-    .learn-pawn .pawn-img{
+    li{
+        padding-bottom: 5px;
+    }
+    .learn-img{
         height: auto;
-        width: 70px;
+        width: 50px;
         margin-top: 0;
     }
     .learn-pawn h2{
         margin-bottom: 30px;
+    }
+    .pawn-move-gif{
+        float: unset;
+        margin-left: 0;
+        margin-bottom: 5px;
     }
     
 
