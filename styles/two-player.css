@@ -102,6 +102,10 @@
     .container{
         padding-top: 130px;
     }
+    .name {
+        height: auto;
+        padding: 10px;
+    }
     .clk-div{
         display: flex;
         flex-direction: column;

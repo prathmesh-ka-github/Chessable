@@ -91,7 +91,7 @@ a {
     cursor: pointer;
 }
 @media only screen and (max-width: 600px) {
-    img {
+    .logo-plybtn img {
         width: 90%;
     }
     .ply-btn{
