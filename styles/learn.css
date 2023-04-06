@@ -5,6 +5,15 @@
     justify-content: center;
     padding-bottom: 80px;
 }
+.title-img{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.title-img img{
+    width: 150px;
+    height: 150px;
+}
 .container{
     width:70%;
     height: 100%;
@@ -14,9 +23,7 @@
     font-size: 25px;
     letter-spacing: 1xpx;
 }
-.container h1{
-    font-size: 40px;
-}
+ 
 
 .no-style{
     list-style: none;
@@ -41,13 +48,12 @@
     margin: 0;
     margin-bottom: 20px;
 }
-.learn-pawn .pawn-img{
+.learn-img{
     position: relative;
     top:20px;
     height: 90px;
     margin-top: 20px;
-    /* width:200px;
-    height: auto; */
+    width: auto;
 }
 .pawn-move-gif{
     width:250px;
@@ -55,13 +61,7 @@
     float: right;
     margin-left: 10px;
 }
-.learn-knight .knight-img{
-    position: relative;
-    top:20px;
-    height: 90px;
-    width: auto;
-    margin-top: 20px;
-}
+
 .knight-move-gif{
     width:250px;
     height: auto;
@@ -73,14 +73,8 @@
     margin: 0;
     padding-top: 35px;
 }
-.learn-bishop .bishop-img{
-    position: relative;
-    top:20px;
-    height: 90px;
-    width: auto;
-    margin-top: 20px;
-}
-.bishop-moves-gif{
+
+.bishop-move-gif{
     width:250px;
     height: auto;
     float: right;
@@ -94,7 +88,7 @@
     width: auto;
     margin-top: 20px;
 }
-.rook-moves-gif{
+.rook-move-gif{
     width:250px;
     height: auto;
     float: left;
@@ -107,15 +101,9 @@
     margin-top: 150px;
 
 }
-.learn-queen .queen-img{
-    position: relative;
-    top:20px;
-    height: 90px;
-    width: auto;
-    margin-top: 20px;
-}
 
-.queen-moves-gif{
+
+.queen-move-gif{
     width:250px;
     height: auto;
     float: right;
@@ -127,13 +115,6 @@
     margin: 0px;
     margin-top: 150px;
 
-}
-.learn-king .king-img{
-    position: relative;
-    top:20px;
-    height: 90px;
-    width: auto;
-    margin-top: 20px;
 }
 
 .king-moves{
@@ -151,6 +132,9 @@
     margin: 0;
     text-align: center;
     padding-top: 90px;
+}
+.middle-game{
+    text-align: center;
 }
 
 ::-webkit-scrollbar {
@@ -172,4 +156,77 @@
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #332f2d; 
+}
+
+@media only screen and (max-width:600px){
+    
+    .container{
+        padding:25px;
+        font-size: 17px;
+        width: 75%;
+    }
+    .container h1{
+     font-size: 25px;   
+    }
+    .about-board p{
+        padding: 0;
+        padding-bottom: 10px;
+    }
+    .title-img img{
+        width:80px;
+        height: auto;
+    }
+    .chess-board-img{
+        width: 200px;
+        height: auto;
+    }
+    ol{
+        padding-left:25px ;
+    }
+    ul{
+        padding-left: 25px;
+    }
+    li{
+        padding-bottom: 5px;
+    }
+    .learn-img{
+        height: auto;
+        width: 50px;
+        margin-top: 0;
+    }
+    .learn-pawn h2{
+        margin-bottom: 30px;
+    }
+    .pawn-move-gif{
+        float: unset;
+        margin-left: 0;
+        margin-bottom: 5px;
+    }
+    .knight-move-gif{
+        float: unset;
+        margin: 0;
+        margin-bottom: 5px;
+    }
+    .bishop-move-gif{
+        float: unset;
+        margin: 0;
+        margin-bottom: 5px;
+    }
+    .rook-move-gif{
+        float: unset;
+        margin: 0;
+        margin-bottom: 5px;
+    }
+    .queen-move-gif{
+        float: unset;
+        margin: 0;
+        margin-bottom: 5px;
+    }
+    .king-moves{
+        float: unset;
+        margin: 0;
+        margin-bottom: 5px;
+    }
+    
+
 }
