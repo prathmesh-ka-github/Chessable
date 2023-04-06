@@ -74,7 +74,7 @@
     padding-top: 35px;
 }
 
-.bishop-moves-gif{
+.bishop-move-gif{
     width:250px;
     height: auto;
     float: right;
@@ -88,7 +88,7 @@
     width: auto;
     margin-top: 20px;
 }
-.rook-moves-gif{
+.rook-move-gif{
     width:250px;
     height: auto;
     float: left;
@@ -103,7 +103,7 @@
 }
 
 
-.queen-moves-gif{
+.queen-move-gif{
     width:250px;
     height: auto;
     float: right;
@@ -132,6 +132,9 @@
     margin: 0;
     text-align: center;
     padding-top: 90px;
+}
+.middle-game{
+    text-align: center;
 }
 
 ::-webkit-scrollbar {
@@ -197,6 +200,31 @@
     .pawn-move-gif{
         float: unset;
         margin-left: 0;
+        margin-bottom: 5px;
+    }
+    .knight-move-gif{
+        float: unset;
+        margin: 0;
+        margin-bottom: 5px;
+    }
+    .bishop-move-gif{
+        float: unset;
+        margin: 0;
+        margin-bottom: 5px;
+    }
+    .rook-move-gif{
+        float: unset;
+        margin: 0;
+        margin-bottom: 5px;
+    }
+    .queen-move-gif{
+        float: unset;
+        margin: 0;
+        margin-bottom: 5px;
+    }
+    .king-moves{
+        float: unset;
+        margin: 0;
         margin-bottom: 5px;
     }
     
