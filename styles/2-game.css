@@ -46,9 +46,27 @@
     background-color: #1D1C1A;
     color: #ffffff;
 }
-#tog {
-    font-size: 0;
+.flip-btn-container {
+    font-size: 30px;
 }
+.flip-btn-container button{
+    all: unset;
+    font-size: 24px;
+    background-color: red;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+.flip-btn-container button:hover {
+    background-color: rgb(159, 0, 0);
+}
+#grey {
+    background-color: grey;
+}
+#grey:hover {
+    background-color: rgb(110, 110, 110);
+}
+
 .board{
     margin-left: 200px;
 }

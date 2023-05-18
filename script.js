@@ -886,11 +886,11 @@ document.querySelectorAll('.box').forEach(item => {
         // Toggling the turn
 
         if (tog % 2 !== 0) {
-            document.getElementById('tog').innerText = "White's Turn"
+            // document.getElementById('tog').innerText = "White's Turn"
             whosTurn('W')
         }
         if (tog % 2 == 0) {
-            document.getElementById('tog').innerText = "Black's Turn"
+            // document.getElementById('tog').innerText = "Black's Turn"
             whosTurn('B')
         }
 
@@ -1163,7 +1163,7 @@ function checkchecks(){
 }
 
 
-// Prvents from selecting multiple elements
+// Prevents from selecting multiple elements
 z = 0
 document.querySelectorAll('.box').forEach(ee => {
     ee.addEventListener('click', function () {
@@ -1173,23 +1173,41 @@ document.querySelectorAll('.box').forEach(ee => {
         }
     })
 })
+var doflip = true;
+function toggleflip(){
+    if (doflip) {
+        doflip = false;
+        document.getElementById('flipbtn').style.backgroundColor = 'green'
+        document.getElementById('flipbtn').innerHTML = 'Start'
+
+    }
+    else {
+        doflip = true;
+        document.getElementById('flipbtn').style.backgroundColor = 'red'
+        document.getElementById('flipbtn').innerHTML = 'Stop'
+    }
+}
 
 // Board auto flip
 function flip() {
-    if (tog % 2 !== 0 && tog!==1) {
-        board = document.getElementById('board')         
-        board.style.transform = 'rotate(0deg)'
-        document.querySelectorAll('.box').forEach(image => {
-            image.style.transform='rotate(0deg)'
-        })
+    if (doflip) {
+        if (tog % 2 !== 0 && tog!==1) {
+            board = document.getElementById('board')         
+            board.style.transform = 'rotate(0deg)'
+            document.querySelectorAll('.box').forEach(image => {
+                image.style.transform='rotate(0deg)'
+            })
+        }
+        if (tog % 2 == 0) {
+            board = document.getElementById('board') 
+            board.style.transform = 'rotate(180deg)'
+            document.querySelectorAll('.box').forEach(image => {
+                image.style.transform='rotate(180deg)'
+            })
+        }
     }
-    if (tog % 2 == 0) {
-        board = document.getElementById('board') 
-        board.style.transform = 'rotate(180deg)'
-        document.querySelectorAll('.box').forEach(image => {
-            image.style.transform='rotate(180deg)'
-        })
-    }
+
+    //  Toggling turns
     if (tog % 2 !== 0) {
         clearInterval(blackinterval)
         whiteinterval = setInterval(startclockwhite,1000);
