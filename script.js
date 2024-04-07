@@ -1,6 +1,5 @@
 function coloring() {
     const color = document.querySelectorAll('.box')
-
     color.forEach(color => {
 
         getId = color.id
@@ -20,7 +19,6 @@ function coloring() {
     checkchecks()
 }
 coloring()
-
 
 function insertImage() {
     document.querySelectorAll('.box').forEach(image => {
@@ -42,7 +40,6 @@ insertImage()
 
 
 //function to not remove the same team element
-
 function reddish() {
     document.querySelectorAll('.box').forEach(i1 => {
         if (i1.style.backgroundColor == 'cadetblue') {
@@ -151,7 +148,6 @@ document.querySelectorAll('.box').forEach(item => {
                     insertImage()
                     checkchecks()
                 }
-
             })
         }
         getId = item.id
@@ -159,12 +155,12 @@ document.querySelectorAll('.box').forEach(item => {
         arr.shift()
         current = eval(arr.join(''))
         aside = eval(arr.pop())
-        console.log('aside = ' + aside)
+        // console.log('aside = ' + aside)
         arr.push('0')
         aup = eval(arr.join(''))
-        console.log('aup = ' + aup)
+        // console.log('aup = ' + aup)
         a = aside + aup
-        console.log('a = ' + a)
+        // console.log('a = ' + a)
 
 
         // Function to display the available paths for all pieces
