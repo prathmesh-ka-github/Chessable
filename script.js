@@ -1,7 +1,9 @@
+let lightColor = "#C3CDDC"
+let darkColor = "#8F9EB8"
+
 function coloring() {
     const color = document.querySelectorAll('.box')
     color.forEach(color => {
-
         getId = color.id
         arr = Array.from(getId)
         arr.shift()
@@ -10,15 +12,21 @@ function coloring() {
         a = aside + aup
 
         if (a % 2 == 0) {
-            color.style.backgroundColor = '#8F9EB8'
+            color.style.backgroundColor = darkColor
         }
         if (a % 2 !== 0) {
-            color.style.backgroundColor = '#C3CDDC'
+            color.style.backgroundColor = lightColor
         }
     })
     checkchecks()
 }
 coloring()
+
+async function boardtheme(light, dark) {
+    lightColor = light
+    darkColor = dark
+    coloring()
+}
 
 function insertImage() {
     document.querySelectorAll('.box').forEach(image => {

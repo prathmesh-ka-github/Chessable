@@ -1,9 +1,9 @@
-
 .test {
-    background-color:rgb(143, 158, 184);
+    background-color: rgb(143, 158, 184);
     background-color: rgb(100, 75, 43);
 }
-.main-space{
+
+.main-space {
     display: flex;
     width: 100%;
     height: 95%;
@@ -13,23 +13,28 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding-top: 40px;
 }
+
 .stats {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 70%;
+    height: 60%;
 }
-.profile img{
+
+.profile img {
     width: 60px;
 }
-.player-name{
+
+.player-name {
     margin: 0 10px;
     font-size: 34px;
 }
+
 .row {
     display: flex;
     flex-direction: row;
 }
+
 .player-time {
     width: 160px;
     height: 60px;
@@ -42,68 +47,80 @@
     border-radius: 15px;
     margin-top: 15px;
 }
+
 #black-time {
     background-color: #1D1C1A;
     color: #ffffff;
 }
+
 .flip-btn-container {
     font-size: 30px;
 }
-.flip-btn-container button{
+
+.flip-btn-container button {
     all: unset;
-    font-size: 24px;
+    font-size: 20px;
     background-color: red;
-    padding: 10px 15px;
-    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
     margin-left: 10px;
 }
+
 .flip-btn-container button:hover {
     background-color: rgb(159, 0, 0);
 }
+
 #grey {
     background-color: grey;
 }
+
 #grey:hover {
     background-color: rgb(110, 110, 110);
 }
 
-.board{
+.board {
     margin-left: 200px;
 }
-.board div{
+
+.board div {
     list-style: none;
     display: flex;
     margin: 0;
 }
+
 .box {
     cursor: pointer;
 }
+
 li {
     width: 11vh;
     height: 11vh;
     display: grid;
     place-items: center;
     font-size: 0;
-    border: 0.1px solid #C3CDDC;
+    /* border: 0.1px solid #C3CDDC; */
     transition: background-color 400ms;
 }
-.allimg{
+
+.allimg {
     width: 100%;
 }
 
-.winner-screen-container{
+.winner-screen-container {
     position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     width: 100%;
-    height:100%;
+    height: 100%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     scale: 0;
     transition: scale 300ms;
 }
+
 .winner-screen {
     position: relative;
     display: flex;
@@ -114,23 +131,27 @@ li {
     padding: 80px 100px;
     font-size: 20px;
     border-radius: 30px;
-    
+
 }
-.winner-name{
-    font-weight:700;
+
+.winner-name {
+    font-weight: 700;
     font-size: 50px;
     padding-bottom: 30px;
     display: flex;
 }
-.winner-screen-container p{
+
+.winner-screen-container p {
     margin-top: 0;
-    font-weight:400;
+    font-weight: 400;
     font-size: 30px;
 }
+
 .rematch {
     margin-top: 30px;
 }
-.rematch button{
+
+.rematch button {
     all: unset;
     text-align: center;
     background-color: #64863a;
@@ -143,11 +164,16 @@ li {
     width: 100px;
     height: 20px;
 }
+
 .rematch button:hover {
-    background-color: rgb(82, 109, 50);   
+    background-color: rgb(82, 109, 50);
 }
-.rematch a{margin-left: 20px;}
-.X{
+
+.rematch a {
+    margin-left: 20px;
+}
+
+.X {
     position: absolute;
     right: 20;
     top: 20;
@@ -155,32 +181,150 @@ li {
     cursor: pointer;
 }
 
-@media only screen and (orientation:portrait) and (max-width:600px){
+.theme-container {
+    display: flex;
+
+}
+
+.themetitle {
+    font-size: 30px;
+}
+
+.dropbtn {
+    background-color: #04aa97;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 220px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 5px 15px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #029483;
+}
+
+.colorbox {
+    display: flex;
+}
+
+.woodLight {
+    background-color: #E2C5B0;
+    width: 20px;
+    height: 20px;
+}
+
+.woodDark {
+    background-color: #AA8C77;
+    width: 20px;
+    height: 20px;
+}
+.steelLight {
+    background-color: #C3CDDC;
+    width: 20px;
+    height: 20px;
+}
+
+.steelDark {
+    background-color: #8F9EB8;
+    width: 20px;
+    height: 20px;
+}
+.greyLight {
+    background-color: #DADADA;
+    width: 20px;
+    height: 20px;
+}
+
+.greyDark {
+    background-color: #ADADAD;
+    width: 20px;
+    height: 20px;
+}
+.pinkLight {
+    background-color: #E1C7E2;
+    width: 20px;
+    height: 20px;
+}
+
+.pinkDark {
+    background-color: #C399BF;
+    width: 20px;
+    height: 20px;
+}
+
+.themename {
+    padding: 10px;
+}
+
+@media only screen and (orientation:portrait) and (max-width:600px) {
     li {
         width: 50px;
         height: 50px;
     }
-    .main-space{
+
+    .main-space {
         flex-direction: column-reverse;
         padding-top: 60px;
     }
+
     .board {
         margin-left: 0;
     }
-    .player-name{
+
+    .player-name {
         font-size: 20px;
     }
+
     #black-player-name {
         margin-right: 40px;
-
+        background-color: #8F9EB8;
     }
-    .profile img{
+
+    .profile img {
         width: 40px;
     }
+
     .stats {
         flex-direction: row;
+        flex-wrap: wrap;
         margin-top: 100px;
         height: auto;
+        padding: 20px;
+    }
+
+    .theme-container {
         padding: 20px;
     }
 
@@ -189,48 +333,52 @@ li {
         padding: 10px;
     }
 
-    .flip-btn-container button{
+    .flip-btn-container button {
         padding: 5px 10px;
         font-size: 20px;
         margin-top: 10px;
     }
 
-    .player-time{
+    .player-time {
         width: 120px;
         height: 50px;
         font-size: 24px;
     }
 }
 
-@media only screen and (orientation:portrait) and (max-width:415px){
+@media only screen and (orientation:portrait) and (max-width:415px) {
     li {
         width: 45px;
         height: 45px;
     }
 }
-@media only screen and (orientation:portrait) and (max-width:375px){
+
+@media only screen and (orientation:portrait) and (max-width:375px) {
     li {
         width: 40px;
         height: 40px;
     }
 }
-@media only screen and (max-width:600px){
-    .winner-screen{
+
+@media only screen and (max-width:600px) {
+    .winner-screen {
         padding: 70px 80px;
         height: 180px;
         width: 50vw;
         font-size: 10px;
     }
-    .winner-screen-container p{
+
+    .winner-screen-container p {
         font-size: 25px;
         margin: 0;
     }
-    .winner-name{
+
+    .winner-name {
         font-size: 30px;
         font-weight: 600;
     }
 
-    .rematch{
+    .rematch {
         display: flex;
         padding-bottom: 20px;
     }
