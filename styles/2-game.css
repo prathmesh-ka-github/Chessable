@@ -99,8 +99,8 @@ li {
     display: grid;
     place-items: center;
     font-size: 0;
-    /* border: 0.1px solid #C3CDDC; */
-    transition: background-color 400ms;
+    border: 0.1px solid #C3CDDC;
+    transition: background-color 300ms;
 }
 
 .allimg {

@@ -22,9 +22,12 @@ function coloring() {
 }
 coloring()
 
-async function boardtheme(light, dark) {
+function boardtheme(light, dark) {
     lightColor = light
     darkColor = dark
+    document.querySelectorAll(".box").forEach(box => {
+        box.style.border = `0.1px solid ${dark}`
+    })
     coloring()
 }
 
