@@ -1,3 +1,6 @@
+let lightColor = "#C3CDDC"
+let darkColor = "#8F9EB8"
+
 function coloring() {
     const color = document.querySelectorAll('.box')
     color.forEach(color => {
@@ -11,17 +14,17 @@ function coloring() {
         aup = eval(arr.shift())
         a = aside + aup
         if (a % 2 == 0) {
-            color.style.backgroundColor = '#8F9EB8'
+            color.style.backgroundColor = darkColor
         }
         if (a % 2 !== 0) {
-            color.style.backgroundColor = '#C3CDDC'
+            color.style.backgroundColor = lightColor
         }
         if ( current >1000 && current<1016 || current>1204 && current<1213 || current>1404 && current<1413) {
             if (a % 2 !== 0) {
-                color.style.backgroundColor = '#8F9EB8'
+                color.style.backgroundColor = darkColor
             }
             if (a % 2 == 0) {
-                color.style.backgroundColor = '#C3CDDC'
+                color.style.backgroundColor = lightColor
             }
         }
         
@@ -29,6 +32,15 @@ function coloring() {
     checkchecks()
 }
 coloring()
+
+function boardtheme(light, dark) {
+    lightColor = light
+    darkColor = dark
+    document.querySelectorAll(".box").forEach(box => {
+        box.style.border = `0.1px solid ${dark}`
+    })
+    coloring()
+}
 
 // INSERTING PNGs IN THE LIs
 function insertImage() {

@@ -20,7 +20,7 @@ li {
     /* width: 70px;
     height: 70px; */
     font-size: 0px;
-    transition: background-color 500ms;
+    transition: background-color 300ms;
 }
 li img{
     width: 100%;
@@ -63,21 +63,25 @@ li img{
 #R-time{
     background-color: #B54040;
     color: white;
+    transition: box-shadow 300ms;
     /* box-shadow: 0px 0px 39px -1px #b54040; */
 }
 #Y-time{
     background-color: #CA9A28;
     color: white;
+    transition: box-shadow 300ms;
     /* box-shadow: 0px 0px 39px -1px #ca9a28; */
 }
 #B-time{
     background-color: #4085B6;
     color: white;
+    transition: box-shadow 300ms;
     /* box-shadow: 0px 0px 39px -1px #4085b6; */
 }
 #G-time{
     background-color: #538E60;
     color: white;
+    transition: box-shadow 300ms;
     /* box-shadow: 0px 0px 39px -1px #538e60; */
 }
 .winner-screen-container{
@@ -145,4 +149,117 @@ li img{
     top: 20;
     font-size: 30px;
     cursor: pointer;
+}
+
+.absolute {
+    position: absolute;
+    top: 90px;
+    left: 20px;
+}
+
+.theme-container {
+    display: flex;
+
+}
+
+.themetitle {
+    font-size: 30px;
+}
+
+.dropbtn {
+    background-color: #04aa97;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 220px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 5px 15px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #029483;
+}
+
+.colorbox {
+    display: flex;
+}
+
+.woodLight {
+    background-color: #E2C5B0;
+    width: 20px;
+    height: 20px;
+}
+
+.woodDark {
+    background-color: #AA8C77;
+    width: 20px;
+    height: 20px;
+}
+.steelLight {
+    background-color: #C3CDDC;
+    width: 20px;
+    height: 20px;
+}
+
+.steelDark {
+    background-color: #8F9EB8;
+    width: 20px;
+    height: 20px;
+}
+.greyLight {
+    background-color: #DADADA;
+    width: 20px;
+    height: 20px;
+}
+
+.greyDark {
+    background-color: #ADADAD;
+    width: 20px;
+    height: 20px;
+}
+.pinkLight {
+    background-color: #E1C7E2;
+    width: 20px;
+    height: 20px;
+}
+
+.pinkDark {
+    background-color: #C399BF;
+    width: 20px;
+    height: 20px;
+}
+
+.themename {
+    padding: 10px;
 }
