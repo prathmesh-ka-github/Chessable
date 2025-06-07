@@ -5,7 +5,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    font-size: 50px;
+    font-size: 30px;
     font-weight: 100;
     padding-top: 80px;
 }
@@ -15,7 +15,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    transition: transform 300ms;
+    transition: transform 500ms;
     
 }
 .four-player-container {
@@ -24,9 +24,8 @@
 .sub-container:hover {
     transform: scale(1.05);
 }
-
 .choose-txt{
-    padding: 10px;
+    padding: 20px;
 }
 .four-player-info{
     display: none;
@@ -35,12 +34,15 @@
     position: relative;
     cursor: pointer;
 }
+.tooltip img {
+    width: 25px;
+}
 .tooltip-text{
     --scale: 0;
     visibility: hidden;
     position: absolute;
     width: max-content;
-    font-size: 20;
+    font-size: 15;
     padding: 12px;
     background-color:#4F4844;
     border-radius: 30px 25px 25px 0px;
