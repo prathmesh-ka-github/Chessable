@@ -69,7 +69,7 @@ Chessable will help encourage playing chess among young minds and also increase 
     - Opera 11+
     - Mozilla Firefox 2.0+
 
-### TODOS
+## TODOS
 1. Make a user profile section.
     - User details
     - Edit user details
