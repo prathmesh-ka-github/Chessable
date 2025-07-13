@@ -10,7 +10,7 @@ Liscence - MIT License. Copyright (c) 2023 Prathmesh Kale.
 
 We have started building backend with ExpressJS and MongoDB as database. 
 
-https://prathmesh-ka-github.github.io/Chessable/
+https://chessable-906m.onrender.com
 
 ![Chessable landing page](image-1.png)
 
@@ -55,7 +55,7 @@ Chessable will help encourage playing chess among young minds and also increase 
     - Windows vista.
     - Windows server 2008 and later.
     - Linux.
-    - Unix.
+    - Unix. 
     - Mac.
 - ### Hardware Environment -
     - Processor: x86 or x64.
