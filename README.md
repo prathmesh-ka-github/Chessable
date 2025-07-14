@@ -9,7 +9,9 @@ Liscence - MIT License. Copyright (c) 2023 Prathmesh Kale.
 
 We have started building backend with ExpressJS and MongoDB as database. 
 
-https://chessable-906m.onrender.com
+## https://play-chessable.vercel.app
+
+This webapp is now deployed on vercel!
 
 ![Chessable landing page](image-1.png)
 
